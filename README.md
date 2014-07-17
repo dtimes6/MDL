@@ -3,9 +3,8 @@ MDL
 
 Modeling Description Language
 
-------------------
-Author: Peng Dai
-------------------
+Author: 代鹏
+Email:  dtimes6@gmail.com
 
 Modeling Description Language(MDL) is a general modeling description language, which is used to create model for other programming language or other description language. Such as C++/Java/Verilog/VHDL or even doing synthesis with library support.
 
