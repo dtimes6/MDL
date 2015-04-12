@@ -14,9 +14,7 @@ fs.readFile(file, 'utf-8', function (err, data) {
         var func_name = tokenProvider.requireType('identifier');
         console.log(func_name);
         tokenProvider.consume(1);
-        var open0 = tokenProvider.require('(');
-        tokenProvider.consume(1);
-        var close0 = tokenProvider.require(')');
+        var open0 = tokenProvider.require('()');
         tokenProvider.consume(1);
         var sep   = tokenProvider.require(':');
         tokenProvider.consume(1);
