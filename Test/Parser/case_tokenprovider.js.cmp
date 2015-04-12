@@ -1,0 +1,7 @@
+{ type: 'identifier', text: 'function', pos: 0 }
+{ type: 'identifier', text: 'author', pos: 9 }
+{ type: 'identifier', text: 'original', pos: 20 }
+[ { type: 'string_dquoted', text: '"Peng Dai"', pos: 42 } ]
+[ { type: ';', text: ';', pos: 52 } ]
+[ { type: '}', text: '}', pos: 54 } ]
+null
