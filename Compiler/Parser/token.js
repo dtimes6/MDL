@@ -1,3 +1,15 @@
+/***
+ * @file:   token.js
+ * @author: Peng Dai
+ *
+ * @brief： Lexical analyser
+ *
+ * MDL
+ *
+ * Copyright (C) 2015, Peng Dai. All rights reserved!
+ *
+ ***/
+
 var Token = function (type, pos, text) {
     'use strict';
     this.type = type;
