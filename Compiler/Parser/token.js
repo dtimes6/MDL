@@ -89,19 +89,22 @@ TokenProvider.func = {
 };
 
 TokenProvider.enum = {
+    // comment
     comment_line  : [/^\/\/[^\n]*\n/,          TokenProvider.func.basic],
     comment_block : [/^\/\*/,                  TokenProvider.func.block_comment],
+    // string
     string_quoted : [/^'/,                     TokenProvider.func.quoted_string],
     string_dquoted: [/^"/,                     TokenProvider.func.double_quoted_string],
     // common
     space         : [/^[ \n\t]+/,              TokenProvider.func.basic],
     identifier    : [/^[A-Za-z_]\w*/,          TokenProvider.func.basic],
+    // number
     binary        : [/^0b[01]*/,               TokenProvider.func.basic],
     octal         : [/^0o[0-7]*/,              TokenProvider.func.basic],
     hexadecimal   : [/^0[xh][0-9A-Fa-f]*/,     TokenProvider.func.basic],
     float         : [/^[0-9]*\.[0-9]+/,        TokenProvider.func.basic],
     decimal       : [/^[0-9]+/,                TokenProvider.func.basic],
-    // block op
+    // op
     operator      : [/^[^ \t\nA-Za-z0-9_]+/,   TokenProvider.func.basic]
 };
 
