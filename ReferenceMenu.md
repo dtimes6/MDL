@@ -3,7 +3,7 @@ Model Description Language Reference Menu
 模型描述语言参考手册
 =================
 
-&copy 代鹏，保留所有权利。
+&copy; 代鹏，保留所有权利。
 
 序言
 ====
