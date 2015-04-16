@@ -13,7 +13,7 @@ function findAndTest(path) {
                     findAndTest(file);
                 } else if (handle.match(/^case_[^\.]*\.js$/)){
                     var exec = require('child_process').exec;
-                    exec("cd " + path + ";node " + file, function (err, stdout, stderr) {
+                    exec("node " + file, function (err, stdout, stderr) {
                         if (err) {
                             console.log("Error calling '" + file + "'");
                         } else {
@@ -22,6 +22,8 @@ function findAndTest(path) {
                                     fs.writeFile(file + ".log", (stderr + stdout), 'utf-8', function (err) {
                                         console.log('Running ' + handle + ' ... '  + 'Failed!');
                                     });
+                                } else {
+                                    exec("rm " + file + ".log");
                                 }
                             });
                         }
