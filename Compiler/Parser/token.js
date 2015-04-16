@@ -33,8 +33,9 @@ Token.prototype.isNumber = function () {
 
 Token.prototype.isString = function () {
     'use strict';
-    return this.type === 'string_quoted' ||
-           this.type === 'string_dquoted';
+    return this.type === 'string_quoted'  ||
+           this.type === 'string_dquoted' ||
+           this.type === 'string_block';
 };
 
 var TokenProvider = function (buffer) {
@@ -70,7 +71,7 @@ TokenProvider.func = {
         'use strict';
         var pos = provider.pos + 1;
         while (pos < provider.buffer.length) {
-            if (provider.buffer[pos]     === '"' && provider.buffer[pos - 1] !== quote) {
+            if (provider.buffer[pos]     === quote && provider.buffer[pos - 1] !== '\\') {
                 text = provider.buffer.substr(provider.pos, pos - provider.pos + 1);
                 return TokenProvider.func.basic(type, provider, text);
             }
@@ -85,6 +86,18 @@ TokenProvider.func = {
     double_quoted_string: function (type, provider, text) {
         'use strict';
         return TokenProvider.func.string(type, provider, text, '"');
+    },
+    block_string: function (type, provider, text) {
+        'use strict';
+        var pos = provider.pos + 3;
+        while (pos < provider.buffer.length) {
+            if (provider.buffer[pos]     === '"' && provider.buffer[pos - 1] === '"' && provider.buffer[pos - 2] === '"') {
+                text = provider.buffer.substr(provider.pos, pos - provider.pos + 1);
+                return TokenProvider.func.basic(type, provider, text);
+            }
+            ++pos;
+        }
+        return null;
     }
 };
 
@@ -93,8 +106,18 @@ TokenProvider.enum = {
     comment_line  : [/^\/\/[^\n]*\n/,          TokenProvider.func.basic],
     comment_block : [/^\/\*/,                  TokenProvider.func.block_comment],
     // string
+    string_block  : [/^"""/,                   TokenProvider.func.block_string],
     string_quoted : [/^'/,                     TokenProvider.func.quoted_string],
     string_dquoted: [/^"/,                     TokenProvider.func.double_quoted_string],
+    // separator
+    ';'           : [/^;/,                     TokenProvider.func.basic],
+    //brace
+    '('           : [/^\(/,                    TokenProvider.func.basic],
+    ')'           : [/^\)/,                    TokenProvider.func.basic],
+    '['           : [/^\[/,                    TokenProvider.func.basic],
+    ']'           : [/^\]/,                    TokenProvider.func.basic],
+    '{'           : [/^\{/,                    TokenProvider.func.basic],
+    '}'           : [/^\}/,                    TokenProvider.func.basic],
     // common
     space         : [/^[ \n\t]+/,              TokenProvider.func.basic],
     identifier    : [/^[A-Za-z_]\w*/,          TokenProvider.func.basic],
