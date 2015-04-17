@@ -1,0 +1,41 @@
+var TokenProvider = require('../../Compiler/Parser/token.js').TokenProvider;
+require('../../test.js')(__filename, function (data) {
+    'use strict';
+    var tokenProvider = new TokenProvider(data);
+    var token = tokenProvider.require("function");
+    tokenProvider.consume(1);
+    console.log(token);
+    var func_name = tokenProvider.requireType('identifier');
+    console.log(func_name);
+    tokenProvider.consume(1);
+    tokenProvider.require('(');
+    tokenProvider.consume(1);
+    tokenProvider.require(')');
+    tokenProvider.consume(1);
+    tokenProvider.require(':');
+    tokenProvider.consume(1);
+    var type  = tokenProvider.requireType('identifier');
+    console.log(type);
+    tokenProvider.consume(1);
+    tokenProvider.require('{');
+    tokenProvider.consume(1);
+    tokenProvider.require('return');
+    tokenProvider.consume(1);
+    token = tokenProvider.getToken();
+    console.log(token);
+    tokenProvider.consume(1);
+    token = tokenProvider.getToken();
+    console.log(token);
+    tokenProvider.consume(1);
+    token = tokenProvider.getToken();
+    console.log(token);
+    tokenProvider.consume(1);
+    token = tokenProvider.getToken();
+    while (token) {
+        console.log(token);
+        console.log(token[0].isNumber());
+        console.log(token[0].isString());
+        tokenProvider.consume();
+        token = tokenProvider.getToken();
+    }
+});

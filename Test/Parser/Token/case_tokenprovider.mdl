@@ -1,0 +1,21 @@
+function author() : original {
+    return "Peng Dai";
+}
+
+123
+0b10
+0d123
+0x1A
+0h12F
+0o123
+9.23
+
+"""
+    String Block
+"""
+
+'quoted\'string'
+
+"double\"quoted string"
+
+/* block comment */

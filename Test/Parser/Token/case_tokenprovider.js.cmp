@@ -1,0 +1,40 @@
+{ type: 'identifier', text: 'function', pos: 0 }
+{ type: 'identifier', text: 'author', pos: 9 }
+{ type: 'identifier', text: 'original', pos: 20 }
+[ { type: 'string_dquoted', text: '"Peng Dai"', pos: 42 } ]
+[ { type: ';', text: ';', pos: 52 } ]
+[ { type: '}', text: '}', pos: 54 } ]
+[ { type: 'decimal', text: '123', pos: 57 } ]
+true
+false
+[ { type: 'binary', text: '0b10', pos: 61 } ]
+true
+false
+[ { type: 'decimal', text: '0d123', pos: 66 } ]
+true
+false
+[ { type: 'hexadecimal', text: '0x1A', pos: 72 } ]
+true
+false
+[ { type: 'hexadecimal', text: '0h12F', pos: 77 } ]
+true
+false
+[ { type: 'octal', text: '0o123', pos: 83 } ]
+true
+false
+[ { type: 'float', text: '9.23', pos: 89 } ]
+true
+false
+[ { type: 'string_block',
+    text: '"""\n    String Block\n"""',
+    pos: 95 } ]
+false
+true
+[ { type: 'string_quoted', text: '\'quoted\\\'string\'', pos: 121 } ]
+false
+true
+[ { type: 'string_dquoted',
+    text: '"double\\"quoted string"',
+    pos: 139 } ]
+false
+true
