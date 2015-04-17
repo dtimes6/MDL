@@ -65,7 +65,7 @@ TokenProvider.func = {
             }
             ++pos;
         }
-        return null;
+        throw "Error: Cannot find end of block comment!";
     },
     string: function (type, provider, text, quote) {
         'use strict';
@@ -77,7 +77,7 @@ TokenProvider.func = {
             }
             ++pos;
         }
-        return null;
+        throw "Error: Cannot find end of string!";
     },
     quoted_string: function (type, provider, text) {
         'use strict';
@@ -97,7 +97,7 @@ TokenProvider.func = {
             }
             ++pos;
         }
-        return null;
+        throw "Error: Cannot find end of string!";
     }
 };
 
@@ -126,7 +126,7 @@ TokenProvider.enum = {
     octal         : [/^0o[0-7]*/,              TokenProvider.func.basic],
     hexadecimal   : [/^0[xh][0-9A-Fa-f]*/,     TokenProvider.func.basic],
     float         : [/^[0-9]*\.[0-9]+/,        TokenProvider.func.basic],
-    decimal       : [/^[0-9]+/,                TokenProvider.func.basic],
+    decimal       : [/^(0d)?[0-9]+/,           TokenProvider.func.basic],
     // op
     operator      : [/^[^ \t\nA-Za-z0-9_]+/,   TokenProvider.func.basic]
 };
@@ -140,8 +140,8 @@ TokenProvider.prototype.parse1Token = function () {
             return TokenProvider.enum[t][1](t, this, match[0]);
         }
     }
-    if (inqueue.length) {
-        console.error("Error: while parsing: " + inqueue);
+    if (inqueue.length) { /* istanbul ignore next */
+        throw "Error: while parsing: " + inqueue;
     }
     return null;
 };
@@ -177,8 +177,7 @@ TokenProvider.prototype.requireType = function (type) {
     'use strict';
     var ret = this.enlargeBuffer(1)[0];
     if (ret.type !== type) {
-        console.error("Error: expected type: '" + type + "' but got '" + ret.type + "'");
-        return null;
+        throw "Error: expected type: '" + type + "' but got '" + ret.type + "'";
     }
     return ret;
 };
@@ -187,8 +186,7 @@ TokenProvider.prototype.require = function (str) {
     'use strict';
     var ret = this.enlargeBuffer(1)[0];
     if (ret.text !== str) {
-        console.error("Error: expected: '" + str + "' but got '" + ret.text + "'");
-        return null;
+        throw "Error: expected: '" + str + "' but got '" + ret.text + "'";
     }
     return ret;
 };
