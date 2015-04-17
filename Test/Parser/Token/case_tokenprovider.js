@@ -35,6 +35,7 @@ require('../../test.js')(__filename, function (data) {
         console.log(token);
         console.log(token[0].isNumber());
         console.log(token[0].isString());
+        console.log(token[0].isOperator());
         tokenProvider.consume();
         token = tokenProvider.getToken();
     }

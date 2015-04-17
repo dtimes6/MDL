@@ -7,34 +7,44 @@
 [ { type: 'decimal', text: '123', pos: 57 } ]
 true
 false
+false
 [ { type: 'binary', text: '0b10', pos: 61 } ]
 true
+false
 false
 [ { type: 'decimal', text: '0d123', pos: 66 } ]
 true
 false
+false
 [ { type: 'hexadecimal', text: '0x1A', pos: 72 } ]
 true
+false
 false
 [ { type: 'hexadecimal', text: '0h12F', pos: 77 } ]
 true
 false
+false
 [ { type: 'octal', text: '0o123', pos: 83 } ]
 true
 false
+false
 [ { type: 'float', text: '9.23', pos: 89 } ]
 true
+false
 false
 [ { type: 'string_block',
     text: '"""\n    String Block\n"""',
     pos: 95 } ]
 false
 true
+false
 [ { type: 'string_quoted', text: '\'quoted\\\'string\'', pos: 121 } ]
 false
 true
+false
 [ { type: 'string_dquoted',
     text: '"double\\"quoted string"',
     pos: 139 } ]
 false
 true
+false

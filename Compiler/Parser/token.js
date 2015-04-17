@@ -38,6 +38,11 @@ Token.prototype.isString = function () {
            this.type === 'string_block';
 };
 
+Token.prototype.isOperator = function () {
+    'use strict';
+    return this.type !== 'identifier' && !this.isNumber() && !this.isString();
+};
+
 var TokenProvider = function (buffer) {
     'use strict';
     this.buffer = buffer;
