@@ -1,0 +1,20 @@
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [] },
+     value: null,
+     method: null,
+     scope: { symbol: [], type: [Object], function: [], operator: [] } },
+  type: 'element',
+  childs: 
+   { name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'net8',
+        method: 'method_buildin_identifier',
+        scope: null,
+        ref: [Circular] } },
+  value: null,
+  method: 'method_buildin_element_decl',
+  scope: null }
