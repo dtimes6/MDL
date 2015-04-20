@@ -1,2 +1,3 @@
 language "C++" ("template_expending") {
+    1 + 2;
 }
