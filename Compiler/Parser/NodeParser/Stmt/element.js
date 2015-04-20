@@ -10,10 +10,14 @@ module.exports = function (parser) {
         n.childs = {
             name: this.parseNamedRef()
         };
-        n.childs.name.ref = n;
-        n.method = parser.method_buildin + "element_decl";
+        n.childs.name.childs.ref = n;
+        n.method = this.method_buildin + "element_decl";
 
         n.scopeNode().scope.type.push(n);
+
+        this.require(';');
+        this.consume();
+
         return this.pop(n);
     };
 };

@@ -13,8 +13,7 @@
         childs: [Object],
         value: 'net8',
         method: 'method_buildin_identifier',
-        scope: null,
-        ref: [Circular] } },
+        scope: null } },
   value: null,
   method: 'method_buildin_element_decl',
   scope: null }
