@@ -45,7 +45,7 @@ module.exports = function (parser) {
                         params: this.parseExprBrace()
                     };
                     n0.type = 'function';
-                    n0.method = this.method_buildin + 'function';
+                    n0.method = this.method_buildin + 'func_call';
                     param = this.pop(n0);
                     token = this.getToken();
                 } else {

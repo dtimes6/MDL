@@ -6,6 +6,7 @@ module.exports = function (parser) {
     require('./Stmt/for.js')(parser);
     require('./Stmt/if.js')(parser);
     require('./Stmt/inst_decl.js')(parser);
+    require('./Stmt/language.js')(parser);
     require('./stmt/switch.js')(parser);
     require('./Stmt/while.js')(parser);
     parser.prototype.parseStmt = function () {
@@ -20,6 +21,9 @@ module.exports = function (parser) {
                 return this.parseFuncDecl();
             }
             return this.parseOperDecl();
+        }
+        if (token.text === 'language') {
+            return this.parseLanguage();
         }
         if (token.text === 'module') {
             return this.parseModuleDecl();

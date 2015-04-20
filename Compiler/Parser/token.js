@@ -181,6 +181,9 @@ TokenProvider.prototype.consume = function (n) {
 TokenProvider.prototype.requireType = function (type) {
     'use strict';
     var ret = this.enlargeBuffer(1)[0];
+    if (ret.isString() && type === 'string') {
+        return ret;
+    }
     if (ret.type !== type) {
         throw "Error: expected type: '" + type + "' but got '" + ret.type + "'";
     }

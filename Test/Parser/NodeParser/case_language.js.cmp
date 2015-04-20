@@ -1,0 +1,33 @@
+[ { parent: 
+     { parent: null,
+       type: 'root',
+       childs: [Object],
+       value: null,
+       method: null,
+       scope: [Object] },
+    type: 'language',
+    childs: { lang: '"C++"', attrs: [Object], stmt: [Object] },
+    value: null,
+    method: 'method_buildin_language',
+    scope: null } ]
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     method: null,
+     scope: { symbol: [], type: [Object], function: [], operator: [] } },
+  type: 'language',
+  childs: 
+   { lang: '"C++"',
+     attrs: { template_expending: 1 },
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] } },
+  value: null,
+  method: 'method_buildin_language',
+  scope: null }
