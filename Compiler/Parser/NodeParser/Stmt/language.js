@@ -12,7 +12,7 @@ module.exports = function (parser) {
         this.require('(');
         this.consume();
 
-        if (this.getToken() === ')') {
+        if (this.getToken().text === ')') {
             this.consume();
         } else {
             var attrs = [];
