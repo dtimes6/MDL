@@ -23,6 +23,7 @@ var ATPParser = function () {
 
     this.root.scope.type.push(ATPParser.typeOriginal());
     this.root.scope.type.push(ATPParser.typeSynth());
+    this.root.scope.type.push(ATPParser.typeMethod());
     this.method_buildin = "method_buildin_";
 
     this.current = this.root;

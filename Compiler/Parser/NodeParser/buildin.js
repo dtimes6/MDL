@@ -24,4 +24,14 @@ module.exports = function (parser) {
         }
         return parser.buildin.synthType;
     };
+
+    parser.typeMethod = function () {
+        if (parser.buildin.methodType === undefined) {
+            var n = new parser.Node();
+            n.parent = null;
+            n.type = 'method';
+            parser.buildin.methodType = n;
+        }
+        return parser.buildin.methodType;
+    };
 };
