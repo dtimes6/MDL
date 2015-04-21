@@ -3,6 +3,8 @@ module.exports = function (parser) {
     parser.prototype.parseBlock = function () {
         var n = this.push();
         n.createScope();
+        n.type   = 'block';
+
         this.require('{');
         this.consume();
         var stmts = [];
@@ -10,7 +12,6 @@ module.exports = function (parser) {
             stmts.push(this.parseStmt());
         }
         this.consume();
-        n.type   = 'block';
         n.childs = {
             stmts: stmts
         };

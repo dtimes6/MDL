@@ -22,7 +22,7 @@ var ATPNode = function () {
 
 ATPNode.prototype.createScope = function () {
     'use strict';
-    this.scope = { symbol: [], type: [], function: [], operator: [] };
+    this.scope = { symbol: [], type: [], method: [], operator: [] };
     return this;
 };
 

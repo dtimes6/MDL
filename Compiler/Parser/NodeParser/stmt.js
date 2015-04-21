@@ -4,16 +4,23 @@ module.exports = function (parser) {
     require('./Stmt/ctrl.js')(parser);
     require('./Stmt/element.js')(parser);
     require('./Stmt/for.js')(parser);
+    require('./Stmt/function.js')(parser);
     require('./Stmt/if.js')(parser);
     require('./Stmt/inst_decl.js')(parser);
     require('./Stmt/language.js')(parser);
+    require('./Stmt/module.js')(parser);
     require('./stmt/switch.js')(parser);
+    require('./Stmt/type.js')(parser);
     require('./Stmt/while.js')(parser);
+
     parser.prototype.parseStmt = function () {
         var token = this.getToken();
         // declaration
         if (token.text === 'element') {
             return this.parseElementDecl();
+        }
+        if (token.text === 'process') {
+            return this.parseProcess();
         }
         if (token.text === 'function') {
             token = this.getToken(2);

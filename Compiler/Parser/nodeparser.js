@@ -48,7 +48,7 @@ ATPParser.prototype.pop = function (n) {
 require("./NodeParser/token.js")(ATPParser);
 require("./NodeParser/buildin")(ATPParser);
 require("./NodeParser/original.js")(ATPParser);
-require("./NodeParser/decl.js")(ATPParser);
+require("./NodeParser/Stmt/module.js")(ATPParser);
 require("./NodeParser/expr.js")(ATPParser);
 require("./NodeParser/stmt.js")(ATPParser);
 
@@ -80,21 +80,33 @@ ATPParser.prototype.parse = function (buffer) {
     return 1;
 };
 
+ATPParser.prototype.lookupScopeForType = function (n, name, i) {
+    'use strict';
+    if (i + 1 === name.length) {
+        return n;
+    }
+    for (var t in n.scope.type) {
+        var type = n.scope.type[t];
+        if (type.value === name[i + 1]) {
+            return this.lookupScopeForType(type, name, i + 1);
+        }
+    }
+    throw "Error: '" + name.join('::') + "' is not a name of a type!";
+};
+
 ATPParser.prototype.lookupForType = function (n, name) {
     'use strict';
     n = n.parent.scopeNode();
     for (var t in n.scope.type) {
         var type = n.scope.type[t];
-        if (type.childs.name) {
-            if (type.childs.name.value === name) {
-                return type;
-            }
+        if (type.value === name[0]) {
+            return this.lookupScopeForType(type, name, 0);
         }
     }
     if (n.parent) {
         return this.lookupForType(n, name);
     } else {
-        throw "Error: '" + name + "' is not a name of a type!";
+        throw "Error: '" + name.join('::') + "' is not a name of a type!";
     }
 };
 

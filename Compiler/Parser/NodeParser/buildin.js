@@ -9,7 +9,8 @@ module.exports = function (parser) {
         if (parser.buildin.originalType === undefined) {
             var n = new parser.Node();
             n.parent = null;
-            n.type = 'original';
+            n.type  = 'original';
+            n.value = 'original';
             parser.buildin.originalType = n;
         }
         return parser.buildin.originalType;
@@ -19,7 +20,8 @@ module.exports = function (parser) {
         if (parser.buildin.synthType === undefined) {
             var n = new parser.Node();
             n.parent = null;
-            n.type = 'synth';
+            n.type  = 'synth';
+            n.value = 'synth';
             parser.buildin.synthType = n;
         }
         return parser.buildin.synthType;
@@ -29,7 +31,8 @@ module.exports = function (parser) {
         if (parser.buildin.methodType === undefined) {
             var n = new parser.Node();
             n.parent = null;
-            n.type = 'method';
+            n.type  = 'method';
+            n.value = 'method';
             parser.buildin.methodType = n;
         }
         return parser.buildin.methodType;

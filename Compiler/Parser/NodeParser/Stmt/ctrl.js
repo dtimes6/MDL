@@ -2,6 +2,7 @@ module.exports = function (parser) {
     'use strict';
     parser.prototype.parseReturn = function () {
         var n = this.push();
+        n.type   = 'return';
 
         this.require('return');
         this.consume();
@@ -17,11 +18,11 @@ module.exports = function (parser) {
         var scope = null;
         var p = n.parent;
         while (p) {
-            if (p.type === 'function') {
+            if (p.type === 'function_decl') {
                 scope = p;
             }
-            if (p.type === 'module' ||
-                p.type === 'template') {
+            if (p.type === 'module_decl' ||
+                p.type === 'template_decl') {
                 throw "Error: return statement must be in the scope of a function";
             }
             p = p.parent;
@@ -30,7 +31,6 @@ module.exports = function (parser) {
             throw "Error: return statement must be in the scope of a function";
         }
 
-        n.type   = 'return';
         n.childs = {
             expr:  expr,
             scope: scope
@@ -42,6 +42,7 @@ module.exports = function (parser) {
 
     parser.prototype.parseBreak = function () {
         var n = this.push();
+        n.type = 'break';
 
         this.require('break');
         this.consume();
@@ -49,7 +50,6 @@ module.exports = function (parser) {
         this.require(';');
         this.consume();
 
-        n.type = 'break';
         n.childs = {
             tag: tag
         };
@@ -60,6 +60,7 @@ module.exports = function (parser) {
 
     parser.prototype.parseContinue = function () {
         var n = this.push();
+        n.type = 'continue';
 
         this.require('continue');
         this.consume();
@@ -67,7 +68,6 @@ module.exports = function (parser) {
         this.require(';');
         this.consume();
 
-        n.type = 'break';
         n.childs = {
             tag: tag
         };

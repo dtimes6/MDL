@@ -1,45 +1,12 @@
 module.exports = function (parser) {
     'use strict';
-    parser.prototype.parseType = function () {
-        var n = this.push();
-
-        var token = this.requireType('identifier');
-        this.consume();
-        var type = this.lookupForType(n, token.text);
-        var range = [];
-
-        token = this.getToken();
-        while (token.text === '[') {
-            this.consume();
-            var left = this.parseExpr();
-            var right = this.zeroValueExpr();
-            token = this.getToken();
-            if (token.text === ':') {
-                this.consume();
-                right = this.parseExpr();
-            }
-            this.require(']');
-            range.push({left: left, right: right});
-            token = this.getToken();
-        }
-
-        n.type = 'type';
-        n.childs = {
-            base:  type,
-            range: range
-        };
-        n.method = this.method_buildin + 'type';
-
-        return this.pop(n);
-    };
-
     parser.prototype.parseInstDecl = function () {
         var n = this.push();
+        n.type = 'inst_decl';
 
         var type = this.parseType();
         var name = this.parseNamedRef();
 
-        n.type = 'inst_decl';
         n.childs = {
             type:  type,
             name:  name,

@@ -3,6 +3,7 @@ module.exports = function (parser) {
 
     parser.prototype.parseWhile = function () {
         var n = this.push();
+        n.type   = 'while';
 
         this.require('while');
         this.consume();
@@ -10,7 +11,6 @@ module.exports = function (parser) {
         var tag  = this.parseTag();
         var stmt = this.parseBlockOrStmt();
 
-        n.type   = 'while';
         n.childs = {
             tag:  tag,
             cond: cond,
@@ -23,6 +23,7 @@ module.exports = function (parser) {
 
     parser.prototype.parseDoWhile = function () {
         var n = this.push();
+        n.type   = 'do_while';
 
         this.require('do');
         this.consume();
@@ -34,7 +35,6 @@ module.exports = function (parser) {
         this.require(';');
         this.consume();
 
-        n.type   = 'do_while';
         n.childs = {
             tag:  tag,
             cond: cond,

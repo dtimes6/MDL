@@ -1,6 +1,7 @@
 module.exports = function (parser) {
     parser.prototype.parseLanguage = function () {
         var n = this.push();
+        n.type = 'language';
 
         this.require('language');
         this.consume();
@@ -38,7 +39,6 @@ module.exports = function (parser) {
             }
         }
         var stmt = this.parseBlockOrStmt();
-        n.type = 'language';
         n.childs = {
             lang:  lang,
             attrs: attributes,

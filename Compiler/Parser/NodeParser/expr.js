@@ -2,13 +2,13 @@ module.exports = function (parser) {
     'use strict';
     parser.prototype.parseExprIdxRange = function () {
         var n = this.push();
+        n.type   = 'range';
         this.require('[');
         this.consume();
         var index = this.parseExpr();
         this.require(']');
         this.consume();
 
-        n.type   = 'range';
         n.childs = {
             base:  null,
             index: index
@@ -40,11 +40,11 @@ module.exports = function (parser) {
                     token = this.getToken();
                 } else if (token.text === '(') {
                     var n0 = this.push();
+                    n0.type = 'func_call';
                     n0.childs = {
                         method: param,
                         params: this.parseExprBrace()
                     };
-                    n0.type = 'function';
                     n0.method = this.method_buildin + 'func_call';
                     param = this.pop(n0);
                     token = this.getToken();
@@ -58,6 +58,7 @@ module.exports = function (parser) {
 
     parser.prototype.parseExpr = function () {
         var n = this.push();
+        n.type   = 'operation';
         var params = [];
         var op = '';
         do {
@@ -97,7 +98,6 @@ module.exports = function (parser) {
         if (op === '') {
             return params[0];
         }
-        n.type   = 'operation';
         n.method = op;
         n.childs = {
             op:     op,

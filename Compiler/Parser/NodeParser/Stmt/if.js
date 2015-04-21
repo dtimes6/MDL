@@ -2,6 +2,7 @@ module.exports = function (parser) {
     'use strict';
     parser.prototype.parseIf = function () {
         var n = this.push();
+        n.type   = 'if';
 
         this.require('if');
         this.consume();
@@ -14,7 +15,6 @@ module.exports = function (parser) {
             if_else = this.parseBlockOrStmt();
         }
 
-        n.type   = 'if';
         n.childs = {
             condition: cond,
             then_stmt: if_then,

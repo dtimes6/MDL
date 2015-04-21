@@ -2,6 +2,7 @@ module.exports = function (parser) {
     'use strict';
     parser.prototype.parseDefault = function () {
         var n = this.push();
+        n.type   = 'case_default';
 
         this.require('default');
         this.consume();
@@ -9,7 +10,6 @@ module.exports = function (parser) {
         this.consume();
         var case_stmt = this.parseBlockOrStmt();
 
-        n.type   = 'case_default';
         n.childs = {
             case_stmt: case_stmt
         };
@@ -19,6 +19,7 @@ module.exports = function (parser) {
 
     parser.prototype.parseCase = function () {
         var n = this.push();
+        n.type   = 'case_item';
 
         this.require('case');
         this.consume();
@@ -27,7 +28,6 @@ module.exports = function (parser) {
         this.consume();
         var case_stmt = this.parseBlockOrStmt();
 
-        n.type   = 'case_item';
         n.childs = {
             case_itemexpr: case_itemexpr,
             case_stmt:     case_stmt
@@ -38,6 +38,7 @@ module.exports = function (parser) {
 
     parser.prototype.parseSwitch = function () {
         var n = this.push();
+        n.type = 'switch';
 
         this.require('switch');
         this.consume();
@@ -56,7 +57,6 @@ module.exports = function (parser) {
         }
         this.require('}');
 
-        n.type = 'switch';
         n.childs = {
             case_expr:    case_expr,
             case_items:   case_items,

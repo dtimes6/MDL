@@ -1,0 +1,12 @@
+element net8;
+
+function func0() {
+}
+
+function func1(net8 n) : net8 {
+    return n;
+}
+
+function build_in_method_constant_string (original s) : synth {
+    return "@s";
+}
