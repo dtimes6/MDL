@@ -57,8 +57,6 @@ module.exports = function (parser) {
     };
 
     parser.prototype.parseExpr = function () {
-        var n = this.push();
-        n.type   = 'operation';
         var params = [];
         var op = '';
         do {
@@ -74,7 +72,7 @@ module.exports = function (parser) {
                 param = this.parseExprBrace();
             } else if (token.type === 'identifier') {
                 this.consume();
-                param = this.lookupForSymbol(n, token.text);
+                param = this.lookupForSymbol(this.current, token.text);
             } else if (token.isNumber()) {
                 param = this.parseNumber();
             } else if (token.isString()) {
@@ -95,9 +93,15 @@ module.exports = function (parser) {
             }
         } while (1);
 
-        if (op === '') {
+        if (op === '$') {
+            // has push but no pop
             return params[0];
         }
+        var n = this.push();
+        for (var i in params) {
+            params[i].parent = n;
+        }
+        n.type   = 'operation';
         n.method = op;
         n.childs = {
             op:     op,

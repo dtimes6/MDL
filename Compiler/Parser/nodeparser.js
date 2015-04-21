@@ -112,7 +112,9 @@ ATPParser.prototype.lookupForType = function (n, name) {
 
 ATPParser.prototype.lookupForSymbol = function (n, name) {
     'use strict';
-    n = n.parent.scopeNode();
+    if (n.parent) {
+        n = n.parent.scopeNode();
+    }
     for (var t in n.scope.symbol) {
         var sym = n.scope.symbol[t];
         if (sym.value === name) {

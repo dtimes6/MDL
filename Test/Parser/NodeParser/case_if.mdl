@@ -1,0 +1,5 @@
+function case_if(original s) : synth {
+    if (s) {
+        return "@s";
+    }
+}
