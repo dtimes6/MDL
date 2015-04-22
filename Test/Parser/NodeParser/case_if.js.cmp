@@ -63,7 +63,13 @@
         value: null,
         method: 'method_buildin_statement_block',
         scope: [Object] },
-     else_stmt: null },
+     else_stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] } },
   value: null,
   method: 'method_buildin_statement_if',
   scope: null }
