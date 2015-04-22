@@ -1,8 +1,12 @@
 module.exports = function (parser) {
     'use strict';
-    parser.prototype.parseBlock = function () {
+    parser.prototype.parseBlock = function (env) {
         var n = this.push();
-        n.createScope();
+        if (env && env.scope) {
+            n.scope = env.scope;
+        } else {
+            n.createScope();
+        }
         n.type   = 'block';
 
         this.require('{');

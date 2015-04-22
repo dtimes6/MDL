@@ -5,26 +5,33 @@ module.exports = function (parser) {
         n.type = 'type';
 
         var type_hierarchy = [this.requireType('identifier').text];
+        this.consume();
         while (this.getToken().text === '::') {
             this.consume();
             type_hierarchy.push(this.requireType('identifier').text);
+            this.consume();
         }
-
-        this.consume();
         var type = this.lookupForType(n, type_hierarchy);
         var range = [];
 
         var token = this.getToken();
         while (token.text === '[') {
             this.consume();
-            var left  = this.parseExpr();
+            var left  = null;
             var right = null;
             token = this.getToken();
-            if (token.text === ':') {
+            if (token.text === ']') {
                 this.consume();
-                right = this.parseExpr();
+            } else {
+                left = this.parseExpr();
+                token = this.getToken();
+                if (token.text === ':') {
+                    this.consume();
+                    right = this.parseExpr();
+                }
+                this.require(']');
+                this.consume();
             }
-            this.require(']');
             range.push({left: left, right: right});
             token = this.getToken();
         }

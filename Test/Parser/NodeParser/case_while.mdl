@@ -1,0 +1,5 @@
+function case_while () {
+    while(1) : tag {
+        continue tag;
+    }
+}

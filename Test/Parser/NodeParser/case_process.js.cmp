@@ -1,0 +1,39 @@
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     method: null,
+     scope: { symbol: [], type: [Object], method: [Object], operator: [] } },
+  type: 'process_decl',
+  childs: 
+   { proc: true,
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'case_process',
+        method: 'method_buildin_identifier',
+        scope: null },
+     type: 
+      { parent: [Circular],
+        type: 'type',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_type',
+        scope: null },
+     params: [ [Object], [Object] ],
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] } },
+  value: null,
+  method: 'method_buildin_process_decl',
+  scope: 
+   { symbol: [ [Object], [Object] ],
+     type: [],
+     method: [],
+     operator: [] } }

@@ -1,0 +1,65 @@
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     method: null,
+     scope: { symbol: [Object], type: [Object], method: [], operator: [] } },
+  type: 'module_decl',
+  childs: 
+   { name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'A',
+        method: 'method_buildin_identifier',
+        scope: null },
+     inheritance: null,
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] },
+     self: 
+      { parent: [Circular],
+        type: 'inst_decl',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_module_this',
+        scope: null } },
+  value: null,
+  method: 'method_buildin_module_decl',
+  scope: 
+   { symbol: [ [Object] ],
+     type: [ [Object] ],
+     method: [],
+     operator: [] } }
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     method: null,
+     scope: { symbol: [Object], type: [Object], method: [], operator: [] } },
+  type: 'inst_decl',
+  childs: 
+   { type: 
+      { parent: [Circular],
+        type: 'type',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_type',
+        scope: null },
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'a',
+        method: 'method_buildin_identifier',
+        scope: null },
+     init: null },
+  value: null,
+  method: 'method_buildin_inst_decl',
+  scope: null }

@@ -18,8 +18,11 @@ module.exports = function (parser) {
         var scope = null;
         var p = n.parent;
         while (p) {
-            if (p.type === 'function_decl') {
+            if (p.type === 'function_decl' ||
+                p.type === 'process_decl'  ||
+                p.type === 'operation_decl') {
                 scope = p;
+                break;
             }
             if (p.type === 'module_decl' ||
                 p.type === 'template_decl') {
@@ -46,7 +49,10 @@ module.exports = function (parser) {
 
         this.require('break');
         this.consume();
-        var tag   = this.parseNamedRef();
+        var tag = null;
+        if (this.getToken().text !== ';') {
+            tag = this.parseNamedRef();
+        }
         this.require(';');
         this.consume();
 
@@ -64,7 +70,10 @@ module.exports = function (parser) {
 
         this.require('continue');
         this.consume();
-        var tag   = this.parseNamedRef();
+        var tag = null;
+        if (this.getToken().text !== ';') {
+            tag = this.parseNamedRef();
+        }
         this.require(';');
         this.consume();
 

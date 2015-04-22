@@ -1,0 +1,12 @@
+module case_module_base {
+    function self() {
+        return this;
+    }
+};
+
+module case_module_inherite
+ : case_module_base, case_module_base
+ ((case_module_base, case_module_base),
+  (case_module_base, case_module_base)) {
+
+};

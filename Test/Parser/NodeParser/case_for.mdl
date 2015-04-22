@@ -1,0 +1,11 @@
+function func_for(original counter) : synth {
+    synth ret = "[";
+    for(original i = 0; i < counter; ++i) {
+        ret += "@i";
+        if (i == (counter - 1)) {
+            ret += ",";
+        }
+    }
+    ret += "]";
+    return ret;
+}

@@ -85,8 +85,8 @@ ATPParser.prototype.lookupScopeForType = function (n, name, i) {
     if (i + 1 === name.length) {
         return n;
     }
-    for (var t in n.scope.type) {
-        var type = n.scope.type[t];
+    for (var t in n.childs.ref.scope.type) {
+        var type = n.childs.ref.scope.type[t];
         if (type.value === name[i + 1]) {
             return this.lookupScopeForType(type, name, i + 1);
         }
@@ -112,9 +112,7 @@ ATPParser.prototype.lookupForType = function (n, name) {
 
 ATPParser.prototype.lookupForSymbol = function (n, name) {
     'use strict';
-    if (n.parent) {
-        n = n.parent.scopeNode();
-    }
+    n = n.scopeNode();
     for (var t in n.scope.symbol) {
         var sym = n.scope.symbol[t];
         if (sym.value === name) {
@@ -122,7 +120,7 @@ ATPParser.prototype.lookupForSymbol = function (n, name) {
         }
     }
     if (n.parent) {
-        return this.lookupForSymbol(n, name);
+        return this.lookupForSymbol(n.parent, name);
     } else {
         throw "Error: '" + name + "' is not a name of a symbol!";
     }

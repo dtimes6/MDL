@@ -23,13 +23,6 @@ module.exports = function (parser) {
         return this.pop(n);
     };
 
-    parser.prototype.parseInstDeclStmt = function () {
-        var n = this.parseInstDecl();
-        this.require(';');
-        this.consume();
-        return n;
-    };
-
     parser.prototype.parseInstDeclWithAssign = function () {
         var n = this.parseInstDecl();
         var init_expr = null;

@@ -114,7 +114,8 @@ module.exports = function (parser) {
     parser.prototype.parseExprCanDecl = function () {
         // instance
         if (this.getToken().type === 'identifier' &&
-            this.getToken(2).type === 'identifier') {
+            (this.getToken(2).type === 'identifier' ||
+             this.getToken(2).text === '::')) {
             return this.parseInstDeclWithAssign();
         }
         // expr

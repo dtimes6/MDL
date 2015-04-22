@@ -1,0 +1,68 @@
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     method: null,
+     scope: { symbol: [], type: [Object], method: [Object], operator: [] } },
+  type: 'function_decl',
+  childs: 
+   { proc: false,
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'case_while',
+        method: 'method_buildin_identifier',
+        scope: null },
+     type: null,
+     params: [],
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] } },
+  value: null,
+  method: 'method_buildin_function_decl',
+  scope: { symbol: [], type: [], method: [], operator: [] } }
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'function_decl',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_function_decl',
+        scope: [Object] },
+     type: 'block',
+     childs: { stmts: [Object] },
+     value: null,
+     method: 'method_buildin_statement_block',
+     scope: { symbol: [], type: [], method: [], operator: [] } },
+  type: 'do_while',
+  childs: 
+   { tag: 
+      { parent: [Circular],
+        type: 'tag',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_tag',
+        scope: null },
+     cond: 
+      { parent: [Circular],
+        type: 'number',
+        childs: {},
+        value: '1',
+        method: 'method_buildin_decimal',
+        scope: null },
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] } },
+  value: null,
+  method: 'method_buildin_statement_do_while',
+  scope: null }

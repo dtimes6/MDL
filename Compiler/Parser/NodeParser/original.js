@@ -32,6 +32,21 @@ module.exports = function (parser) {
         n.method = parser.method_buildin + "operator";
         // TODO check operator string, space should not used between ops
         // TODO ??? check reserved operator such as: . ::
+        /* TODO
+
+            join_type operator
+
+            function ',' (type [] list) : vec{type} {
+                vec{type} ret;
+                for (type l in list) {
+                    ret.push(l);
+                }
+                return ret;
+            }
+
+
+
+          */
         return this.pop(n);
     };
 

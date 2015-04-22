@@ -20,7 +20,7 @@ module.exports = function (parser) {
             return this.parseElementDecl();
         }
         if (token.text === 'process') {
-            return this.parseProcess();
+            return this.parseProcessDecl();
         }
         if (token.text === 'function') {
             token = this.getToken(2);
