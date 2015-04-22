@@ -76,6 +76,46 @@
   value: null,
   method: 'method_buildin_module_decl',
   scope: { symbol: [ [Object] ], type: [], method: [], operator: [] } }
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     method: null,
+     scope: { symbol: [], type: [Object], method: [], operator: [] } },
+  type: 'module_decl',
+  childs: 
+   { name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'case_module_inherite_simple',
+        method: 'method_buildin_identifier',
+        scope: null },
+     inheritance: 
+      { parent: [Circular],
+        type: 'inheritance',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_module_decl_inheritance',
+        scope: null },
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] },
+     self: 
+      { parent: [Circular],
+        type: 'inst_decl',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_module_this',
+        scope: null } },
+  value: null,
+  method: 'method_buildin_module_decl',
+  scope: { symbol: [ [Object] ], type: [], method: [], operator: [] } }
 --------------------------
 { parent: 
    { parent: 

@@ -10,3 +10,8 @@ module case_module_inherite
   (case_module_base, case_module_base)) {
 
 };
+
+module case_module_inherite_simple
+ : case_module_base {
+
+};

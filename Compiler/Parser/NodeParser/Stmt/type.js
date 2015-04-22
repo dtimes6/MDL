@@ -24,10 +24,10 @@ module.exports = function (parser) {
                 this.consume();
             } else {
                 left = this.parseExpr();
-                token = this.getToken();
-                if (token.text === ':') {
-                    this.consume();
-                    right = this.parseExpr();
+                if (left.type === 'operation' &&
+                    left.childs.op === '$:$') {
+                    right = left.childs.params[1];
+                    left  = left.childs.params[0];
                 }
                 this.require(']');
                 this.consume();
