@@ -62,7 +62,7 @@ module.exports = function (parser) {
         do {
             var token = this.getToken();
             if (token === null) {
-                throw "Error: Bad Expr!";
+                throw "Error: Bad Expr with operator: '" + op + "'";
             }
             if (token.text === ')' ||
                 token.text === ']' ||

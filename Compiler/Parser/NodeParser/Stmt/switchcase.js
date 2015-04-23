@@ -23,7 +23,17 @@ module.exports = function (parser) {
 
         this.require('case');
         this.consume();
-        var case_itemexpr = this.parseExpr();
+
+        var case_itemexpr = null;
+        var token = this.getToken();
+        if (token.isNumber()) {
+            case_itemexpr = this.parseNumber();
+        } else if (token.isString()) {
+            case_itemexpr = this.parseString();
+        } else {
+            throw "Error: case expression expected to be a constant string or number but got '" + token.text + "'";
+        }
+
         this.require(':');
         this.consume();
         var case_stmt = this.parseBlockOrStmt();
@@ -49,13 +59,14 @@ module.exports = function (parser) {
         var token = this.getToken();
         while (token.text === 'case') {
             case_items.push(this.parseCase());
+            token = this.getToken();
         }
-        token = this.getToken();
         var case_default = null;
         if (token.text === 'default') {
             case_default = this.parseDefault();
         }
         this.require('}');
+        this.consume();
 
         n.childs = {
             case_expr:    case_expr,
@@ -64,6 +75,6 @@ module.exports = function (parser) {
         };
         n.method = this.method_buildin + 'statement_switch';
 
-        return n.pop(n);
+        return this.pop(n);
     };
 };

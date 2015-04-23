@@ -9,7 +9,7 @@ module.exports = function (parser) {
     require('./Stmt/inst_decl.js')(parser);
     require('./Stmt/language.js')(parser);
     require('./Stmt/module.js')(parser);
-    require('./stmt/switch.js')(parser);
+    require('./Stmt/switchcase.js')(parser);
     require('./Stmt/type.js')(parser);
     require('./Stmt/while.js')(parser);
 

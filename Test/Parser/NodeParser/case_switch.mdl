@@ -1,0 +1,7 @@
+function case_switch (original i) : original {
+    switch (i) {
+    case 0:  return 0;
+    case 'a': return 0;
+    default: return 1;
+    }
+}
