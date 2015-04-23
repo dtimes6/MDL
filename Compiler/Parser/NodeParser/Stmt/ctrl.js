@@ -20,7 +20,8 @@ module.exports = function (parser) {
         while (p) {
             if (p.type === 'function_decl' ||
                 p.type === 'process_decl'  ||
-                p.type === 'operation_decl') {
+                p.type === 'operation_decl'||
+                p.type === 'operproc_decl') {
                 scope = p;
                 break;
             }

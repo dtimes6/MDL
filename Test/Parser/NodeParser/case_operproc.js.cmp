@@ -1,0 +1,35 @@
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     method: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'operproc_decl',
+  childs: 
+   { proc: false,
+     name: 
+      { parent: [Circular],
+        type: 'operator',
+        childs: [Object],
+        value: '"$0+$1"',
+        method: 'method_buildin_operator',
+        scope: null },
+     type: 
+      { parent: [Circular],
+        type: 'type',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_type',
+        scope: null },
+     params: [ [Object], [Object] ],
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] } },
+  value: null,
+  method: 'method_buildin_operproc_decl',
+  scope: { symbol: { a: [Object], b: [Object] }, type: {} } }
