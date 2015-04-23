@@ -1,0 +1,8 @@
+process case_indexing (original [2] a) : original {
+    return a[0];
+}
+
+process "\$$" (original b) {
+}
+
+$1;

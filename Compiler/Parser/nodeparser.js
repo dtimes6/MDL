@@ -56,6 +56,7 @@ ATPParser.debug = true;
 
 ATPParser.prototype.parse = function (buffer) {
     'use strict';
+    buffer += "\n"; // avoid eof issue
     this.createTokenProvider(buffer);
     while (this.getToken() !== null) {
         if (ATPParser.debug) {
