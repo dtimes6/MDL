@@ -1,3 +1,4 @@
+var msg = require('../../ErrorHandling/errorhandling.js');
 module.exports = function (parser) {
     'use strict';
     parser.prototype.parseExprIdxRange = function () {
@@ -75,7 +76,7 @@ module.exports = function (parser) {
         do {
             var token = this.getToken();
             if (token === null) {
-                throw "Error: Bad Expr with operator: '" + op + "'";
+                msg.error(this, "Bad Expr with operator: '" + op + "'");
             }
             if (token.text === ')' ||
                 token.text === ']' ||
@@ -96,7 +97,7 @@ module.exports = function (parser) {
                 params.push(param);
                 if (op[op.length - 1] === '$') {
                     if (op[op.length - 2] !== '\\') {
-                        throw "Error: invalid operands join together !";
+                        msg.error(this, "invalid operands join together !");
                     }
                 }
                 op += '$';

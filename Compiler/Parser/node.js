@@ -10,6 +10,7 @@
  *
  ***/
 
+var msg = require('../ErrorHandling/errorhandling.js');
 var ATPNode = function () {
     'use strict';
     this.parent   = null;
@@ -37,7 +38,7 @@ ATPNode.prototype.scopeNode = function () {
 ATPNode.prototype.addType = function (n) {
     'use strict';
     if (this.scope.type[n.value]) {
-        throw "Error: redefine type:" + n.value;
+        msg.error(this, "redefine type:" + n.value);
     }
     this.scope.type[n.value] = n;
 };
@@ -45,7 +46,7 @@ ATPNode.prototype.addType = function (n) {
 ATPNode.prototype.addSymbol = function (n) {
     'use strict';
     if (this.scope.symbol[n.value]) {
-        throw "Error: redefine symbol:" + n.value;
+        msg.error(this, "Error: redefine symbol:" + n.value);
     }
     this.scope.symbol[n.value] = n;
 };

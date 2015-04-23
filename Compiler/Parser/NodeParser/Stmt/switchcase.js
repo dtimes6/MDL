@@ -1,3 +1,4 @@
+var msg = require('../../../ErrorHandling/errorhandling.js');
 module.exports = function (parser) {
     'use strict';
     parser.prototype.parseDefault = function () {
@@ -31,7 +32,7 @@ module.exports = function (parser) {
         } else if (token.isString()) {
             case_itemexpr = this.parseString();
         } else {
-            throw "Error: case expression expected to be a constant string or number but got '" + token.text + "'";
+            msg.error(this, "case expression expected to be a constant string or number but got '" + token.text + "'");
         }
 
         this.require(':');

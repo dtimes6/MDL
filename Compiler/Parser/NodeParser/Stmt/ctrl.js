@@ -1,3 +1,5 @@
+var msg = require('../../../ErrorHandling/errorhandling.js');
+
 module.exports = function (parser) {
     'use strict';
     parser.prototype.parseReturn = function () {
@@ -27,12 +29,12 @@ module.exports = function (parser) {
             }
             if (p.type === 'module_decl' ||
                 p.type === 'template_decl') {
-                throw "Error: return statement must be in the scope of a function";
+                msg.error(this, "return statement must be in the scope of a function");
             }
             p = p.parent;
         }
         if (scope === null) {
-            throw "Error: return statement must be in the scope of a function";
+            msg.error(this, "return statement must be in the scope of a function");
         }
 
         n.childs = {

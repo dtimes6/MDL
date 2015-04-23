@@ -9,7 +9,7 @@
  * Copyright (C) 2015, Peng Dai. All rights reserved!
  *
  ***/
-
+var msg = require('../ErrorHandling/errorhandling.js');
 var Token = function (type, pos, text) {
     'use strict';
     this.type = type;
@@ -70,7 +70,7 @@ TokenProvider.func = {
             }
             ++pos;
         }
-        throw "Error: Cannot find end of block comment!";
+        msg.error(this, "Cannot find end of block comment!");
     },
     string: function (type, provider, text, quote) {
         'use strict';
@@ -82,7 +82,7 @@ TokenProvider.func = {
             }
             ++pos;
         }
-        throw "Error: Cannot find end of string!";
+        msg.error(this, "Cannot find end of string!");
     },
     quoted_string: function (type, provider, text) {
         'use strict';
@@ -102,7 +102,7 @@ TokenProvider.func = {
             }
             ++pos;
         }
-        throw "Error: Cannot find end of string!";
+        msg.error(this, "Cannot find end of string!");
     }
 };
 
@@ -146,7 +146,7 @@ TokenProvider.prototype.parse1Token = function () {
         }
     }
     if (inqueue.length) { /* istanbul ignore next */
-        throw "Error: while parsing: " + inqueue;
+        msg.error(this, "while parsing: " + inqueue);
     }
     return null;
 };
@@ -185,7 +185,7 @@ TokenProvider.prototype.requireType = function (type) {
         return ret;
     }
     if (ret.type !== type) {
-        throw "Error: expected type: '" + type + "' but got '" + ret.type + "'";
+        msg.error(this, "expected type: '" + type + "' but got '" + ret.type + "'");
     }
     return ret;
 };
@@ -194,7 +194,7 @@ TokenProvider.prototype.require = function (str) {
     'use strict';
     var ret = this.enlargeBuffer(1)[0];
     if (ret.text !== str) {
-        throw "Error: expected: '" + str + "' but got '" + ret.text + "'";
+        msg.error(this, "expected: '" + str + "' but got '" + ret.text + "'");
     }
     return ret;
 };

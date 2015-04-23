@@ -1,4 +1,4 @@
-
+var msg = require('../../../ErrorHandling/errorhandling.js');
 module.exports = function (parser) {
     'use strict';
     parser.prototype.createThisNamedRef = function () {
@@ -60,7 +60,7 @@ module.exports = function (parser) {
         if (n.parent.scope) { /* istanbul ignore else */
             n.parent.addType(mod_name);
         } else {
-            throw "Error: module decl must be in within a scope!";
+            msg.error(this, "module decl must be in within a scope!");
         }
 
         return this.pop(n);

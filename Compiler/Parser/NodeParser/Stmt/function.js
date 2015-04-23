@@ -1,3 +1,4 @@
+var msg = require('../../../ErrorHandling/errorhandling.js');
 module.exports = function (parser) {
     'use strict';
     parser.prototype.parseProcessDecl = function () {
@@ -46,7 +47,7 @@ module.exports = function (parser) {
         if (n.parent.scope) {
             n.parent.addMethod(func_name);
         } else {
-            throw "Error: function decl must be in within a scope!";
+            msg.error(this, "function decl must be in within a scope!");
         }
 
         return this.pop(n);
@@ -97,7 +98,7 @@ module.exports = function (parser) {
         if (n.parent.scope) {
             n.parent.addMethod(func_name);
         } else {
-            throw "Error: function decl must be in within a scope!";
+            msg.error(this, "function decl must be in within a scope!");
         }
 
         return this.pop(n);
@@ -150,7 +151,7 @@ module.exports = function (parser) {
         if (n.parent.scope) {
             n.parent.addOperator(func_name);
         } else {
-            throw "Error: operation process decl must be in within a scope!";
+            msg.error(this, "operation process decl must be in within a scope!");
         }
 
         return this.pop(n);
@@ -203,7 +204,7 @@ module.exports = function (parser) {
         if (n.parent.scope) {
             n.parent.addOperator(func_name);
         } else {
-            throw "Error: operation decl must be in within a scope!";
+            msg.error(this, "operation decl must be in within a scope!");
         }
 
         return this.pop(n);

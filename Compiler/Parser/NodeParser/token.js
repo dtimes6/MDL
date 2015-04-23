@@ -1,3 +1,4 @@
+var msg = require('../../ErrorHandling/errorhandling.js');
 module.exports = function (parser) {
     'use strict';
     // token related
@@ -15,7 +16,7 @@ module.exports = function (parser) {
         if (token.isNumber()) {
             return token;
         }
-        throw "Error: require a number but got: '" + token.text + "'";
+        msg.error(this, "require a number but got: '" + token.text + "'");
     };
 
     parser.prototype.getString = function () {
@@ -23,7 +24,7 @@ module.exports = function (parser) {
         if (token.isString()) {
             return token;
         }
-        throw "Error: require a string but got: '" + token.text + "'";
+        msg.error(this, "require a string but got: '" + token.text + "'");
     };
 
     parser.prototype.consume = function (n) {

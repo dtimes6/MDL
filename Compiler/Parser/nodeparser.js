@@ -9,6 +9,7 @@
  * Copyright (C) 2015, Peng Dai. All rights reserved!
  *
  ***/
+var msg = require('../ErrorHandling/errorhandling.js');
 var ATPNode = require('./node.js');
 
 var ATPParser = function () {
@@ -52,30 +53,21 @@ require("./NodeParser/Stmt/module.js")(ATPParser);
 require("./NodeParser/expr.js")(ATPParser);
 require("./NodeParser/stmt.js")(ATPParser);
 
-ATPParser.debug = true;
-
 ATPParser.prototype.parse = function (buffer) {
     'use strict';
     buffer += "\n"; // avoid eof issue
     this.createTokenProvider(buffer);
     while (this.getToken() !== null) {
-        if (ATPParser.debug) {
+        try {
             var stmt = this.parseStmt();
             if (stmt === undefined) {
                 break;
             }
             this.root.childs.stmts.push(stmt);
-        } else {
-            try {
-                var stmt = this.parseStmt();
-                if (stmt === undefined) {
-                    break;
-                }
-                this.root.childs.stmts.push(stmt);
-            } catch (err) {
-                console.error(err);
-                return 0;
-            }
+        } catch (err) {
+            if (msg.debug) { throw err; }
+            console.error(err);
+            return 0;
         }
     }
     return 1;
@@ -90,7 +82,7 @@ ATPParser.prototype.lookupScopeForType = function (n, name, i) {
     if (type) {
         return this.lookupScopeForType(type, name, i + 1);
     }
-    throw "Error: '" + name.join('::') + "' is not a name of a type!";
+    msg.error(this, "'" + name.join('::') + "' is not a name of a type!");
 };
 
 ATPParser.prototype.lookupForType = function (n, name) {
@@ -103,7 +95,7 @@ ATPParser.prototype.lookupForType = function (n, name) {
     if (n.parent) {
         return this.lookupForType(n, name);
     } else {
-        throw "Error: '" + name.join('::') + "' is not a name of a type!";
+        msg.error(this, "'" + name.join('::') + "' is not a name of a type!");
     }
 };
 
@@ -117,7 +109,7 @@ ATPParser.prototype.lookupForSymbol = function (n, name) {
     if (n.parent) {
         return this.lookupForSymbol(n.parent, name);
     } else {
-        throw "Error: '" + name + "' is not a name of a symbol!";
+        msg.error(this, "'" + name + "' is not a name of a symbol!");
     }
 };
 

@@ -1,3 +1,4 @@
+var msg = require('../../../ErrorHandling/errorhandling.js');
 module.exports = function (parser) {
     parser.prototype.parseLanguage = function () {
         var n = this.push();
@@ -34,7 +35,7 @@ module.exports = function (parser) {
                     var key = attr.substr(2 - on, attr.length - 3 + on);
                     attributes[key] = on;
                 } else {
-                    throw "Error: Cannot recognize attribute '" + attr + "'";
+                    msg.error(this, "Cannot recognize attribute '" + attr + "'");
                 }
             }
         }

@@ -1,3 +1,4 @@
+var msg = require('../../../ErrorHandling/errorhandling.js');
 module.exports = function (parser) {
     'use strict';
     parser.prototype.parseInstDecl = function () {
@@ -18,7 +19,7 @@ module.exports = function (parser) {
         if (n.parent.scope) {
             n.parent.addSymbol(name);
         } else {
-            throw "Error: type decl must be in within a scope!";
+            msg.error(this, "type decl must be in within a scope!");
         }
         return this.pop(n);
     };
