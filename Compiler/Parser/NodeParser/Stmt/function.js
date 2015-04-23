@@ -139,7 +139,7 @@ module.exports = function (parser) {
 
         /// TODO check operator params number with the operref and unique the string
         n.childs = {
-            proc:   false,
+            proc:   true,
             name:   func_name,
             type:   func_ret,
             params: params,

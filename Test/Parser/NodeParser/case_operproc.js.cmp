@@ -7,7 +7,7 @@
      scope: { symbol: [Object], type: [Object] } },
   type: 'operproc_decl',
   childs: 
-   { proc: false,
+   { proc: true,
      name: 
       { parent: [Circular],
         type: 'operator',
