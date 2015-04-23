@@ -1,0 +1,11 @@
+function case_for_in (original s) : original {
+    original ret = "";
+    for (original i in (1,2,3)) {
+        ret += s;
+    }
+    return ret;
+}
+
+function call_case_for_in_1 (original s) : original {
+    return case_for_in(2);
+}

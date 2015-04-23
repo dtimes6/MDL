@@ -4,7 +4,7 @@
      childs: { stmts: [Object] },
      value: null,
      method: null,
-     scope: { symbol: [], type: [Object], method: [], operator: [] } },
+     scope: { symbol: {}, type: [Object] } },
   type: 'module_decl',
   childs: 
    { name: 
@@ -31,18 +31,14 @@
         scope: null } },
   value: null,
   method: 'method_buildin_module_decl',
-  scope: 
-   { symbol: [ [Object] ],
-     type: [],
-     method: [ [Object] ],
-     operator: [] } }
+  scope: { symbol: { this: [Object], self: [Object] }, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
      method: null,
-     scope: { symbol: [], type: [Object], method: [], operator: [] } },
+     scope: { symbol: {}, type: [Object] } },
   type: 'module_decl',
   childs: 
    { name: 
@@ -75,14 +71,14 @@
         scope: null } },
   value: null,
   method: 'method_buildin_module_decl',
-  scope: { symbol: [ [Object] ], type: [], method: [], operator: [] } }
+  scope: { symbol: { this: [Object] }, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
      method: null,
-     scope: { symbol: [], type: [Object], method: [], operator: [] } },
+     scope: { symbol: {}, type: [Object] } },
   type: 'module_decl',
   childs: 
    { name: 
@@ -115,7 +111,7 @@
         scope: null } },
   value: null,
   method: 'method_buildin_module_decl',
-  scope: { symbol: [ [Object] ], type: [], method: [], operator: [] } }
+  scope: { symbol: { this: [Object] }, type: {} } }
 --------------------------
 { parent: 
    { parent: 
@@ -133,7 +129,7 @@
         self: [Circular] },
      value: null,
      method: 'method_buildin_module_decl',
-     scope: { symbol: [Object], type: [], method: [Object], operator: [] } },
+     scope: { symbol: [Object], type: {} } },
   type: 'inst_decl',
   childs: 
    { type: 
@@ -156,18 +152,12 @@
   scope: null }
 --------------------------
 { symbol: 
-   [ { parent: [Object],
-       type: 'identifier',
-       childs: [Object],
-       value: 'this',
-       method: 'method_buildin_module_symbol_this',
-       scope: null } ],
-  type: [],
-  method: 
-   [ { parent: [Object],
-       type: 'identifier',
-       childs: [Object],
-       value: 'self',
-       method: 'method_buildin_identifier',
-       scope: null } ],
-  operator: [] }
+   { this: 
+      { parent: [Object],
+        type: 'identifier',
+        childs: [Object],
+        value: 'this',
+        method: 'method_buildin_module_symbol_this',
+        scope: null },
+     self: [ [Object] ] },
+  type: {} }

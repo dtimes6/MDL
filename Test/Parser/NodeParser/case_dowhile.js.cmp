@@ -4,7 +4,7 @@
      childs: { stmts: [Object] },
      value: null,
      method: null,
-     scope: { symbol: [], type: [Object], method: [Object], operator: [] } },
+     scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
    { proc: false,
@@ -26,7 +26,7 @@
         scope: [Object] } },
   value: null,
   method: 'method_buildin_function_decl',
-  scope: { symbol: [], type: [], method: [], operator: [] } }
+  scope: { symbol: {}, type: {} } }
 { parent: 
    { parent: 
       { parent: [Object],
@@ -39,7 +39,7 @@
      childs: { stmts: [Object] },
      value: null,
      method: 'method_buildin_statement_block',
-     scope: { symbol: [], type: [], method: [], operator: [] } },
+     scope: { symbol: {}, type: {} } },
   type: 'do_while',
   childs: 
    { tag: 

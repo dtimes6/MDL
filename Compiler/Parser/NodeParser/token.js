@@ -15,8 +15,7 @@ module.exports = function (parser) {
         if (token.isNumber()) {
             return token;
         }
-        console.log("Error: require a number but got: '" + token.text + "'");
-        return null;
+        throw "Error: require a number but got: '" + token.text + "'";
     };
 
     parser.prototype.getString = function () {
@@ -24,8 +23,7 @@ module.exports = function (parser) {
         if (token.isString()) {
             return token;
         }
-        console.log("Error: require a string but got: '" + token.text + "'");
-        return null;
+        throw "Error: require a string but got: '" + token.text + "'";
     };
 
     parser.prototype.consume = function (n) {

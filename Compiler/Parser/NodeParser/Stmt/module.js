@@ -25,7 +25,7 @@ module.exports = function (parser) {
         };
         n.method = this.method_buildin + 'module_this';
         name.childs.ref = n;
-        n.parent.scope.symbol.push(name);
+        n.parent.addSymbol(name);
         return this.pop(n);
     };
 
@@ -58,7 +58,7 @@ module.exports = function (parser) {
         n.method = this.method_buildin + "module_decl";
         mod_name.childs.ref = n;
         if (n.parent.scope) { /* istanbul ignore else */
-            n.parent.scope.type.push(mod_name);
+            n.parent.addType(mod_name);
         } else {
             throw "Error: module decl must be in within a scope!";
         }

@@ -13,7 +13,7 @@ module.exports = function (parser) {
         n.childs.name.childs.ref = n;
         n.method = this.method_buildin + "element_decl";
 
-        n.scopeNode().scope.type.push(n.childs.name);
+        n.scopeNode().addType(n.childs.name);
 
         this.require(';');
         this.consume();

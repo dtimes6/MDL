@@ -4,7 +4,7 @@
      childs: { stmts: [Object] },
      value: null,
      method: null,
-     scope: { symbol: [Object], type: [Object], method: [], operator: [] } },
+     scope: { symbol: [Object], type: [Object] } },
   type: 'module_decl',
   childs: 
    { name: 
@@ -31,18 +31,14 @@
         scope: null } },
   value: null,
   method: 'method_buildin_module_decl',
-  scope: 
-   { symbol: [ [Object] ],
-     type: [ [Object] ],
-     method: [],
-     operator: [] } }
+  scope: { symbol: { this: [Object] }, type: { B: [Object] } } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
      method: null,
-     scope: { symbol: [Object], type: [Object], method: [], operator: [] } },
+     scope: { symbol: [Object], type: [Object] } },
   type: 'inst_decl',
   childs: 
    { type: 

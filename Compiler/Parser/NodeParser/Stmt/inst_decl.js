@@ -16,7 +16,7 @@ module.exports = function (parser) {
         // register name in scope
         name.childs.ref = n;
         if (n.parent.scope) {
-            n.parent.scope.symbol.push(name);
+            n.parent.addSymbol(name);
         } else {
             throw "Error: type decl must be in within a scope!";
         }

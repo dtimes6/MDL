@@ -4,7 +4,7 @@
      childs: { stmts: [Object] },
      value: null,
      method: null,
-     scope: { symbol: [], type: [Object], method: [], operator: [Object] } },
+     scope: { symbol: [Object], type: [Object] } },
   type: 'operation_decl',
   childs: 
    { proc: false,
@@ -32,8 +32,4 @@
         scope: [Object] } },
   value: null,
   method: 'method_buildin_operation_decl',
-  scope: 
-   { symbol: [ [Object], [Object] ],
-     type: [],
-     method: [],
-     operator: [] } }
+  scope: { symbol: { a: [Object], b: [Object] }, type: {} } }

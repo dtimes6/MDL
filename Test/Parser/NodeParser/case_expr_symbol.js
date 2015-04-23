@@ -4,7 +4,7 @@ require('../../test.js')(__filename, function (data) {
     var parser = new ATPParser();
     parser.parse(data);
     console.log(parser.root.scope);
-    console.log(parser.root.scope.type[3]);
+    console.log(parser.root.scope.type["net8"]);
     console.log(parser.root.childs.stmts);
     console.log(parser.root.childs.stmts[3].childs.init);
     console.log(parser.root.childs.stmts[3].childs.init.childs.params);

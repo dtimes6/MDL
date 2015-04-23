@@ -4,7 +4,7 @@
      childs: { stmts: [Object] },
      value: null,
      method: null,
-     scope: { symbol: [], type: [Object], method: [Object], operator: [] } },
+     scope: { symbol: [Object], type: [Object] } },
   type: 'element',
   childs: 
    { name: 
@@ -23,7 +23,7 @@
      childs: { stmts: [Object] },
      value: null,
      method: null,
-     scope: { symbol: [], type: [Object], method: [Object], operator: [] } },
+     scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
    { proc: false,
@@ -45,14 +45,14 @@
         scope: [Object] } },
   value: null,
   method: 'method_buildin_function_decl',
-  scope: { symbol: [], type: [], method: [], operator: [] } }
+  scope: { symbol: {}, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
      method: null,
-     scope: { symbol: [], type: [Object], method: [Object], operator: [] } },
+     scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
    { proc: false,
@@ -80,14 +80,14 @@
         scope: [Object] } },
   value: null,
   method: 'method_buildin_function_decl',
-  scope: { symbol: [ [Object] ], type: [], method: [], operator: [] } }
+  scope: { symbol: { n: [Object] }, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
      method: null,
-     scope: { symbol: [], type: [Object], method: [Object], operator: [] } },
+     scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
    { proc: false,
@@ -115,7 +115,7 @@
         scope: [Object] } },
   value: null,
   method: 'method_buildin_function_decl',
-  scope: { symbol: [ [Object] ], type: [], method: [], operator: [] } }
+  scope: { symbol: { s: [Object] }, type: {} } }
 ----------------
 { parent: 
    { parent: 
@@ -134,7 +134,7 @@
         stmt: [Object] },
      value: null,
      method: 'method_buildin_function_decl',
-     scope: { symbol: [Object], type: [], method: [], operator: [] } },
+     scope: { symbol: [Object], type: {} } },
   type: 'identifier',
   childs: 
    { ref: 
@@ -165,7 +165,7 @@
         stmt: [Object] },
      value: null,
      method: 'method_buildin_function_decl',
-     scope: { symbol: [Object], type: [], method: [], operator: [] } },
+     scope: { symbol: [Object], type: {} } },
   type: 'type',
   childs: 
    { base: 
@@ -197,7 +197,7 @@
         stmt: [Object] },
      value: null,
      method: 'method_buildin_function_decl',
-     scope: { symbol: [Object], type: [], method: [], operator: [] } },
+     scope: { symbol: [Object], type: {} } },
   type: 'type',
   childs: 
    { base: 

@@ -22,7 +22,7 @@ var ATPNode = function () {
 
 ATPNode.prototype.createScope = function () {
     'use strict';
-    this.scope = { symbol: [], type: [], method: [], operator: [] };
+    this.scope = { symbol: {}, type: {} };
     return this;
 };
 
@@ -32,6 +32,40 @@ ATPNode.prototype.scopeNode = function () {
         return this;
     }
     return this.parent.scopeNode();
+};
+
+ATPNode.prototype.addType = function (n) {
+    'use strict';
+    if (this.scope.type[n.value]) {
+        throw "Error: redefine type:" + n.value;
+    }
+    this.scope.type[n.value] = n;
+};
+
+ATPNode.prototype.addSymbol = function (n) {
+    'use strict';
+    if (this.scope.symbol[n.value]) {
+        throw "Error: redefine symbol:" + n.value;
+    }
+    this.scope.symbol[n.value] = n;
+};
+
+ATPNode.prototype.addMethod = function (n) {
+    'use strict';
+    if (this.scope.symbol[n.value]) {
+        this.scope.symbol[n.value].push(n);
+    } else {
+        this.scope.symbol[n.value] = [n];
+    }
+};
+
+ATPNode.prototype.addOperator = function (n) {
+    'use strict';
+    if (this.scope.symbol[n.value]) {
+        this.scope.symbol[n.value].push(n);
+    } else {
+        this.scope.symbol[n.value] = [n];
+    }
 };
 
 ATPNode.prototype.constantEval = function () {

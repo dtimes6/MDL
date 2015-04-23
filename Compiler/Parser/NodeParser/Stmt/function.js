@@ -44,7 +44,7 @@ module.exports = function (parser) {
         n.method = this.method_buildin + 'process_decl';
         func_name.childs.ref = n;
         if (n.parent.scope) {
-            n.parent.scope.method.push(func_name);
+            n.parent.addMethod(func_name);
         } else {
             throw "Error: function decl must be in within a scope!";
         }
@@ -95,7 +95,7 @@ module.exports = function (parser) {
         n.method = this.method_buildin + 'function_decl';
         func_name.childs.ref = n;
         if (n.parent.scope) {
-            n.parent.scope.method.push(func_name);
+            n.parent.addMethod(func_name);
         } else {
             throw "Error: function decl must be in within a scope!";
         }
@@ -103,6 +103,7 @@ module.exports = function (parser) {
         return this.pop(n);
     };
 
+    // TODO add operation process decl
     parser.prototype.parseOperDecl = function () {
         var n = this.push();
         n.createScope();
@@ -148,7 +149,7 @@ module.exports = function (parser) {
         n.method = this.method_buildin + 'operation_decl';
         func_name.childs.ref = n;
         if (n.parent.scope) {
-            n.parent.scope.operator.push(func_name);
+            n.parent.addOperator(func_name);
         } else {
             throw "Error: operation decl must be in within a scope!";
         }

@@ -4,7 +4,7 @@
      childs: { stmts: [Object] },
      value: null,
      method: null,
-     scope: { symbol: [], type: [Object], method: [Object], operator: [] } },
+     scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
    { proc: false,
@@ -32,7 +32,7 @@
         scope: [Object] } },
   value: null,
   method: 'method_buildin_function_decl',
-  scope: { symbol: [ [Object] ], type: [], method: [], operator: [] } }
+  scope: { symbol: { counter: [Object] }, type: {} } }
 { parent: 
    { parent: 
       { parent: [Object],
@@ -45,7 +45,7 @@
      childs: { stmts: [Object] },
      value: null,
      method: 'method_buildin_statement_block',
-     scope: { symbol: [Object], type: [], method: [], operator: [] } },
+     scope: { symbol: [Object], type: {} } },
   type: 'for',
   childs: 
    { init: 
@@ -79,4 +79,4 @@
         scope: [Object] } },
   value: null,
   method: 'method_buildin_statement_for',
-  scope: { symbol: [ [Object] ], type: [], method: [], operator: [] } }
+  scope: { symbol: { i: [Object] }, type: {} } }

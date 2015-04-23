@@ -12,11 +12,17 @@
       { parent: [Circular],
         type: 'identifier',
         childs: [Object],
-        value: 'case_while',
+        value: 'case_for_in',
         method: 'method_buildin_identifier',
         scope: null },
-     type: null,
-     params: [],
+     type: 
+      { parent: [Circular],
+        type: 'type',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_type',
+        scope: null },
+     params: [ [Object] ],
      stmt: 
       { parent: [Circular],
         type: 'block',
@@ -26,36 +32,32 @@
         scope: [Object] } },
   value: null,
   method: 'method_buildin_function_decl',
-  scope: { symbol: {}, type: {} } }
+  scope: { symbol: { s: [Object] }, type: {} } }
 { parent: 
-   { parent: 
-      { parent: [Object],
-        type: 'function_decl',
-        childs: [Object],
-        value: null,
-        method: 'method_buildin_function_decl',
-        scope: [Object] },
-     type: 'block',
+   { parent: null,
+     type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: 'method_buildin_statement_block',
-     scope: { symbol: {}, type: {} } },
-  type: 'while',
+     method: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'function_decl',
   childs: 
-   { tag: 
+   { proc: false,
+     name: 
       { parent: [Circular],
-        type: 'tag',
+        type: 'identifier',
+        childs: [Object],
+        value: 'call_case_for_in_1',
+        method: 'method_buildin_identifier',
+        scope: null },
+     type: 
+      { parent: [Circular],
+        type: 'type',
         childs: [Object],
         value: null,
-        method: 'method_buildin_tag',
+        method: 'method_buildin_type',
         scope: null },
-     cond: 
-      { parent: [Circular],
-        type: 'number',
-        childs: {},
-        value: '1',
-        method: 'method_buildin_decimal',
-        scope: null },
+     params: [ [Object] ],
      stmt: 
       { parent: [Circular],
         type: 'block',
@@ -64,5 +66,5 @@
         method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_statement_while',
-  scope: null }
+  method: 'method_buildin_function_decl',
+  scope: { symbol: { s: [Object] }, type: {} } }

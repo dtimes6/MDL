@@ -4,7 +4,7 @@
      childs: { stmts: [] },
      value: null,
      method: null,
-     scope: { symbol: [], type: [Object], method: [], operator: [] } },
+     scope: { symbol: {}, type: [Object] } },
   type: 'element',
   childs: 
    { name: 

@@ -1,3 +1,11 @@
 language "C++" ("template_expending") {
     1 + 2;
 }
+
+language "C" () {
+    1 + 2;
+}
+
+language "ASM" ("intel", "~amd", "i386") {
+    3;
+}

@@ -21,9 +21,9 @@ var ATPParser = function () {
     };
     this.root = n;
 
-    this.root.scope.type.push(ATPParser.typeOriginal());
-    this.root.scope.type.push(ATPParser.typeSynth());
-    this.root.scope.type.push(ATPParser.typeMethod());
+    this.root.addType(ATPParser.typeOriginal());
+    this.root.addType(ATPParser.typeSynth());
+    this.root.addType(ATPParser.typeMethod());
     this.method_buildin = "method_buildin_";
 
     this.current = this.root;
@@ -85,11 +85,9 @@ ATPParser.prototype.lookupScopeForType = function (n, name, i) {
     if (i + 1 === name.length) {
         return n;
     }
-    for (var t in n.childs.ref.scope.type) {
-        var type = n.childs.ref.scope.type[t];
-        if (type.value === name[i + 1]) {
-            return this.lookupScopeForType(type, name, i + 1);
-        }
+    var type = n.childs.ref.scope.type[name[i + 1]];
+    if (type) {
+        return this.lookupScopeForType(type, name, i + 1);
     }
     throw "Error: '" + name.join('::') + "' is not a name of a type!";
 };
@@ -97,11 +95,9 @@ ATPParser.prototype.lookupScopeForType = function (n, name, i) {
 ATPParser.prototype.lookupForType = function (n, name) {
     'use strict';
     n = n.parent.scopeNode();
-    for (var t in n.scope.type) {
-        var type = n.scope.type[t];
-        if (type.value === name[0]) {
-            return this.lookupScopeForType(type, name, 0);
-        }
+    var type = n.scope.type[name[0]];
+    if (type) {
+        return this.lookupScopeForType(type, name, 0);
     }
     if (n.parent) {
         return this.lookupForType(n, name);
@@ -113,11 +109,9 @@ ATPParser.prototype.lookupForType = function (n, name) {
 ATPParser.prototype.lookupForSymbol = function (n, name) {
     'use strict';
     n = n.scopeNode();
-    for (var t in n.scope.symbol) {
-        var sym = n.scope.symbol[t];
-        if (sym.value === name) {
-            return sym;
-        }
+    var sym = n.scope.symbol[name];
+    if (sym) {
+        return sym;
     }
     if (n.parent) {
         return this.lookupForSymbol(n.parent, name);
