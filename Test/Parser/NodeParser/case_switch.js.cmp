@@ -33,3 +33,54 @@
   value: null,
   method: 'method_buildin_function_decl',
   scope: { symbol: { i: [Object] }, type: {} } }
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'function_decl',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_function_decl',
+        scope: [Object] },
+     type: 'block',
+     childs: { stmts: [Object] },
+     value: null,
+     method: 'method_buildin_statement_block',
+     scope: { symbol: {}, type: {} } },
+  type: 'switch',
+  childs: 
+   { case_expr: 
+      { parent: [Object],
+        type: 'identifier',
+        childs: [Object],
+        value: 'i',
+        method: 'method_buildin_identifier',
+        scope: null },
+     case_items: [ [Object], [Object] ],
+     case_default: 
+      { parent: [Circular],
+        type: 'case_default',
+        childs: [Object],
+        value: null,
+        method: null,
+        scope: null } },
+  value: null,
+  method: 'method_buildin_statement_switch',
+  scope: null }
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'function_decl',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_function_decl',
+        scope: [Object] },
+     type: 'block',
+     childs: { stmts: [Object] },
+     value: null,
+     method: 'method_buildin_statement_block',
+     scope: { symbol: {}, type: {} } },
+  type: 'null',
+  childs: {},
+  value: null,
+  method: null,
+  scope: null }

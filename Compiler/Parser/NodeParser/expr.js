@@ -56,7 +56,20 @@ module.exports = function (parser) {
         return param;
     };
 
+    parser.prototype.nullStmt = function () {
+        var n = this.push();
+
+        this.require(';');
+        this.consume();
+
+        n.type = 'null';
+        return this.pop(n);
+    };
+
     parser.prototype.parseExpr = function () {
+        if (this.getToken().text === ';') {
+            return this.nullStmt();
+        }
         var params = [];
         var op = '';
         do {
