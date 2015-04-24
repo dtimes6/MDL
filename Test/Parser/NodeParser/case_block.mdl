@@ -1,0 +1,10 @@
+{
+    function sub () {
+        while(1) {
+            break;
+        };
+        while(1) {
+            continue;
+        };
+    }
+}

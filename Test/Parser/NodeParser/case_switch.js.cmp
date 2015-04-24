@@ -84,3 +84,21 @@
   value: null,
   method: null,
   scope: null }
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'function_decl',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_function_decl',
+        scope: [Object] },
+     type: 'block',
+     childs: { stmts: [Object] },
+     value: null,
+     method: 'method_buildin_statement_block',
+     scope: { symbol: {}, type: {} } },
+  type: 'null',
+  childs: {},
+  value: null,
+  method: null,
+  scope: null }

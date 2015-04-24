@@ -1,0 +1,19 @@
+process case_cover() : original {
+    return "1";
+}
+
+process case_cover() {
+}
+
+function case_cover_2() {
+}
+
+process "++" () {
+}
+
+function "++" () {
+}
+
+function add(original a, original b) : original {
+    return a + b;
+}
