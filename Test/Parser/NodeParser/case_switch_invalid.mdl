@@ -1,0 +1,8 @@
+function a(original a, original b) : original {
+    switch(b) {
+    case 0 : return 0;
+    };
+    switch(a) {
+    case b : return b;
+    };
+}

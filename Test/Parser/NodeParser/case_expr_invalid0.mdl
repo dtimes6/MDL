@@ -1,0 +1,4 @@
+original a = 1;
+original b = 2;
+
+original c = 1 + a b;
