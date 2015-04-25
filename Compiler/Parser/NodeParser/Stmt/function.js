@@ -2,7 +2,7 @@ var msg = require('../../../ErrorHandling/errorhandling.js');
 module.exports = function (parser) {
     'use strict';
 
-    parser.prototype.parseProcessDecl = function () {
+    parser.prototype.parseProcFuncDecl = function () {
         var n = this.push();
         n.createScope();
 

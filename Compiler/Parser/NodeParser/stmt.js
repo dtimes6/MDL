@@ -20,11 +20,9 @@ module.exports = function (parser) {
         if (token.text === 'element') {
             return this.parseElementDecl();
         }
-        if (token.text === 'process') {
-            return this.parseProcessDecl();
-        }
-        if (token.text === 'function') {
-            return this.parseProcessDecl();
+        if (token.text === 'process' ||
+            token.text === 'functon') {
+            return this.parseProcFuncDecl();
         }
         if (token.text === 'language') {
             return this.parseLanguage();
