@@ -99,8 +99,23 @@ ATPParser.prototype.lookupForType = function (n, name) {
     }
 };
 
+ATPParser.prototype.createMemberRef = function (base, name) {
+    var n = this.push();
+    n.type  = 'member_identifier';
+    n.value = name;
+    n.childs = {
+        base: base,
+        ref:  null
+    };
+    n.method = this.method_buildin + 'member_identifier';
+    return this.pop(n);
+};
+
 ATPParser.prototype.lookupForSymbol = function (n, name) {
     'use strict';
+    if (n.type === 'member') {
+        return this.createMemberRef(n.childs.base, name);
+    }
     n = n.scopeNode();
     var sym = n.scope.symbol[name];
     if (sym) {

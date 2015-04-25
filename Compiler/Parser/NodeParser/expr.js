@@ -49,6 +49,15 @@ module.exports = function (parser) {
                     n0.method = this.method_buildin + 'func_call';
                     param = this.pop(n0);
                     token = this.getToken();
+                } else if (token.text === '.') {
+                    this.consume();
+                    var n0 = this.push();
+                    n0.type = 'member';
+                    n0.childs.base = param;
+                    n0.childs.member = this.parseExpr();
+                    n0.method = this.method_buildin + "member";
+                    param = this.pop(n0);
+                    token = this.getToken();
                 } else {
                     break;
                 }

@@ -1,0 +1,11 @@
+element net8;
+
+module A {
+    net8 data;
+};
+
+function add(A a, A b) : A {
+    A r;
+    (r.data) = a.data + b.data;
+    return r;
+}

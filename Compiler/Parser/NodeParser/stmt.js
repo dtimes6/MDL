@@ -10,6 +10,7 @@ module.exports = function (parser) {
     require('./Stmt/language.js')(parser);
     require('./Stmt/module.js')(parser);
     require('./Stmt/switchcase.js')(parser);
+    require('./Stmt/template.js')(parser);
     require('./Stmt/type.js')(parser);
     require('./Stmt/while.js')(parser);
 
@@ -20,18 +21,10 @@ module.exports = function (parser) {
             return this.parseElementDecl();
         }
         if (token.text === 'process') {
-            token = this.getToken(2);
-            if (token.type === 'identifier') {
-                return this.parseProcessDecl();
-            }
-            return this.parseOperProcDecl();
+            return this.parseProcessDecl();
         }
         if (token.text === 'function') {
-            token = this.getToken(2);
-            if (token.type === 'identifier') {
-                return this.parseFuncDecl();
-            }
-            return this.parseOperDecl();
+            return this.parseProcessDecl();
         }
         if (token.text === 'language') {
             return this.parseLanguage();
@@ -39,8 +32,8 @@ module.exports = function (parser) {
         if (token.text === 'module') {
             return this.parseModuleDecl();
         }
-        if (token.type === 'template') {
-            return this.parseTempDecl();
+        if (token.text === 'template') {
+            return this.parseTemplateDecl();
         }
         // stmt
         if (token.text === 'if') {
