@@ -29,6 +29,21 @@ module.exports = function (parser) {
     };
 
     parser.prototype.parseFuncCallOrIndex = function (param) {
+        // parse Template Parameter specification here
+        if (param instanceof Array && param.length) {
+            if (param[0].type === 'identifier' &&
+                param[0].childs.ref.childs.tparams) {
+                var n0 = this.push();
+                n0.type = 'func_call';
+                // template function
+                n0.childs = { method: param };
+                n0.childs.tparams_specification = this.parseTemplateParameter();
+                n0.childs.params = this.parseExprBrace();
+                n0.method = this.method_buildin + 'func_call';
+                param = this.pop(n0);
+            }
+        }
+
         if (param) {
             var token = this.getToken();
             while (1) {
@@ -127,7 +142,13 @@ module.exports = function (parser) {
              this.getToken(2).text === '::')) {
             return this.parseInstDeclWithAssign();
         }
-        // expr
+        if (this.getToken().type === 'identifier' &&
+            this.getToken(2).text === '[') {
+            // can be of type decl or expression
+            if (this.testIsInstTemplateOrArrayDecl(this.getToken().pos)) {
+                return this.parseInstDeclWithAssign();
+            }
+        }
         return this.parseExpr();
     };
 

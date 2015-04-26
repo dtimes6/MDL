@@ -21,7 +21,7 @@ module.exports = function (parser) {
             return this.parseElementDecl();
         }
         if (token.text === 'process' ||
-            token.text === 'functon') {
+            token.text === 'function') {
             return this.parseProcFuncDecl();
         }
         if (token.text === 'language') {

@@ -3,6 +3,7 @@ module.exports = function (parser) {
     parser.prototype.parseType = function () {
         var n = this.push();
         n.type = 'type';
+        n.childs = {};
 
         var type_hierarchy = [this.requireType('identifier').text];
         this.consume();
@@ -12,8 +13,13 @@ module.exports = function (parser) {
             this.consume();
         }
         var type = this.lookupForType(n, type_hierarchy);
-        var range = [];
+        n.childs.base  = type;
 
+        if (type instanceof Array) {
+            // template type
+            n.childs.tparams_specification = this.parseTemplateParameter();
+        }
+        var range = [];
         var token = this.getToken();
         while (token.text === '[') {
             this.consume();
@@ -35,11 +41,7 @@ module.exports = function (parser) {
             range.push({left: left, right: right});
             token = this.getToken();
         }
-
-        n.childs = {
-            base: type,
-            range: range
-        };
+        n.childs.range = range;
         n.method = this.method_buildin + 'type';
 
         return this.pop(n);

@@ -29,33 +29,22 @@ module.exports = function (parser) {
         return this.pop(n);
     };
 
-    parser.prototype.parseModuleDecl = function () {
-        var n = this.push();
-        n.createScope();
-        n.type = 'module_decl';
+    parser.prototype.parseModuleDecl = function (n) {
+        var createN = false;
+        if (n === undefined) {
+            n = this.push();
+            n.createScope();
+            n.childs = {};
+            createN = true;
+        }
 
+        n.type = 'module_decl';
         this.require('module');
         this.consume();
 
         var mod_name = this.parseNamedRef();
-        var self = this.createThisSymbol();
+        n.childs.name = mod_name;
 
-        var token = this.getToken();
-        var inherit = null;
-        if (token.text === ':') {
-            inherit = this.parseInheritance();
-        }
-        var mod_blk  = this.parseBlock({scope: n.scope});
-        this.require(';');
-        this.consume();
-
-        n.childs = {
-            name:        mod_name,
-            inheritance: inherit,
-            stmt:        mod_blk,
-            self:        self
-        };
-        n.method = this.method_buildin + "module_decl";
         mod_name.childs.ref = n;
         if (n.parent.scope) { /* istanbul ignore else */
             n.parent.addType(mod_name);
@@ -63,7 +52,28 @@ module.exports = function (parser) {
             msg.error(this, "module decl must be in within a scope!");
         }
 
-        return this.pop(n);
+        if (n.childs.tparams) {
+            if (this.getToken().text === '[') {
+                n.childs.tparams_specification = this.parseTemplateParameter();
+            }
+        }
+
+        n.childs.self = this.createThisSymbol();
+        var token = this.getToken();
+        n.childs.inheritance = null;
+        if (token.text === ':') {
+            n.childs.inheritance = this.parseInheritance();
+        }
+        n.childs.stmt = this.parseBlock({scope: n.scope});
+        this.require(';');
+        this.consume();
+
+        n.method = this.method_buildin + "module_decl";
+        if (createN) {
+            return this.pop(n);
+        } else {
+            return n;
+        }
     };
 
     parser.prototype.parseInheritance = function () {

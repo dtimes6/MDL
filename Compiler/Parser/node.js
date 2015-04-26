@@ -37,10 +37,20 @@ ATPNode.prototype.scopeNode = function () {
 
 ATPNode.prototype.addType = function (n) {
     'use strict';
-    if (this.scope.type[n.value]) {
-        msg.error(this, "redefine type:" + n.value);
+    if (n.parent &&
+        n.parent.type === 'module_decl' &&
+        n.parent.childs.tparams) {
+        if (this.scope.type[n.value]) {
+            this.scope.type[n.value].push(n);
+        } else {
+            this.scope.type[n.value] = [n];
+        }
+    } else {
+        if (this.scope.type[n.value]) {
+            msg.error(this, "redefine type:" + n.value);
+        }
+        this.scope.type[n.value] = n;
     }
-    this.scope.type[n.value] = n;
 };
 
 ATPNode.prototype.addSymbol = function (n) {

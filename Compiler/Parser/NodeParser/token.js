@@ -43,4 +43,23 @@ module.exports = function (parser) {
         var TokenProvider = require('../token.js').TokenProvider;
         this.tokenProvider = new TokenProvider(buffer);
     };
+
+    parser.prototype.testIsInstTemplateOrArrayDecl = function (pos) {
+        var TokenProvider = require('../token.js').TokenProvider;
+        var tokenProvider = new TokenProvider(this.tokenProvider.buffer.substring(pos));
+        tokenProvider.consume();
+        var brace = 0;
+        while (tokenProvider.getToken()) {
+            var token = tokenProvider.getToken()[0];
+            if (token.text === '[') {
+                ++brace;
+            } else if (token.text === ']') {
+                --brace;
+            } else if (brace === 0 && token.type === 'identifier') {
+                return true;
+            }
+            tokenProvider.consume();
+        }
+        return false;
+    };
 };

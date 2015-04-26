@@ -2,43 +2,60 @@ var msg = require('../../../ErrorHandling/errorhandling.js');
 module.exports = function (parser) {
     'use strict';
 
-    parser.prototype.parseProcFuncDecl = function () {
-        var n = this.push();
-        n.createScope();
+    parser.prototype.parseProcFuncDecl = function (n) {
+        var createN = false;
+        if (n === undefined) {
+            n = this.push();
+            n.createScope();
+            n.childs = {};
+            createN = true;
+        }
 
         var token = this.getToken();
         var keyword = null;
-        var is_proc = false;
         if (token.text === 'process') {
             keyword = 'process';
-            is_proc = true;
+            n.childs.proc = true;
         } else {
             this.require('function');
             keyword = 'function';
+            n.childs.proc = false;
         }
         this.consume();
 
-        var func_name = null;
         var category = null;
         if (this.getToken().type === 'identifier') {
-            func_name = this.parseNamedRef();
+            n.childs.name = this.parseNamedRef();
             n.type   = keyword + '_decl';
             category  = 'call';
         } else {
-            func_name = this.parseOperRef();
+            n.childs.name = this.parseOperRef();
+            n.type   = n.childs.proc ? 'operproc_decl' : 'operation_decl';
             category  = 'operation';
-            n.type   = is_proc ? 'operproc_decl' : 'operation_decl';
+        }
+
+        n.childs.name.childs.ref = n;
+        if (n.parent.scope) {
+            n.parent.addMethod(n.childs.name);
+        } else {
+            msg.error(this, keyword + category + " declaration must be in within a scope!");
+        }
+
+        if (n.childs.tparams) {
+            if (this.getToken().text === '[') {
+                n.childs.tparams_specification = this.parseTemplateParameter();
+            }
         }
 
         this.require('(');
         this.consume();
 
-        var params = [];
+        n.childs.params = [];
         if (this.getToken().text === ')') {
             this.consume();
         } else {
             while (this.getToken().text !== ')') {
-                params.push(this.parseInstDecl());
+                n.childs.params.push(this.parseInstDecl());
                 if (this.getToken().text === ')') { break; }
                 this.require(',');
                 this.consume();
@@ -46,29 +63,19 @@ module.exports = function (parser) {
             this.consume();
         }
 
-        var func_ret = null;
+        n.childs.type = null;
         if (this.getToken().text === ':') {
             this.consume();
-            func_ret = this.parseType();
+            n.childs.type = this.parseType();
         }
 
-        var func_body = this.parseBlock();
-
-        n.childs = {
-            proc:   is_proc,
-            name:   func_name,
-            type:   func_ret,
-            params: params,
-            stmt:   func_body
-        };
+        n.childs.stmt = this.parseBlock();
         n.method = this.method_buildin + n.type;
-        func_name.childs.ref = n;
-        if (n.parent.scope) {
-            n.parent.addMethod(func_name);
-        } else {
-            msg.error(this, keyword + category + " declaration must be in within a scope!");
-        }
 
-        return this.pop(n);
+        if (createN) {
+            return this.pop(n);
+        } else {
+            return n;
+        }
     };
 };

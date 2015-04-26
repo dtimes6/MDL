@@ -3,6 +3,7 @@ var ErrorHandling = {
     error: function (env, str) {
         'use strict';
         if (ErrorHandling.debug) {
+            console.error("Error: " + str);
             show_error_stack;
         }
         throw "Error: " + str;
