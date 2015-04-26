@@ -15,6 +15,7 @@
         value: 'case_for_in',
         method: 'method_buildin_identifier',
         scope: null },
+     params: [ [Object] ],
      type: 
       { parent: [Circular],
         type: 'type',
@@ -22,7 +23,6 @@
         value: null,
         method: 'method_buildin_type',
         scope: null },
-     params: [ [Object] ],
      stmt: 
       { parent: [Circular],
         type: 'block',
@@ -50,6 +50,7 @@
         value: 'call_case_for_in_1',
         method: 'method_buildin_identifier',
         scope: null },
+     params: [ [Object] ],
      type: 
       { parent: [Circular],
         type: 'type',
@@ -57,7 +58,6 @@
         value: null,
         method: 'method_buildin_type',
         scope: null },
-     params: [ [Object] ],
      stmt: 
       { parent: [Circular],
         type: 'block',

@@ -15,8 +15,8 @@
         value: 'case_while',
         method: 'method_buildin_identifier',
         scope: null },
-     type: null,
      params: [],
+     type: null,
      stmt: 
       { parent: [Circular],
         type: 'block',

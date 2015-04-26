@@ -15,6 +15,7 @@
         value: 'case_process',
         method: 'method_buildin_identifier',
         scope: null },
+     params: [ [Object], [Object] ],
      type: 
       { parent: [Circular],
         type: 'type',
@@ -22,7 +23,6 @@
         value: null,
         method: 'method_buildin_type',
         scope: null },
-     params: [ [Object], [Object] ],
      stmt: 
       { parent: [Circular],
         type: 'block',

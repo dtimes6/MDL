@@ -1,0 +1,8 @@
+template [
+    typename type,
+    original N
+]
+module io {
+    type in;
+    type out;
+};

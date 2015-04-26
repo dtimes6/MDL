@@ -1,0 +1,8 @@
+template [
+    typename type
+]
+function add(type a, type b) : type {
+    type r;
+    r.value = a.value + b.value;
+    return r;
+}

@@ -1,0 +1,39 @@
+template [
+    typename type
+]
+function add(type a, type b) : type {
+    type r;
+    r.value = a.value + b.value;
+    return r;
+}
+
+template []
+function add[original] (original a, original b) : original {
+    return a + b;
+}
+
+template [
+    typename type
+]
+module io {
+    type in;
+    type out;
+    process plus(io[type] b) : io[type] {
+        io[type] ret; ret.in = this.out + b.out;
+    }
+};
+
+template []
+module io[original] {
+    original bus;
+    process plus(io[original] b) : io[original] {
+        io[original] ret; ret.in = this.out + b.out;
+    }
+};
+
+template [
+    typename type
+]
+function add[io[type]] (io[type] a, io[type] b) : io[type] {
+    return a.plus(b);
+}

@@ -1,0 +1,129 @@
+--------------------------------
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     method: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'function_decl',
+  childs: 
+   { tparams: [ [Object] ],
+     proc: false,
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'add',
+        method: 'method_buildin_identifier',
+        scope: null },
+     params: [ [Object], [Object] ],
+     type: 
+      { parent: [Circular],
+        type: 'type',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_type',
+        scope: null },
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] } },
+  value: null,
+  method: 'method_buildin_function_decl',
+  scope: 
+   { symbol: { a: [Object], b: [Object] },
+     type: { type: [Object] } } }
+--------------------------------
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        method: null,
+        scope: [Object] },
+     type: 'function_decl',
+     childs: 
+      { tparams: [Object],
+        proc: false,
+        name: [Object],
+        params: [Object],
+        type: [Object],
+        stmt: [Object] },
+     value: null,
+     method: 'method_buildin_function_decl',
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'typename',
+  childs: 
+   { name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'type',
+        method: 'method_buildin_identifier',
+        scope: null } },
+  value: null,
+  method: 'method_buildin_typename_decl',
+  scope: null }
+--------------------------------
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'function_decl',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_function_decl',
+        scope: [Object] },
+     type: 'typename',
+     childs: { name: [Circular] },
+     value: null,
+     method: 'method_buildin_typename_decl',
+     scope: null },
+  type: 'identifier',
+  childs: 
+   { ref: 
+      { parent: [Object],
+        type: 'typename',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_typename_decl',
+        scope: null } },
+  value: 'type',
+  method: 'method_buildin_identifier',
+  scope: null }
+--------------------------------
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        method: null,
+        scope: [Object] },
+     type: 'function_decl',
+     childs: 
+      { tparams: [Object],
+        proc: false,
+        name: [Object],
+        params: [Object],
+        type: [Object],
+        stmt: [Object] },
+     value: null,
+     method: 'method_buildin_function_decl',
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'typename',
+  childs: 
+   { name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'type',
+        method: 'method_buildin_identifier',
+        scope: null } },
+  value: null,
+  method: 'method_buildin_typename_decl',
+  scope: null }

@@ -1,0 +1,198 @@
+--------------------------------
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     method: null,
+     scope: { symbol: {}, type: [Object] } },
+  type: 'module_decl',
+  childs: 
+   { tparams: [ [Object] ],
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'io',
+        method: 'method_buildin_identifier',
+        scope: null },
+     self: 
+      { parent: [Circular],
+        type: 'inst_decl',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_module_this',
+        scope: null },
+     inheritance: null,
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] } },
+  value: null,
+  method: 'method_buildin_module_decl',
+  scope: 
+   { symbol: { this: [Object], in: [Object], out: [Object], plus: [Object] },
+     type: { type: [Object] } } }
+--------------------------------
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'module_decl',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_module_decl',
+        scope: [Object] },
+     type: 'block',
+     childs: { stmts: [Object] },
+     value: null,
+     method: 'method_buildin_statement_block',
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'process_decl',
+  childs: 
+   { proc: true,
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'plus',
+        method: 'method_buildin_identifier',
+        scope: null },
+     params: [ [Object] ],
+     type: 
+      { parent: [Circular],
+        type: 'type',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_type',
+        scope: null },
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] } },
+  value: null,
+  method: 'method_buildin_process_decl',
+  scope: { symbol: { b: [Object] }, type: {} } }
+--------------------------------
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] },
+     type: 'process_decl',
+     childs: 
+      { proc: true,
+        name: [Object],
+        params: [Object],
+        type: [Object],
+        stmt: [Object] },
+     value: null,
+     method: 'method_buildin_process_decl',
+     scope: { symbol: [Object], type: {} } },
+  type: 'inst_decl',
+  childs: 
+   { type: 
+      { parent: [Circular],
+        type: 'type',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_type',
+        scope: null },
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'b',
+        method: 'method_buildin_identifier',
+        scope: null },
+     init: null },
+  value: null,
+  method: 'method_buildin_inst_decl',
+  scope: null }
+--------------------------------
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'process_decl',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_process_decl',
+        scope: [Object] },
+     type: 'inst_decl',
+     childs: { type: [Circular], name: [Object], init: null },
+     value: null,
+     method: 'method_buildin_inst_decl',
+     scope: null },
+  type: 'type',
+  childs: 
+   { base: [ [Object] ],
+     tparams_specification: 
+      { parent: [Circular],
+        type: 'tparam_specification',
+        childs: [Object],
+        value: null,
+        method: null,
+        scope: null },
+     range: [] },
+  value: null,
+  method: 'method_buildin_type',
+  scope: null }
+[ { parent: 
+     { parent: [Object],
+       type: 'module_decl',
+       childs: [Object],
+       value: null,
+       method: 'method_buildin_module_decl',
+       scope: [Object] },
+    type: 'identifier',
+    childs: { ref: [Object] },
+    value: 'io',
+    method: 'method_buildin_identifier',
+    scope: null } ]
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'module_decl',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_module_decl',
+        scope: [Object] },
+     type: 'typename',
+     childs: { name: [Circular] },
+     value: null,
+     method: 'method_buildin_typename_decl',
+     scope: null },
+  type: 'identifier',
+  childs: 
+   { ref: 
+      { parent: [Object],
+        type: 'typename',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_typename_decl',
+        scope: null } },
+  value: 'type',
+  method: 'method_buildin_identifier',
+  scope: null }
+--------------------------------
+{ stmts: 
+   [ { parent: [Object],
+       type: 'inst_decl',
+       childs: [Object],
+       value: null,
+       method: 'method_buildin_inst_decl',
+       scope: null },
+     { parent: [Object],
+       type: 'member',
+       childs: [Object],
+       value: null,
+       method: 'method_buildin_member',
+       scope: null } ] }

@@ -32,8 +32,8 @@
     childs: 
      { proc: true,
        name: [Object],
-       type: [Object],
        params: [Object],
+       type: [Object],
        stmt: [Object] },
     value: null,
     method: 'method_buildin_process_decl',
@@ -49,8 +49,8 @@
     childs: 
      { proc: true,
        name: [Object],
-       type: null,
        params: [Object],
+       type: null,
        stmt: [Object] },
     value: null,
     method: 'method_buildin_operproc_decl',

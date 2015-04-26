@@ -34,8 +34,8 @@
         value: 'func0',
         method: 'method_buildin_identifier',
         scope: null },
-     type: null,
      params: [],
+     type: null,
      stmt: 
       { parent: [Circular],
         type: 'block',
@@ -63,6 +63,7 @@
         value: 'func1',
         method: 'method_buildin_identifier',
         scope: null },
+     params: [ [Object] ],
      type: 
       { parent: [Circular],
         type: 'type',
@@ -70,7 +71,6 @@
         value: null,
         method: 'method_buildin_type',
         scope: null },
-     params: [ [Object] ],
      stmt: 
       { parent: [Circular],
         type: 'block',
@@ -98,6 +98,7 @@
         value: 'build_in_method_constant_string',
         method: 'method_buildin_identifier',
         scope: null },
+     params: [ [Object] ],
      type: 
       { parent: [Circular],
         type: 'type',
@@ -105,7 +106,6 @@
         value: null,
         method: 'method_buildin_type',
         scope: null },
-     params: [ [Object] ],
      stmt: 
       { parent: [Circular],
         type: 'block',
@@ -129,8 +129,8 @@
      childs: 
       { proc: false,
         name: [Circular],
-        type: [Object],
         params: [Object],
+        type: [Object],
         stmt: [Object] },
      value: null,
      method: 'method_buildin_function_decl',
@@ -160,8 +160,8 @@
      childs: 
       { proc: false,
         name: [Object],
-        type: [Circular],
         params: [Object],
+        type: [Circular],
         stmt: [Object] },
      value: null,
      method: 'method_buildin_function_decl',
@@ -192,8 +192,8 @@
      childs: 
       { proc: false,
         name: [Object],
-        type: [Circular],
         params: [Object],
+        type: [Circular],
         stmt: [Object] },
      value: null,
      method: 'method_buildin_function_decl',

@@ -1,0 +1,12 @@
+template [
+    typename type
+]
+module io {
+    type in;
+    type out;
+};
+
+template []
+module io[original] {
+    original bus;
+};
