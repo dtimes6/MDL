@@ -1,0 +1,36 @@
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [] },
+     value: null,
+     method: null,
+     scope: { symbol: {}, type: [Object] } },
+  type: 'identifier',
+  childs: { ref: null },
+  value: 'author',
+  method: 'method_buildin_identifier',
+  scope: null }
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [] },
+     value: null,
+     method: null,
+     scope: { symbol: {}, type: [Object] } },
+  type: 'number',
+  childs: {},
+  value: '0h123',
+  method: 'method_buildin_hexadecimal',
+  scope: null }
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [] },
+     value: null,
+     method: null,
+     scope: { symbol: {}, type: [Object] } },
+  type: 'string',
+  childs: {},
+  value: '"123"',
+  method: 'method_buildin_string_dquoted',
+  scope: null }

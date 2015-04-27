@@ -1,0 +1,26 @@
+element net;
+
+function identifier() {
+}
+
+module FIFO {
+    net en;
+    net clk;
+    net rst;
+};
+
+template [original N, original M]
+function method_buildin_element_decl(net[N:M] s) : synth {
+    language "Verilog" {
+        return "wire [@N:@M] @s";
+    }
+    language "C++" {
+        if (M > N) {
+            var C = M - N + 1;
+            return "net @s[@C]";
+        } else {
+            var C = N - M + 1;
+            return "net @s[@C];
+        }
+    }
+}
