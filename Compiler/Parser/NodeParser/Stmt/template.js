@@ -66,12 +66,6 @@ module.exports = function (parser) {
             var t = null;
             if (tparams[i].type === 'typename') {
                 t = this.parseType();
-            } else if (tparams[i].type === 'element') {
-                t = this.parseType();
-                //TODO check type
-            } else if (tparams[i].type === 'module') {
-                t = this.parseType();
-                //TODO check type
             } else {
                 t = this.parseExpr();
             }
