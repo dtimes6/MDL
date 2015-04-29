@@ -10,7 +10,7 @@
  *
  ***/
 var msg = require('../ErrorHandling/errorhandling.js');
-var ATPNode = require('./node.js');
+var ATPNode = require('./../Node/node.js');
 
 var ATPParser = function () {
     'use strict';
