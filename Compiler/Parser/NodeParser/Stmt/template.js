@@ -1,14 +1,15 @@
 var msg = require('../../../ErrorHandling/errorhandling.js');
 module.exports = function (parser) {
     'use strict';
-    parser.prototype.parseTypenameDecl = function () {
+    parser.prototype.parseTemplateTypenameDecl = function () {
         var n = this.push();
         n.type = 'typename';
 
-        this.require('typename');
+        var type = this.getToken().text;
         this.consume();
 
         n.childs = {
+            type: type,
             name: this.parseNamedRef()
         };
         n.childs.name.childs.ref = n;
@@ -90,8 +91,11 @@ module.exports = function (parser) {
     };
 
     parser.prototype.parseTemplateParameterDecl = function () {
-        if (this.getToken().text === 'typename') {
-            return this.parseTypenameDecl();
+        var node = this.getToken();
+        if (node.text === 'typename' ||
+            node.text === 'element'  ||
+            node.text === 'module') {
+            return this.parseTemplateTypenameDecl();
         } else {
             return this.parseInstDecl();
         }

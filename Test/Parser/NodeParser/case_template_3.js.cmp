@@ -166,7 +166,7 @@
         method: 'method_buildin_module_decl',
         scope: [Object] },
      type: 'typename',
-     childs: { name: [Circular] },
+     childs: { type: 'typename', name: [Circular] },
      value: null,
      method: 'method_buildin_typename_decl',
      scope: null },

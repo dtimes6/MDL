@@ -59,7 +59,8 @@
      scope: { symbol: [Object], type: [Object] } },
   type: 'typename',
   childs: 
-   { name: 
+   { type: 'typename',
+     name: 
       { parent: [Circular],
         type: 'identifier',
         childs: [Object],
@@ -79,7 +80,7 @@
         method: 'method_buildin_function_decl',
         scope: [Object] },
      type: 'typename',
-     childs: { name: [Circular] },
+     childs: { type: 'typename', name: [Circular] },
      value: null,
      method: 'method_buildin_typename_decl',
      scope: null },
@@ -117,7 +118,8 @@
      scope: { symbol: [Object], type: [Object] } },
   type: 'typename',
   childs: 
-   { name: 
+   { type: 'typename',
+     name: 
       { parent: [Circular],
         type: 'identifier',
         childs: [Object],

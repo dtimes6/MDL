@@ -57,7 +57,8 @@
      scope: { symbol: [Object], type: [Object] } },
   type: 'typename',
   childs: 
-   { name: 
+   { type: 'typename',
+     name: 
       { parent: [Circular],
         type: 'identifier',
         childs: [Object],
