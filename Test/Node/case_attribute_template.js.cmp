@@ -1,0 +1,163 @@
+{ parent: null,
+  type: 'root',
+  childs: 
+   { stmts: 
+      [ [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object] ] },
+  value: null,
+  method: null,
+  scope: 
+   { symbol: { sub: [Object], add: [Object] },
+     type: 
+      { original: [Object],
+        synth: [Object],
+        method: [Object],
+        net8: [Object],
+        io: [Object] } },
+  attribute: { template: true } }
+-----------------------------------------
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     method: null,
+     scope: { symbol: [Object], type: [Object] },
+     attribute: { template: true } },
+  type: 'function_decl',
+  childs: 
+   { tparams: [ [Object] ],
+     proc: false,
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'add',
+        method: 'method_buildin_identifier',
+        scope: null,
+        attribute: {} },
+     params: [ [Object], [Object] ],
+     type: 
+      { parent: [Circular],
+        type: 'type',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_type',
+        scope: null,
+        attribute: [Object] },
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object],
+        attribute: [Object] } },
+  value: null,
+  method: 'method_buildin_function_decl',
+  scope: 
+   { symbol: { a: [Object], b: [Object] },
+     type: { type: [Object] } },
+  attribute: { template: true } }
+--
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     method: null,
+     scope: { symbol: [Object], type: [Object] },
+     attribute: { template: true } },
+  type: 'module_decl',
+  childs: 
+   { tparams: [ [Object] ],
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'io',
+        method: 'method_buildin_identifier',
+        scope: null,
+        attribute: {} },
+     self: 
+      { parent: [Circular],
+        type: 'inst_decl',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_module_this',
+        scope: null,
+        attribute: {} },
+     inheritance: null,
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object],
+        attribute: [Object] } },
+  value: null,
+  method: 'method_buildin_module_decl',
+  scope: 
+   { symbol: { this: [Object], in: [Object], out: [Object], plus: [Object] },
+     type: { type: [Object] } },
+  attribute: { template: true } }
+--
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     method: null,
+     scope: { symbol: [Object], type: [Object] },
+     attribute: { template: true } },
+  type: 'function_decl',
+  childs: 
+   { tparams: [ [Object] ],
+     proc: false,
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'add',
+        method: 'method_buildin_identifier',
+        scope: null,
+        attribute: {} },
+     tparams_specification: 
+      { parent: [Circular],
+        type: 'tparam_specification',
+        childs: [Object],
+        value: null,
+        method: null,
+        scope: null,
+        attribute: [Object] },
+     params: [ [Object], [Object] ],
+     type: 
+      { parent: [Circular],
+        type: 'type',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_type',
+        scope: null,
+        attribute: [Object] },
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object],
+        attribute: {} } },
+  value: null,
+  method: 'method_buildin_function_decl',
+  scope: 
+   { symbol: { a: [Object], b: [Object] },
+     type: { type: [Object] } },
+  attribute: { template: true } }
+--
+-----------------------------------------
