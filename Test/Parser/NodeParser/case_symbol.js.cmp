@@ -1,0 +1,66 @@
+symbol
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [] },
+     value: null,
+     method: null,
+     scope: { symbol: {}, type: [Object] } },
+  type: 'symbol',
+  childs: 
+   { path: 
+      { parent: [Circular],
+        type: 'selection',
+        childs: [Object],
+        value: null,
+        method: null,
+        scope: null },
+     name: 'insideType',
+     ref: null },
+  value: 'insideType',
+  method: null,
+  scope: null }
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        method: null,
+        scope: [Object] },
+     type: 'symbol',
+     childs: { path: [Circular], name: 'insideType', ref: null },
+     value: 'insideType',
+     method: null,
+     scope: null },
+  type: 'selection',
+  childs: 
+   { base: 
+      { parent: [Circular],
+        type: 'symbol',
+        childs: [Object],
+        value: 'symbol',
+        method: null,
+        scope: null },
+     params: [ undefined, [Object], [Object], [Object] ] },
+  value: null,
+  method: null,
+  scope: null }
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'symbol',
+        childs: [Object],
+        value: 'insideType',
+        method: null,
+        scope: null },
+     type: 'selection',
+     childs: { base: [Circular], params: [Object] },
+     value: null,
+     method: null,
+     scope: null },
+  type: 'symbol',
+  childs: { path: null, name: 'symbol', ref: null },
+  value: 'symbol',
+  method: null,
+  scope: null }
