@@ -1,0 +1,19 @@
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [] },
+     value: null,
+     method: null,
+     scope: { symbol: {}, type: [Object] } },
+  type: 'element',
+  childs: 
+   { name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'lucky',
+        method: 'method_buildin_identifier',
+        scope: null } },
+  value: null,
+  method: 'method_buildin_element_decl',
+  scope: null }
