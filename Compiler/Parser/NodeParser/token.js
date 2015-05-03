@@ -44,6 +44,13 @@ module.exports = function (parser) {
         this.tokenProvider = new TokenProvider(buffer);
     };
 
+    parser.prototype.clone = function (pos) {
+        var clone = new parser();
+        clone.createTokenProvider(this.tokenProvider.buffer);
+        clone.tokenProvider.pos = pos;
+        return clone;
+    };
+
     parser.prototype.testIsInstTemplateOrArrayDecl = function (pos) {
         var TokenProvider = require('../token.js').TokenProvider;
         var tokenProvider = new TokenProvider(this.tokenProvider.buffer.substring(pos));
