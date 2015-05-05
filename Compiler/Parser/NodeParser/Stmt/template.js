@@ -30,24 +30,9 @@ module.exports = function (parser) {
         var params = [];
         while (this.getToken().text !== ']') {
             var token = this.getToken();
-            if (token.type === 'identifier') {
-                var clone = this.clone();
-                clone.parseSymbol();
-                var t = clone.getToken();
-                params.push(this.parseSymbol());
-            } else if (token.isNumber()) {
-                params.push(this.parseNumber());
-            } else if (token.isString()) {
-                params.push(this.parseString());
-            } else {
-                params.push(this.parseExprBrace());
-            }
+            this.parseParameter(token, params);
             if (this.getToken().text === ',') {
                 n.childs.template = true;
-                this.consume();
-            }
-            if (this.getToken().text === ':') {
-                n.childs.range = true;
                 this.consume();
             }
         }

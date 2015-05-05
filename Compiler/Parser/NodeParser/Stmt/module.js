@@ -90,7 +90,8 @@ module.exports = function (parser) {
         }
 
         var virtual = null;
-        if (this.getToken().text === '(') {
+        if (this.getToken().text === 'virtual') {
+            this.consume();
             virtual = this.parseVirtualInheritanceList();
         }
 
