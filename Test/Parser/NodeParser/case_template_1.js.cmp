@@ -90,10 +90,10 @@
   childs: 
    { type: 
       { parent: [Circular],
-        type: 'type',
+        type: 'symbol',
         childs: [Object],
-        value: null,
-        method: 'method_buildin_type',
+        value: 'original',
+        method: null,
         scope: null },
      name: 
       { parent: [Circular],
@@ -120,16 +120,8 @@
      value: null,
      method: 'method_buildin_inst_decl',
      scope: null },
-  type: 'type',
-  childs: 
-   { base: 
-      { parent: null,
-        type: 'original',
-        childs: {},
-        value: 'original',
-        method: null,
-        scope: null },
-     range: [] },
-  value: null,
-  method: 'method_buildin_type',
+  type: 'symbol',
+  childs: { path: null, name: 'original', ref: null },
+  value: 'original',
+  method: null,
   scope: null }

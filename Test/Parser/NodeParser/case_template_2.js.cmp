@@ -55,7 +55,7 @@
         scope: null },
      tparams_specification: 
       { parent: [Circular],
-        type: 'tparam_specification',
+        type: 'tparam_spec',
         childs: [Object],
         value: null,
         method: null,
@@ -79,16 +79,15 @@
   method: 'method_buildin_module_decl',
   scope: { symbol: { this: [Object], bus: [Object] }, type: {} } }
 --------------------------------
-{ type: 
-   { parent: 
-      { parent: [Object],
-        type: 'tparam_specification',
-        childs: [Object],
-        value: null,
-        method: null,
-        scope: null },
-     type: 'type',
-     childs: { base: [Object], range: [] },
-     value: null,
-     method: 'method_buildin_type',
-     scope: null } }
+[ { parent: 
+     { parent: [Object],
+       type: 'tparam_spec',
+       childs: [Object],
+       value: null,
+       method: null,
+       scope: null },
+    type: 'symbol',
+    childs: { path: null, name: 'original', ref: null },
+    value: 'original',
+    method: null,
+    scope: null } ]

@@ -1,24 +1,7 @@
 var msg = require('../../ErrorHandling/errorhandling.js');
 module.exports = function (parser) {
     'use strict';
-    parser.prototype.parseExprIdxRange = function () {
-        var n = this.push();
-        n.type   = 'range';
-        this.require('[');
-        this.consume();
-        var index = this.parseExpr();
-        this.require(']');
-        this.consume();
-
-        n.childs = {
-            base:  null,
-            index: index
-        };
-        n.method = this.method_buildin + 'range';
-
-        return this.pop(n);
-    };
-
+    require('./Expr/symbol.js')(parser);
     parser.prototype.parseExprBrace = function () {
         this.require('(');
         this.consume();
@@ -28,58 +11,6 @@ module.exports = function (parser) {
         return n;
     };
 
-    parser.prototype.parseFuncCallOrIndex = function (param) {
-        // parse Template Parameter specification here
-        if (param instanceof Array && param.length) {
-            if (param[0].type === 'identifier' &&
-                param[0].childs.ref.childs.tparams) {
-                var n0 = this.push();
-                n0.type = 'func_call';
-                // template function
-                n0.childs = { method: param };
-                n0.childs.tparams_specification = this.parseTemplateParameter();
-                n0.childs.params = this.parseExprBrace();
-                n0.method = this.method_buildin + 'func_call';
-                param = this.pop(n0);
-            }
-        }
-
-        if (param) {
-            var token = this.getToken();
-            while (1) {
-                if (token.text === '[') {
-                    var n0 = this.parseExprIdxRange();
-                    n0.childs.base = param;
-                    n0.type = 'index';
-                    n0.method = this.method_buildin + 'index';
-                    param = n0;
-                    token = this.getToken();
-                } else if (token.text === '(') {
-                    var n0 = this.push();
-                    n0.type = 'func_call';
-                    n0.childs = {
-                        method: param,
-                        params: this.parseExprBrace()
-                    };
-                    n0.method = this.method_buildin + 'func_call';
-                    param = this.pop(n0);
-                    token = this.getToken();
-                } else if (token.text === '.') {
-                    this.consume();
-                    var n0 = this.push();
-                    n0.type = 'member';
-                    n0.childs.base = param;
-                    n0.childs.member = this.parseExpr();
-                    n0.method = this.method_buildin + "member";
-                    param = this.pop(n0);
-                    token = this.getToken();
-                } else {
-                    break;
-                }
-            }
-        }
-        return param;
-    };
     parser.prototype.parseExpr = function () {
         var params = [];
         var op = '';
@@ -95,14 +26,14 @@ module.exports = function (parser) {
             if (token.text === '(') {
                 param = this.parseExprBrace();
             } else if (token.type === 'identifier') {
-                this.consume();
-                param = this.lookupForSymbol(this.current, token.text);
+                param = this.parseSymbol();
+                //this.consume();
+                //param = this.lookupForSymbol(this.current, token.text);
             } else if (token.isNumber()) {
                 param = this.parseNumber();
             } else if (token.isString()) {
                 param = this.parseString();
             }
-            param = this.parseFuncCallOrIndex(param);
             if (param) {
                 params.push(param);
                 if (op[op.length - 1] === '$') {
@@ -136,16 +67,10 @@ module.exports = function (parser) {
     };
 
     parser.prototype.parseExprCanDecl = function () {
-        // instance
-        if (this.getToken().type === 'identifier' &&
-            (this.getToken(2).type === 'identifier' ||
-             this.getToken(2).text === '::')) {
-            return this.parseInstDeclWithAssign();
-        }
-        if (this.getToken().type === 'identifier' &&
-            this.getToken(2).text === '[') {
-            // can be of type decl or expression
-            if (this.testIsInstTemplateOrArrayDecl(this.getToken().pos)) {
+        if (this.getToken().type === 'identifier') {
+            var clone = this.clone();
+            clone.parseSymbol();
+            if (clone.getToken().type === 'identifier') {
                 return this.parseInstDeclWithAssign();
             }
         }

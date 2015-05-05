@@ -22,65 +22,37 @@ module.exports = function (parser) {
     parser.prototype.parseTemplateParameter = function () {
         var n = this.push();
 
-        n.type = 'tparam_specification';
+        n.type = 'tparam_spec';
+
         this.require('[');
         this.consume();
 
-        var tparams = null;
-        if (n.parent.type === 'function_decl') {
-            var name = n.parent.childs.name.value;
-            var symlist = this.lookupForSymbol(n, [name]);
-            tparams = symlist[0].childs.ref.childs.tparams;
-            if (tparams === undefined) {
-                msg.error(this, name + ' is not a template function');
-            }
-        }
-        if (n.parent.type === 'module_decl') {
-            var name = n.parent.childs.name.value;
-            var typelist = this.lookupForType(n, [name]);
-            tparams = typelist[0].childs.ref.childs.tparams;
-            if (tparams === undefined) {
-                msg.error(this, n.parent.childs.name.value + ' is not a template module');
-            }
-        }
-        if (n.parent.type === 'type') {
-            var name = n.parent.childs.base[0].value;
-            var typelist = this.lookupForType(n, [name]);
-            tparams = typelist[0].childs.ref.childs.tparams;
-            if (tparams === undefined) {
-                msg.error(this, n.parent.childs.name.value + ' is not a template module');
-            }
-        }
-        if (n.parent.type === 'func_call') {
-            tparams = n.parent.childs.method[0].childs.ref.childs.tparams;
-            if (tparams === undefined) {
-                msg.error(this, n.parent.childs.name.value + ' is not a template function');
-            }
-        }
-        /// Function Call
-        /// Module Inheritance
-        var list = [];
-        var map  = {};
-        for (var i in tparams) {
-            var name = tparams[i].childs.name.value;
-            var t = null;
-            if (tparams[i].type === 'typename') {
-                t = this.parseType();
+        var params = [];
+        while (this.getToken().text !== ']') {
+            var token = this.getToken();
+            if (token.type === 'identifier') {
+                var clone = this.clone();
+                clone.parseSymbol();
+                var t = clone.getToken();
+                params.push(this.parseSymbol());
+            } else if (token.isNumber()) {
+                params.push(this.parseNumber());
+            } else if (token.isString()) {
+                params.push(this.parseString());
             } else {
-                t = this.parseExpr();
+                params.push(this.parseExprBrace());
             }
-            list.push(t);
-            map[name] = t;
+            if (this.getToken().text === ',') {
+                n.childs.template = true;
+                this.consume();
+            }
+            if (this.getToken().text === ':') {
+                n.childs.range = true;
+                this.consume();
+            }
         }
-
-        n.childs = {
-            list: list,
-            map:  map
-        };
-
-        this.require(']');
+        n.childs.params = params;
         this.consume();
-
         return this.pop(n);
     };
 

@@ -9,5 +9,5 @@ require('../../test.js')(__filename, function (data) {
         console.log(parser.root.childs.stmts[i]);
     }
     console.log('--------------------------------');
-    console.log(parser.root.childs.stmts[i].childs.tparams_specification.childs.map);
+    console.log(parser.root.childs.stmts[i].childs.tparams_specification.childs.params);
 });

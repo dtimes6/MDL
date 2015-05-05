@@ -7,5 +7,4 @@ require('../../test.js')(__filename, function (data) {
         console.log(parser.root.childs.stmts[i]);
     }
     console.log(parser.root.childs.stmts[2].childs.stmt.childs.stmts[1].childs.params[0]);
-    console.log(parser.root.childs.stmts[2].childs.stmt.childs.stmts[1].childs.params[0].childs.member);
 });

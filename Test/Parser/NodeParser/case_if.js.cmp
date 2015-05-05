@@ -18,10 +18,10 @@
      params: [ [Object] ],
      type: 
       { parent: [Circular],
-        type: 'type',
+        type: 'symbol',
         childs: [Object],
-        value: null,
-        method: 'method_buildin_type',
+        value: 'synth',
+        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
@@ -50,11 +50,11 @@
   type: 'if',
   childs: 
    { condition: 
-      { parent: [Object],
-        type: 'identifier',
+      { parent: [Circular],
+        type: 'symbol',
         childs: [Object],
         value: 's',
-        method: 'method_buildin_identifier',
+        method: null,
         scope: null },
      then_stmt: 
       { parent: [Circular],
@@ -76,27 +76,23 @@
 { parent: 
    { parent: 
       { parent: [Object],
-        type: 'function_decl',
+        type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_function_decl',
+        method: 'method_buildin_statement_block',
         scope: [Object] },
-     type: 'inst_decl',
-     childs: { type: [Object], name: [Circular], init: null },
+     type: 'if',
+     childs: 
+      { condition: [Circular],
+        then_stmt: [Object],
+        else_stmt: [Object] },
      value: null,
-     method: 'method_buildin_inst_decl',
+     method: 'method_buildin_statement_if',
      scope: null },
-  type: 'identifier',
-  childs: 
-   { ref: 
-      { parent: [Object],
-        type: 'inst_decl',
-        childs: [Object],
-        value: null,
-        method: 'method_buildin_inst_decl',
-        scope: null } },
+  type: 'symbol',
+  childs: { path: null, name: 's', ref: null },
   value: 's',
-  method: 'method_buildin_identifier',
+  method: null,
   scope: null }
 { parent: 
    { parent: 

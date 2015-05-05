@@ -6,6 +6,6 @@ module A {
 
 function add(A a, A b) : A {
     A r;
-    (r.data) = a.data + b.data;
+    r.data = (a.data + b.data);
     return r;
 }

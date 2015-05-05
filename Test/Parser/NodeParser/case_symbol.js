@@ -8,4 +8,8 @@ require('../../test.js')(__filename, function (data) {
     console.log(s);
     console.log(s.childs.path);
     console.log(s.childs.path.childs.base);
+    var s = parser.parseSymbol();
+    console.log(s);
+    var s = parser.parseSymbol();
+    console.log(s);
 });

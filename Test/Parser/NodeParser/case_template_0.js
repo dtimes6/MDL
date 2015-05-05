@@ -11,5 +11,5 @@ require('../../test.js')(__filename, function (data) {
     console.log('--------------------------------');
     console.log(parser.root.childs.stmts[i].childs.tparams_specification);
     console.log('--------------------------------');
-    console.log(parser.root.childs.stmts[i].childs.tparams_specification.childs.map.type);
+    console.log(parser.root.childs.stmts[i].childs.tparams_specification.childs.params[0]);
 });

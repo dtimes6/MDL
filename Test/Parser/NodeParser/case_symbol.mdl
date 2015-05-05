@@ -1,1 +1,3 @@
-symbol[Type::A[], Type[B]::C, 0, Type[C]::value]::insideType symbol[Type::A[], Type[B]::C, (0 + 1), Type[C]::value]::member;
+symbol[Type::A[], Type[B]::C, 0, Type[C]::value]::insideType
+symbol[Type::A[], Type[B]::C, (0 + 1), Type[C]::value]::staticMember
+symbol[Type::A[], Type[B]::C, (0 + 1), Type[C]::value]::staticCall(1,2,3)

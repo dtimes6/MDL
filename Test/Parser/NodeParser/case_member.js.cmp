@@ -71,10 +71,10 @@
      params: [ [Object], [Object] ],
      type: 
       { parent: [Circular],
-        type: 'type',
+        type: 'symbol',
         childs: [Object],
-        value: null,
-        method: 'method_buildin_type',
+        value: 'A',
+        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
@@ -101,46 +101,15 @@
      scope: null },
   type: 'member',
   childs: 
-   { base: 
-      { parent: [Object],
-        type: 'identifier',
-        childs: [Object],
-        value: 'r',
-        method: 'method_buildin_identifier',
-        scope: null },
-     member: 
+   { path: 
       { parent: [Circular],
-        type: 'member_identifier',
-        childs: [Object],
-        value: 'data',
-        method: 'method_buildin_member_identifier',
-        scope: null } },
-  value: null,
-  method: 'method_buildin_member',
-  scope: null }
-{ parent: 
-   { parent: 
-      { parent: [Object],
-        type: 'operation',
-        childs: [Object],
-        value: null,
-        method: '$=$',
-        scope: null },
-     type: 'member',
-     childs: { base: [Object], member: [Circular] },
-     value: null,
-     method: 'method_buildin_member',
-     scope: null },
-  type: 'member_identifier',
-  childs: 
-   { base: 
-      { parent: [Object],
-        type: 'identifier',
+        type: 'symbol',
         childs: [Object],
         value: 'r',
-        method: 'method_buildin_identifier',
+        method: null,
         scope: null },
+     name: 'data',
      ref: null },
   value: 'data',
-  method: 'method_buildin_member_identifier',
+  method: null,
   scope: null }

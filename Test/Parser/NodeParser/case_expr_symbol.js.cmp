@@ -141,10 +141,10 @@
        value: null,
        method: '$+$',
        scope: null },
-    type: 'identifier',
-    childs: { ref: [Object] },
+    type: 'symbol',
+    childs: { path: null, name: 'a1', ref: null },
     value: 'a1',
-    method: 'method_buildin_identifier',
+    method: null,
     scope: null },
   { parent: 
      { parent: [Object],
@@ -171,15 +171,8 @@
      value: null,
      method: '$+$',
      scope: null },
-  type: 'identifier',
-  childs: 
-   { ref: 
-      { parent: [Object],
-        type: 'inst_decl',
-        childs: [Object],
-        value: null,
-        method: 'method_buildin_inst_decl_assign',
-        scope: null } },
+  type: 'symbol',
+  childs: { path: null, name: 'a1', ref: null },
   value: 'a1',
-  method: 'method_buildin_identifier',
+  method: null,
   scope: null }

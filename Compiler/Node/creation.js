@@ -1,6 +1,11 @@
 var msg = require('../ErrorHandling/errorhandling.js');
 module.exports = function (node) {
     'use strict';
+    node.prototype.appendChild = function (name, n) {
+        this.childs[name] = n;
+        n.parent = this;
+    };
+
     node.prototype.createScope = function () {
         this.scope = { symbol: {}, type: {} };
         return this;

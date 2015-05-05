@@ -43,10 +43,10 @@
   childs: 
    { type: 
       { parent: [Circular],
-        type: 'type',
+        type: 'selection',
         childs: [Object],
         value: null,
-        method: 'method_buildin_type',
+        method: null,
         scope: null },
      name: 
       { parent: [Circular],

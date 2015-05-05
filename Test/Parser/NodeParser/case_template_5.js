@@ -11,10 +11,7 @@ require('../../test.js')(__filename, function (data) {
     console.log('--------------------------------');
     console.log(parser.root.childs.stmts[i].childs.stmt.childs.stmts[2]);
     console.log('--------------------------------');
-    console.log(parser.root.childs.stmts[i].childs.stmt.childs.stmts[2].childs.method[2]);
+    console.log(parser.root.childs.stmts[i].childs.stmt.childs.stmts[2].childs.func);
     console.log('--------------------------------');
-    console.log(parser.root.childs.stmts[i].childs.stmt.childs.stmts[2].childs.tparams_specification.childs.map.type);
-    console.log('--------------------------------');
-    console.log(parser.root.childs.stmts[i].childs.stmt.childs.stmts[2].childs.tparams_specification.childs.map.type.childs.base);
-    console.log(parser.root.childs.stmts[i].childs.stmt.childs.stmts[2].childs.tparams_specification.childs.map.type.childs.tparams_specification.childs.map.type);
+    console.log(parser.root.childs.stmts[i].childs.stmt.childs.stmts[2].childs.params);
 });

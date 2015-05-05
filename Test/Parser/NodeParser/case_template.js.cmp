@@ -20,10 +20,10 @@
      params: [ [Object], [Object] ],
      type: 
       { parent: [Circular],
-        type: 'type',
+        type: 'symbol',
         childs: [Object],
-        value: null,
-        method: 'method_buildin_type',
+        value: 'type',
+        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],

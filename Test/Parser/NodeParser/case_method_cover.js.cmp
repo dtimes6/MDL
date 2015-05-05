@@ -18,10 +18,10 @@
      params: [],
      type: 
       { parent: [Circular],
-        type: 'type',
+        type: 'symbol',
         childs: [Object],
-        value: null,
-        method: 'method_buildin_type',
+        value: 'original',
+        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
@@ -169,10 +169,10 @@
      params: [ [Object], [Object] ],
      type: 
       { parent: [Circular],
-        type: 'type',
+        type: 'symbol',
         childs: [Object],
-        value: null,
-        method: 'method_buildin_type',
+        value: 'original',
+        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],

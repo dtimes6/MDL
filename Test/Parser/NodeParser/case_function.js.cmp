@@ -66,10 +66,10 @@
      params: [ [Object] ],
      type: 
       { parent: [Circular],
-        type: 'type',
+        type: 'symbol',
         childs: [Object],
-        value: null,
-        method: 'method_buildin_type',
+        value: 'net8',
+        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
@@ -101,10 +101,10 @@
      params: [ [Object] ],
      type: 
       { parent: [Circular],
-        type: 'type',
+        type: 'symbol',
         childs: [Object],
-        value: null,
-        method: 'method_buildin_type',
+        value: 'synth',
+        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
@@ -166,18 +166,10 @@
      value: null,
      method: 'method_buildin_function_decl',
      scope: { symbol: [Object], type: {} } },
-  type: 'type',
-  childs: 
-   { base: 
-      { parent: [Object],
-        type: 'identifier',
-        childs: [Object],
-        value: 'net8',
-        method: 'method_buildin_identifier',
-        scope: null },
-     range: [] },
-  value: null,
-  method: 'method_buildin_type',
+  type: 'symbol',
+  childs: { path: null, name: 'net8', ref: null },
+  value: 'net8',
+  method: null,
   scope: null }
 ----------------
 { parent: 
@@ -198,16 +190,8 @@
      value: null,
      method: 'method_buildin_function_decl',
      scope: { symbol: [Object], type: {} } },
-  type: 'type',
-  childs: 
-   { base: 
-      { parent: null,
-        type: 'synth',
-        childs: {},
-        value: 'synth',
-        method: null,
-        scope: null },
-     range: [] },
-  value: null,
-  method: 'method_buildin_type',
+  type: 'symbol',
+  childs: { path: null, name: 'synth', ref: null },
+  value: 'synth',
+  method: null,
   scope: null }

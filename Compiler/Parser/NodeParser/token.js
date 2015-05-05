@@ -47,26 +47,11 @@ module.exports = function (parser) {
     parser.prototype.clone = function (pos) {
         var clone = new parser();
         clone.createTokenProvider(this.tokenProvider.buffer);
-        clone.tokenProvider.pos = pos;
-        return clone;
-    };
-
-    parser.prototype.testIsInstTemplateOrArrayDecl = function (pos) {
-        var TokenProvider = require('../token.js').TokenProvider;
-        var tokenProvider = new TokenProvider(this.tokenProvider.buffer.substring(pos));
-        tokenProvider.consume();
-        var brace = 0;
-        while (tokenProvider.getToken()) {
-            var token = tokenProvider.getToken()[0];
-            if (token.text === '[') {
-                ++brace;
-            } else if (token.text === ']') {
-                --brace;
-            } else if (brace === 0 && token.type === 'identifier') {
-                return true;
-            }
-            tokenProvider.consume();
+        if (pos) {
+            clone.tokenProvider.pos = pos;
+        } else {
+            clone.tokenProvider.pos = this.getToken().pos;
         }
-        return false;
+        return clone;
     };
 };

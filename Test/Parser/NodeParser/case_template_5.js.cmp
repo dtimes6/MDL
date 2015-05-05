@@ -20,10 +20,10 @@
      params: [ [Object], [Object] ],
      type: 
       { parent: [Circular],
-        type: 'type',
+        type: 'symbol',
         childs: [Object],
-        value: null,
-        method: 'method_buildin_type',
+        value: 'type',
+        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
@@ -57,7 +57,7 @@
         scope: null },
      tparams_specification: 
       { parent: [Circular],
-        type: 'tparam_specification',
+        type: 'tparam_spec',
         childs: [Object],
         value: null,
         method: null,
@@ -65,10 +65,10 @@
      params: [ [Object], [Object] ],
      type: 
       { parent: [Circular],
-        type: 'type',
+        type: 'symbol',
         childs: [Object],
-        value: null,
-        method: 'method_buildin_type',
+        value: 'original',
+        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
@@ -136,7 +136,7 @@
         scope: null },
      tparams_specification: 
       { parent: [Circular],
-        type: 'tparam_specification',
+        type: 'tparam_spec',
         childs: [Object],
         value: null,
         method: null,
@@ -181,7 +181,7 @@
         scope: null },
      tparams_specification: 
       { parent: [Circular],
-        type: 'tparam_specification',
+        type: 'tparam_spec',
         childs: [Object],
         value: null,
         method: null,
@@ -189,10 +189,10 @@
      params: [ [Object], [Object] ],
      type: 
       { parent: [Circular],
-        type: 'type',
+        type: 'selection',
         childs: [Object],
         value: null,
-        method: 'method_buildin_type',
+        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
@@ -251,14 +251,14 @@
      scope: { symbol: [Object], type: {} } },
   type: 'func_call',
   childs: 
-   { method: [ [Object], [Object], [Object] ],
-     tparams_specification: 
+   { func: 
       { parent: [Circular],
-        type: 'tparam_specification',
+        type: 'selection',
         childs: [Object],
         value: null,
         method: null,
         scope: null },
+     ref: null,
      params: 
       { parent: [Circular],
         type: 'operation',
@@ -267,117 +267,51 @@
         method: '',
         scope: null } },
   value: null,
-  method: 'method_buildin_func_call',
+  method: null,
   scope: null }
 --------------------------------
 { parent: 
    { parent: 
-      { parent: null,
-        type: 'root',
+      { parent: [Object],
+        type: 'block',
         childs: [Object],
         value: null,
-        method: null,
+        method: 'method_buildin_statement_block',
         scope: [Object] },
-     type: 'function_decl',
-     childs: 
-      { tparams: [Object],
-        proc: false,
-        name: [Circular],
-        tparams_specification: [Object],
-        params: [Object],
-        type: [Object],
-        stmt: [Object] },
-     value: null,
-     method: 'method_buildin_function_decl',
-     scope: { symbol: [Object], type: [Object] } },
-  type: 'identifier',
-  childs: 
-   { ref: 
-      { parent: [Object],
-        type: 'function_decl',
-        childs: [Object],
-        value: null,
-        method: 'method_buildin_function_decl',
-        scope: [Object] } },
-  value: 'add',
-  method: 'method_buildin_identifier',
-  scope: null }
---------------------------------
-{ parent: 
-   { parent: 
-      { parent: [Object],
-        type: 'func_call',
-        childs: [Object],
-        value: null,
-        method: 'method_buildin_func_call',
-        scope: null },
-     type: 'tparam_specification',
-     childs: { list: [Object], map: [Object] },
+     type: 'func_call',
+     childs: { func: [Circular], ref: null, params: [Object] },
      value: null,
      method: null,
      scope: null },
-  type: 'type',
-  childs: 
-   { base: [ [Object], [Object] ],
-     tparams_specification: 
-      { parent: [Circular],
-        type: 'tparam_specification',
-        childs: [Object],
-        value: null,
-        method: null,
-        scope: null },
-     range: [] },
-  value: null,
-  method: 'method_buildin_type',
-  scope: null }
---------------------------------
-[ { parent: 
-     { parent: [Object],
-       type: 'module_decl',
-       childs: [Object],
-       value: null,
-       method: 'method_buildin_module_decl',
-       scope: [Object] },
-    type: 'identifier',
-    childs: { ref: [Object] },
-    value: 'io',
-    method: 'method_buildin_identifier',
-    scope: null },
-  { parent: 
-     { parent: [Object],
-       type: 'module_decl',
-       childs: [Object],
-       value: null,
-       method: 'method_buildin_module_decl',
-       scope: [Object] },
-    type: 'identifier',
-    childs: { ref: [Object] },
-    value: 'io',
-    method: 'method_buildin_identifier',
-    scope: null } ]
-{ parent: 
-   { parent: 
-      { parent: [Object],
-        type: 'type',
-        childs: [Object],
-        value: null,
-        method: 'method_buildin_type',
-        scope: null },
-     type: 'tparam_specification',
-     childs: { list: [Object], map: [Object] },
-     value: null,
-     method: null,
-     scope: null },
-  type: 'type',
+  type: 'selection',
   childs: 
    { base: 
-      { parent: null,
-        type: 'original',
-        childs: {},
-        value: 'original',
+      { parent: [Circular],
+        type: 'symbol',
+        childs: [Object],
+        value: 'add',
         method: null,
         scope: null },
-     range: [] },
+     params: [ [Object] ] },
   value: null,
-  method: 'method_buildin_type',
+  method: null,
+  scope: null }
+--------------------------------
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        method: 'method_buildin_statement_block',
+        scope: [Object] },
+     type: 'func_call',
+     childs: { func: [Object], ref: null, params: [Circular] },
+     value: null,
+     method: null,
+     scope: null },
+  type: 'operation',
+  childs: { op: '', params: [] },
+  value: null,
+  method: '',
   scope: null }
