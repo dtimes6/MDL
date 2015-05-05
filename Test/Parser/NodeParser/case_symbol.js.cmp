@@ -4,7 +4,6 @@ symbol
      type: 'root',
      childs: { stmts: [] },
      value: null,
-     method: null,
      scope: { symbol: {}, type: [Object] } },
   type: 'symbol',
   childs: 
@@ -13,12 +12,10 @@ symbol
         type: 'selection',
         childs: [Object],
         value: null,
-        method: null,
         scope: null },
      name: 'insideType',
      ref: null },
   value: 'insideType',
-  method: null,
   scope: null }
 { parent: 
    { parent: 
@@ -26,12 +23,10 @@ symbol
         type: 'root',
         childs: [Object],
         value: null,
-        method: null,
         scope: [Object] },
      type: 'symbol',
      childs: { path: [Circular], name: 'insideType', ref: null },
      value: 'insideType',
-     method: null,
      scope: null },
   type: 'selection',
   childs: 
@@ -40,12 +35,10 @@ symbol
         type: 'symbol',
         childs: [Object],
         value: 'symbol',
-        method: null,
         scope: null },
      template: true,
      params: [ [Object], [Object], [Object], [Object] ] },
   value: null,
-  method: null,
   scope: null }
 { parent: 
    { parent: 
@@ -53,24 +46,20 @@ symbol
         type: 'symbol',
         childs: [Object],
         value: 'insideType',
-        method: null,
         scope: null },
      type: 'selection',
      childs: { base: [Circular], template: true, params: [Object] },
      value: null,
-     method: null,
      scope: null },
   type: 'symbol',
   childs: { path: null, name: 'symbol', ref: null },
   value: 'symbol',
-  method: null,
   scope: null }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [] },
      value: null,
-     method: null,
      scope: { symbol: {}, type: [Object] } },
   type: 'symbol',
   childs: 
@@ -79,19 +68,16 @@ symbol
         type: 'selection',
         childs: [Object],
         value: null,
-        method: null,
         scope: null },
      name: 'staticMember',
      ref: null },
   value: 'staticMember',
-  method: null,
   scope: null }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [] },
      value: null,
-     method: null,
      scope: { symbol: {}, type: [Object] } },
   type: 'func_call',
   childs: 
@@ -100,7 +86,6 @@ symbol
         type: 'symbol',
         childs: [Object],
         value: 'staticCall',
-        method: null,
         scope: null },
      ref: null,
      params: 
@@ -108,8 +93,6 @@ symbol
         type: 'operation',
         childs: [Object],
         value: null,
-        method: '$,$,$',
         scope: null } },
   value: null,
-  method: null,
   scope: null }

@@ -3,7 +3,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'module_decl',
   childs: 
@@ -12,14 +11,12 @@
         type: 'identifier',
         childs: [Object],
         value: 'A',
-        method: 'method_buildin_identifier',
         scope: null },
      self: 
       { parent: [Circular],
         type: 'inst_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_module_this',
         scope: null },
      inheritance: null,
      stmt: 
@@ -27,17 +24,14 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_module_decl',
   scope: { symbol: { this: [Object] }, type: { B: [Object] } } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'inst_decl',
   childs: 
@@ -46,16 +40,13 @@
         type: 'selection',
         childs: [Object],
         value: null,
-        method: null,
         scope: null },
      name: 
       { parent: [Circular],
         type: 'identifier',
         childs: [Object],
         value: 'a',
-        method: 'method_buildin_identifier',
         scope: null },
      init: null },
   value: null,
-  method: 'method_buildin_inst_decl',
   scope: null }

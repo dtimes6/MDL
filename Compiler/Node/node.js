@@ -16,7 +16,6 @@ var ATPNode = function () {
     this.type     = null; // type of node tails how to visit childs
     this.childs   = {};
     this.value    = null; // for original constants, or reserved constants
-    this.method   = null; // for elaboration method/function should taken
     this.scope    = null; // information in this scope
 };
 

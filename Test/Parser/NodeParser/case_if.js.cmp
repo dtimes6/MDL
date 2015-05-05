@@ -3,7 +3,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -13,7 +12,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'case_if',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [ [Object] ],
      type: 
@@ -21,17 +19,14 @@
         type: 'symbol',
         childs: [Object],
         value: 'synth',
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: { symbol: { s: [Object] }, type: {} } }
 -----------------------------------------------------------
 { parent: 
@@ -40,12 +35,10 @@
         type: 'function_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_function_decl',
         scope: [Object] },
      type: 'block',
      childs: { stmts: [Object] },
      value: null,
-     method: 'method_buildin_statement_block',
      scope: { symbol: {}, type: {} } },
   type: 'if',
   childs: 
@@ -54,24 +47,20 @@
         type: 'symbol',
         childs: [Object],
         value: 's',
-        method: null,
         scope: null },
      then_stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] },
      else_stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_statement_if',
   scope: null }
 { parent: 
    { parent: 
@@ -79,7 +68,6 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] },
      type: 'if',
      childs: 
@@ -87,12 +75,10 @@
         then_stmt: [Object],
         else_stmt: [Object] },
      value: null,
-     method: 'method_buildin_statement_if',
      scope: null },
   type: 'symbol',
   childs: { path: null, name: 's', ref: null },
   value: 's',
-  method: null,
   scope: null }
 { parent: 
    { parent: 
@@ -100,15 +86,12 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] },
      type: 'return',
      childs: { expr: [Circular], scope: [Object] },
      value: null,
-     method: 'method_buildin_return',
      scope: null },
   type: 'string',
   childs: {},
   value: '"@s"',
-  method: 'method_buildin_string_dquoted',
   scope: null }

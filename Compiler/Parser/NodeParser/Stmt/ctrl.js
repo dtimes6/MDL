@@ -41,8 +41,6 @@ module.exports = function (parser) {
             expr:  expr,
             scope: scope
         };
-        n.method = this.method_buildin + 'return';
-
         return this.pop(n);
     };
 
@@ -62,8 +60,6 @@ module.exports = function (parser) {
         n.childs = {
             tag: tag
         };
-        n.method = this.method_buildin + 'break';
-
         return this.pop(n);
     };
 
@@ -83,8 +79,6 @@ module.exports = function (parser) {
         n.childs = {
             tag: tag
         };
-        n.method = this.method_buildin + 'continue';
-
         return this.pop(n);
     };
 
@@ -101,8 +95,6 @@ module.exports = function (parser) {
             name: this.parseNamedRef()
         };
         n.childs.name.childs.ref = n;
-        n.method = this.method_buildin + 'tag';
-
         return this.pop(n);
     };
 };

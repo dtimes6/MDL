@@ -3,7 +3,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'element',
   childs: 
@@ -12,17 +11,14 @@
         type: 'identifier',
         childs: [Object],
         value: 'net8',
-        method: 'method_buildin_identifier',
         scope: null } },
   value: null,
-  method: 'method_buildin_element_decl',
   scope: null }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'module_decl',
   childs: 
@@ -31,14 +27,12 @@
         type: 'identifier',
         childs: [Object],
         value: 'A',
-        method: 'method_buildin_identifier',
         scope: null },
      self: 
       { parent: [Circular],
         type: 'inst_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_module_this',
         scope: null },
      inheritance: null,
      stmt: 
@@ -46,17 +40,14 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_module_decl',
   scope: { symbol: { this: [Object], data: [Object] }, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -66,7 +57,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'add',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [ [Object], [Object] ],
      type: 
@@ -74,17 +64,14 @@
         type: 'symbol',
         childs: [Object],
         value: 'A',
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: { symbol: { a: [Object], b: [Object] }, type: {} } }
 { parent: 
    { parent: 
@@ -92,12 +79,10 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] },
      type: 'operation',
      childs: { op: '$=$', params: [Object] },
      value: null,
-     method: '$=$',
      scope: null },
   type: 'member',
   childs: 
@@ -106,10 +91,8 @@
         type: 'symbol',
         childs: [Object],
         value: 'r',
-        method: null,
         scope: null },
      name: 'data',
      ref: null },
   value: 'data',
-  method: null,
   scope: null }

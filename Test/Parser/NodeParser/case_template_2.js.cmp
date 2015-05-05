@@ -4,7 +4,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: {}, type: [Object] } },
   type: 'module_decl',
   childs: 
@@ -14,14 +13,12 @@
         type: 'identifier',
         childs: [Object],
         value: 'io',
-        method: 'method_buildin_identifier',
         scope: null },
      self: 
       { parent: [Circular],
         type: 'inst_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_module_this',
         scope: null },
      inheritance: null,
      stmt: 
@@ -29,10 +26,8 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_module_decl',
   scope: 
    { symbol: { this: [Object], in: [Object], out: [Object] },
      type: { type: [Object] } } }
@@ -41,7 +36,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: {}, type: [Object] } },
   type: 'module_decl',
   childs: 
@@ -51,21 +45,18 @@
         type: 'identifier',
         childs: [Object],
         value: 'io',
-        method: 'method_buildin_identifier',
         scope: null },
      tparams_specification: 
       { parent: [Circular],
         type: 'tparam_spec',
         childs: [Object],
         value: null,
-        method: null,
         scope: null },
      self: 
       { parent: [Circular],
         type: 'inst_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_module_this',
         scope: null },
      inheritance: null,
      stmt: 
@@ -73,10 +64,8 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_module_decl',
   scope: { symbol: { this: [Object], bus: [Object] }, type: {} } }
 --------------------------------
 [ { parent: 
@@ -84,10 +73,8 @@
        type: 'tparam_spec',
        childs: [Object],
        value: null,
-       method: null,
        scope: null },
     type: 'symbol',
     childs: { path: null, name: 'original', ref: null },
     value: 'original',
-    method: null,
     scope: null } ]

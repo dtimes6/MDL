@@ -3,7 +3,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'process_decl',
   childs: 
@@ -13,7 +12,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'case_cover',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [],
      type: 
@@ -21,24 +19,20 @@
         type: 'symbol',
         childs: [Object],
         value: 'original',
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_process_decl',
   scope: { symbol: {}, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'process_decl',
   childs: 
@@ -48,7 +42,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'case_cover',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [],
      type: null,
@@ -57,17 +50,14 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_process_decl',
   scope: { symbol: {}, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -77,7 +67,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'case_cover_2',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [],
      type: null,
@@ -86,17 +75,14 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: { symbol: {}, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'operproc_decl',
   childs: 
@@ -106,7 +92,6 @@
         type: 'operator',
         childs: [Object],
         value: '"++"',
-        method: 'method_buildin_operator',
         scope: null },
      params: [],
      type: null,
@@ -115,17 +100,14 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_operproc_decl',
   scope: { symbol: {}, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'operation_decl',
   childs: 
@@ -135,7 +117,6 @@
         type: 'operator',
         childs: [Object],
         value: '"++"',
-        method: 'method_buildin_operator',
         scope: null },
      params: [],
      type: null,
@@ -144,17 +125,14 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_operation_decl',
   scope: { symbol: {}, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -164,7 +142,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'add',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [ [Object], [Object] ],
      type: 
@@ -172,15 +149,12 @@
         type: 'symbol',
         childs: [Object],
         value: 'original',
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: { symbol: { a: [Object], b: [Object] }, type: {} } }

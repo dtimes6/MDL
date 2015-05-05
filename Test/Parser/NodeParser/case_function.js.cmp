@@ -3,7 +3,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'element',
   childs: 
@@ -12,17 +11,14 @@
         type: 'identifier',
         childs: [Object],
         value: 'net8',
-        method: 'method_buildin_identifier',
         scope: null } },
   value: null,
-  method: 'method_buildin_element_decl',
   scope: null }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -32,7 +28,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'func0',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [],
      type: null,
@@ -41,17 +36,14 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: { symbol: {}, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -61,7 +53,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'func1',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [ [Object] ],
      type: 
@@ -69,24 +60,20 @@
         type: 'symbol',
         childs: [Object],
         value: 'net8',
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: { symbol: { n: [Object] }, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -96,7 +83,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'build_in_method_constant_string',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [ [Object] ],
      type: 
@@ -104,17 +90,14 @@
         type: 'symbol',
         childs: [Object],
         value: 'synth',
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: { symbol: { s: [Object] }, type: {} } }
 ----------------
 { parent: 
@@ -123,7 +106,6 @@
         type: 'root',
         childs: [Object],
         value: null,
-        method: null,
         scope: [Object] },
      type: 'function_decl',
      childs: 
@@ -133,7 +115,6 @@
         type: [Object],
         stmt: [Object] },
      value: null,
-     method: 'method_buildin_function_decl',
      scope: { symbol: [Object], type: {} } },
   type: 'identifier',
   childs: 
@@ -142,10 +123,8 @@
         type: 'function_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_function_decl',
         scope: [Object] } },
   value: 'func1',
-  method: 'method_buildin_identifier',
   scope: null }
 ----------------
 { parent: 
@@ -154,7 +133,6 @@
         type: 'root',
         childs: [Object],
         value: null,
-        method: null,
         scope: [Object] },
      type: 'function_decl',
      childs: 
@@ -164,12 +142,10 @@
         type: [Circular],
         stmt: [Object] },
      value: null,
-     method: 'method_buildin_function_decl',
      scope: { symbol: [Object], type: {} } },
   type: 'symbol',
   childs: { path: null, name: 'net8', ref: null },
   value: 'net8',
-  method: null,
   scope: null }
 ----------------
 { parent: 
@@ -178,7 +154,6 @@
         type: 'root',
         childs: [Object],
         value: null,
-        method: null,
         scope: [Object] },
      type: 'function_decl',
      childs: 
@@ -188,10 +163,8 @@
         type: [Circular],
         stmt: [Object] },
      value: null,
-     method: 'method_buildin_function_decl',
      scope: { symbol: [Object], type: {} } },
   type: 'symbol',
   childs: { path: null, name: 'synth', ref: null },
   value: 'synth',
-  method: null,
   scope: null }

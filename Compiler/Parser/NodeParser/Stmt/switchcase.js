@@ -74,7 +74,6 @@ module.exports = function (parser) {
             case_items:   case_items,
             case_default: case_default
         };
-        n.method = this.method_buildin + 'statement_switch';
 
         return this.pop(n);
     };

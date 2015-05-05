@@ -4,7 +4,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -15,7 +14,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'add',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [ [Object], [Object] ],
      type: 
@@ -23,17 +21,14 @@
         type: 'symbol',
         childs: [Object],
         value: 'type',
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: 
    { symbol: { a: [Object], b: [Object] },
      type: { type: [Object] } } }
@@ -42,7 +37,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -53,14 +47,12 @@
         type: 'identifier',
         childs: [Object],
         value: 'add',
-        method: 'method_buildin_identifier',
         scope: null },
      tparams_specification: 
       { parent: [Circular],
         type: 'tparam_spec',
         childs: [Object],
         value: null,
-        method: null,
         scope: null },
      params: [ [Object], [Object] ],
      type: 
@@ -68,24 +60,20 @@
         type: 'symbol',
         childs: [Object],
         value: 'original',
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: { symbol: { a: [Object], b: [Object] }, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'module_decl',
   childs: 
@@ -95,14 +83,12 @@
         type: 'identifier',
         childs: [Object],
         value: 'io',
-        method: 'method_buildin_identifier',
         scope: null },
      self: 
       { parent: [Circular],
         type: 'inst_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_module_this',
         scope: null },
      inheritance: null,
      stmt: 
@@ -110,10 +96,8 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_module_decl',
   scope: 
    { symbol: { this: [Object], in: [Object], out: [Object], plus: [Object] },
      type: { type: [Object] } } }
@@ -122,7 +106,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'module_decl',
   childs: 
@@ -132,21 +115,18 @@
         type: 'identifier',
         childs: [Object],
         value: 'io',
-        method: 'method_buildin_identifier',
         scope: null },
      tparams_specification: 
       { parent: [Circular],
         type: 'tparam_spec',
         childs: [Object],
         value: null,
-        method: null,
         scope: null },
      self: 
       { parent: [Circular],
         type: 'inst_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_module_this',
         scope: null },
      inheritance: null,
      stmt: 
@@ -154,10 +134,8 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_module_decl',
   scope: 
    { symbol: { this: [Object], bus: [Object], plus: [Object] },
      type: {} } }
@@ -166,7 +144,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -177,14 +154,12 @@
         type: 'identifier',
         childs: [Object],
         value: 'add',
-        method: 'method_buildin_identifier',
         scope: null },
      tparams_specification: 
       { parent: [Circular],
         type: 'tparam_spec',
         childs: [Object],
         value: null,
-        method: null,
         scope: null },
      params: [ [Object], [Object] ],
      type: 
@@ -192,17 +167,14 @@
         type: 'selection',
         childs: [Object],
         value: null,
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: 
    { symbol: { a: [Object], b: [Object] },
      type: { type: [Object] } } }

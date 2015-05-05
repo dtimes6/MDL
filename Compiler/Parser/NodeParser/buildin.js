@@ -1,7 +1,6 @@
 
 module.exports = function (parser) {
     'use strict';
-    parser.method_buildin = "method_buildin_";
     // buildin
     parser.buildin = {};
 

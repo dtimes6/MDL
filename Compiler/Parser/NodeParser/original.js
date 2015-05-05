@@ -13,7 +13,6 @@ module.exports = function (parser) {
         n.childs = {
             ref: null
         };
-        n.method = parser.method_buildin + token.type;
 
         return this.pop(n);
     };
@@ -29,7 +28,6 @@ module.exports = function (parser) {
         n.childs = {
             ref: null
         };
-        n.method = parser.method_buildin + "operator";
         // TODO check operator string, space should not used between ops
         // TODO ??? check reserved operator such as: . ::
         /* TODO
@@ -57,8 +55,6 @@ module.exports = function (parser) {
         this.consume();
 
         n.value  = token.text;
-        n.method = parser.method_buildin + token.type;
-
         return this.pop(n);
     };
 
@@ -69,8 +65,6 @@ module.exports = function (parser) {
         this.consume();
 
         n.value  = token.text;
-        n.method = parser.method_buildin + token.type;
-
         return this.pop(n);
     };
 };

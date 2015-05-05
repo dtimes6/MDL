@@ -5,7 +5,10 @@ module.exports = function (parser) {
     parser.prototype.parseExprBrace = function () {
         this.require('(');
         this.consume();
-        var n = this.parseExpr();
+        var n = null;
+        if (this.getToken().text !== ')') {
+            n = this.parseExpr();
+        }
         this.require(')');
         this.consume();
         return n;
@@ -57,7 +60,6 @@ module.exports = function (parser) {
             params[i].parent = n;
         }
         n.type   = 'operation';
-        n.method = op;
         n.childs = {
             op:     op,
             params: params

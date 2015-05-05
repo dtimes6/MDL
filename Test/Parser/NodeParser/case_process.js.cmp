@@ -3,7 +3,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'process_decl',
   childs: 
@@ -13,7 +12,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'case_process',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [ [Object], [Object] ],
      type: 
@@ -21,15 +19,12 @@
         type: 'symbol',
         childs: [Object],
         value: 'original',
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_process_decl',
   scope: { symbol: { a: [Object], b: [Object] }, type: {} } }

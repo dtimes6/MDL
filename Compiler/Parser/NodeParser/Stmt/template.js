@@ -13,7 +13,6 @@ module.exports = function (parser) {
             name: this.parseNamedRef()
         };
         n.childs.name.childs.ref = n;
-        n.method = this.method_buildin + "typename_decl";
 
         n.scopeNode().addType(n.childs.name);
         return this.pop(n);
@@ -74,7 +73,6 @@ module.exports = function (parser) {
             tparams: params
         };
 
-        var stmt = null;
         var token = this.getToken();
         if (token.text === 'process' ||
             token.text === 'function') {

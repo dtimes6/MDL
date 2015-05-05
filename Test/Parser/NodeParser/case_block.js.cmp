@@ -3,10 +3,8 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: {}, type: [Object] } },
   type: 'block',
   childs: { stmts: [ [Object] ] },
   value: null,
-  method: 'method_buildin_statement_block',
   scope: { symbol: { sub: [Object] }, type: {} } }

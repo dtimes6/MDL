@@ -70,8 +70,6 @@ module.exports = function (parser) {
         }
 
         n.childs.stmt = this.parseBlock();
-        n.method = this.method_buildin + n.type;
-
         if (createN) {
             return this.pop(n);
         } else {

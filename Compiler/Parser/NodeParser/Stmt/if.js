@@ -20,8 +20,6 @@ module.exports = function (parser) {
             then_stmt: if_then,
             else_stmt: if_else
         };
-        n.method = this.method_buildin + 'statement_if';
-
         return this.pop(n);
     };
 };

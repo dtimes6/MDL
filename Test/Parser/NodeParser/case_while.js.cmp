@@ -3,7 +3,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -13,7 +12,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'case_while',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [],
      type: null,
@@ -22,10 +20,8 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: { symbol: {}, type: {} } }
 { parent: 
    { parent: 
@@ -33,12 +29,10 @@
         type: 'function_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_function_decl',
         scope: [Object] },
      type: 'block',
      childs: { stmts: [Object] },
      value: null,
-     method: 'method_buildin_statement_block',
      scope: { symbol: {}, type: {} } },
   type: 'while',
   childs: 
@@ -47,22 +41,18 @@
         type: 'tag',
         childs: [Object],
         value: null,
-        method: 'method_buildin_tag',
         scope: null },
      cond: 
       { parent: [Circular],
         type: 'number',
         childs: {},
         value: '1',
-        method: 'method_buildin_decimal',
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_statement_while',
   scope: null }

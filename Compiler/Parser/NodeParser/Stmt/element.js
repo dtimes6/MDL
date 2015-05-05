@@ -11,8 +11,6 @@ module.exports = function (parser) {
             name: this.parseNamedRef()
         };
         n.childs.name.childs.ref = n;
-        n.method = this.method_buildin + "element_decl";
-
         n.scopeNode().addType(n.childs.name);
 
         this.require(';');

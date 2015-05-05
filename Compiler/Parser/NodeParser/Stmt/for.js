@@ -20,7 +20,6 @@ module.exports = function (parser) {
                 variable:  for_var,
                 initarray: for_initarray
             };
-            n.method = this.method_buildin + 'statement_for_in';
         } else {
             n.type = 'for';
             this.require(';');
@@ -34,7 +33,6 @@ module.exports = function (parser) {
                 cond: for_cond,
                 step: for_step
             };
-            n.method = this.method_buildin + 'statement_for';
         }
         this.require(')');
         this.consume();
@@ -43,4 +41,4 @@ module.exports = function (parser) {
 
         return this.pop(n);
     };
-}
+};

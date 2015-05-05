@@ -3,7 +3,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -13,7 +12,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'func_for',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [ [Object] ],
      type: 
@@ -21,17 +19,14 @@
         type: 'symbol',
         childs: [Object],
         value: 'synth',
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: { symbol: { counter: [Object] }, type: {} } }
 { parent: 
    { parent: 
@@ -39,12 +34,10 @@
         type: 'function_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_function_decl',
         scope: [Object] },
      type: 'block',
      childs: { stmts: [Object] },
      value: null,
-     method: 'method_buildin_statement_block',
      scope: { symbol: [Object], type: {} } },
   type: 'for',
   childs: 
@@ -53,21 +46,18 @@
         type: 'inst_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_inst_decl_assign',
         scope: null },
      cond: 
       { parent: [Circular],
         type: 'operation',
         childs: [Object],
         value: null,
-        method: '$<$',
         scope: null },
      step: 
       { parent: [Circular],
         type: 'operation',
         childs: [Object],
         value: null,
-        method: '++$',
         scope: null },
      tag: null,
      stmt: 
@@ -75,8 +65,6 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_statement_for',
   scope: { symbol: { i: [Object] }, type: {} } }

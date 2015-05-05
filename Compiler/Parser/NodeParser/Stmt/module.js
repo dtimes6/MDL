@@ -8,8 +8,6 @@ module.exports = function (parser) {
         n.childs = {
             ref: null
         };
-        n.method = parser.method_buildin + 'module_symbol_this';
-
         return this.pop(n);
     };
 
@@ -23,7 +21,6 @@ module.exports = function (parser) {
             name: name,
             init: null
         };
-        n.method = this.method_buildin + 'module_this';
         name.childs.ref = n;
         n.parent.addSymbol(name);
         return this.pop(n);
@@ -68,7 +65,6 @@ module.exports = function (parser) {
         this.require(';');
         this.consume();
 
-        n.method = this.method_buildin + "module_decl";
         if (createN) {
             return this.pop(n);
         } else {
@@ -99,7 +95,6 @@ module.exports = function (parser) {
             list:   typelist,
             virtual: virtual
         };
-        n.method = this.method_buildin + "module_decl_inheritance";
 
         return this.pop(n);
     };

@@ -4,7 +4,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: {}, type: [Object] } },
   type: 'module_decl',
   childs: 
@@ -14,14 +13,12 @@
         type: 'identifier',
         childs: [Object],
         value: 'io',
-        method: 'method_buildin_identifier',
         scope: null },
      self: 
       { parent: [Circular],
         type: 'inst_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_module_this',
         scope: null },
      inheritance: null,
      stmt: 
@@ -29,10 +26,8 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_module_decl',
   scope: 
    { symbol: { this: [Object], in: [Object], out: [Object], plus: [Object] },
      type: { type: [Object] } } }
@@ -43,12 +38,10 @@
         type: 'module_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_module_decl',
         scope: [Object] },
      type: 'block',
      childs: { stmts: [Object] },
      value: null,
-     method: 'method_buildin_statement_block',
      scope: { symbol: [Object], type: [Object] } },
   type: 'process_decl',
   childs: 
@@ -58,7 +51,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'plus',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [ [Object] ],
      type: 
@@ -66,17 +58,14 @@
         type: 'selection',
         childs: [Object],
         value: null,
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_process_decl',
   scope: { symbol: { b: [Object] }, type: {} } }
 --------------------------------
 { parent: 
@@ -85,7 +74,6 @@
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] },
      type: 'process_decl',
      childs: 
@@ -95,7 +83,6 @@
         type: [Object],
         stmt: [Object] },
      value: null,
-     method: 'method_buildin_process_decl',
      scope: { symbol: [Object], type: {} } },
   type: 'inst_decl',
   childs: 
@@ -104,18 +91,15 @@
         type: 'selection',
         childs: [Object],
         value: null,
-        method: null,
         scope: null },
      name: 
       { parent: [Circular],
         type: 'identifier',
         childs: [Object],
         value: 'b',
-        method: 'method_buildin_identifier',
         scope: null },
      init: null },
   value: null,
-  method: 'method_buildin_inst_decl',
   scope: null }
 --------------------------------
 { parent: 
@@ -124,12 +108,10 @@
         type: 'process_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_process_decl',
         scope: [Object] },
      type: 'inst_decl',
      childs: { type: [Circular], name: [Object], init: null },
      value: null,
-     method: 'method_buildin_inst_decl',
      scope: null },
   type: 'selection',
   childs: 
@@ -138,11 +120,9 @@
         type: 'symbol',
         childs: [Object],
         value: 'io',
-        method: null,
         scope: null },
      params: [ [Object] ] },
   value: null,
-  method: null,
   scope: null }
 { parent: 
    { parent: 
@@ -150,29 +130,24 @@
         type: 'inst_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_inst_decl',
         scope: null },
      type: 'selection',
      childs: { base: [Circular], params: [Object] },
      value: null,
-     method: null,
      scope: null },
   type: 'symbol',
   childs: { path: null, name: 'io', ref: null },
   value: 'io',
-  method: null,
   scope: null }
 [ { parent: 
      { parent: [Object],
        type: 'selection',
        childs: [Object],
        value: null,
-       method: null,
        scope: null },
     type: 'symbol',
     childs: { path: null, name: 'type', ref: null },
     value: 'type',
-    method: null,
     scope: null } ]
 --------------------------------
 { stmts: [] }

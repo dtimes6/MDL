@@ -16,7 +16,6 @@ module.exports = function (parser) {
             cond: cond,
             stmt: stmt
         };
-        n.method = this.method_buildin + 'statement_while';
 
         return this.pop(n);
     };
@@ -40,7 +39,6 @@ module.exports = function (parser) {
             cond: cond,
             stmt: stmt
         };
-        n.method = this.method_buildin + 'statement_do_while';
 
         return this.pop(n);
     };

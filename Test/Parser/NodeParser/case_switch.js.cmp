@@ -3,7 +3,6 @@
      type: 'root',
      childs: { stmts: [Object] },
      value: null,
-     method: null,
      scope: { symbol: [Object], type: [Object] } },
   type: 'function_decl',
   childs: 
@@ -13,7 +12,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'case_switch',
-        method: 'method_buildin_identifier',
         scope: null },
      params: [ [Object] ],
      type: 
@@ -21,17 +19,14 @@
         type: 'symbol',
         childs: [Object],
         value: 'original',
-        method: null,
         scope: null },
      stmt: 
       { parent: [Circular],
         type: 'block',
         childs: [Object],
         value: null,
-        method: 'method_buildin_statement_block',
         scope: [Object] } },
   value: null,
-  method: 'method_buildin_function_decl',
   scope: { symbol: { i: [Object] }, type: {} } }
 { parent: 
    { parent: 
@@ -39,12 +34,10 @@
         type: 'function_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_function_decl',
         scope: [Object] },
      type: 'block',
      childs: { stmts: [Object] },
      value: null,
-     method: 'method_buildin_statement_block',
      scope: { symbol: {}, type: {} } },
   type: 'switch',
   childs: 
@@ -53,7 +46,6 @@
         type: 'symbol',
         childs: [Object],
         value: 'i',
-        method: null,
         scope: null },
      case_items: [ [Object], [Object] ],
      case_default: 
@@ -61,10 +53,8 @@
         type: 'case_default',
         childs: [Object],
         value: null,
-        method: null,
         scope: null } },
   value: null,
-  method: 'method_buildin_statement_switch',
   scope: null }
 { parent: 
    { parent: 
@@ -72,17 +62,14 @@
         type: 'function_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_function_decl',
         scope: [Object] },
      type: 'block',
      childs: { stmts: [Object] },
      value: null,
-     method: 'method_buildin_statement_block',
      scope: { symbol: {}, type: {} } },
   type: 'null',
   childs: {},
   value: null,
-  method: null,
   scope: null }
 { parent: 
    { parent: 
@@ -90,15 +77,12 @@
         type: 'function_decl',
         childs: [Object],
         value: null,
-        method: 'method_buildin_function_decl',
         scope: [Object] },
      type: 'block',
      childs: { stmts: [Object] },
      value: null,
-     method: 'method_buildin_statement_block',
      scope: { symbol: {}, type: {} } },
   type: 'null',
   childs: {},
   value: null,
-  method: null,
   scope: null }

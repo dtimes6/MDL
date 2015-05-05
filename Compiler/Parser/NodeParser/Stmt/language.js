@@ -45,8 +45,6 @@ module.exports = function (parser) {
             attrs: attributes,
             stmt:  stmt
         };
-        n.method = this.method_buildin + 'language';
-
         return this.pop(n);
     };
 };

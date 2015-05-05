@@ -19,8 +19,6 @@ module.exports = function (parser) {
         n.childs = {
             stmts: stmts
         };
-        n.method = this.method_buildin + 'statement_block';
-
         return this.pop(n);
     };
 

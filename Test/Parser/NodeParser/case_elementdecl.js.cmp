@@ -3,7 +3,6 @@
      type: 'root',
      childs: { stmts: [] },
      value: null,
-     method: null,
      scope: { symbol: {}, type: [Object] } },
   type: 'element',
   childs: 
@@ -12,8 +11,6 @@
         type: 'identifier',
         childs: [Object],
         value: 'net8',
-        method: 'method_buildin_identifier',
         scope: null } },
   value: null,
-  method: 'method_buildin_element_decl',
   scope: null }

@@ -13,7 +13,6 @@ module.exports = function (parser) {
             name:  name,
             init:  null
         };
-        n.method = this.method_buildin + 'inst_decl';
         // register name in scope
         name.childs.ref = n;
         if (n.parent.scope) {
@@ -32,7 +31,6 @@ module.exports = function (parser) {
             this.consume();
             init_expr = this.parseExpr();
             n.childs.init = init_expr;
-            n.method = this.method_buildin + 'inst_decl_assign';
         }
         return n;
     };
