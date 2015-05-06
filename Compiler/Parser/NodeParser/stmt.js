@@ -13,6 +13,7 @@ module.exports = function (parser) {
     require('./Stmt/template.js')(parser);
     require('./Stmt/type.js')(parser);
     require('./Stmt/while.js')(parser);
+    require('./Stmt/expr.js')(parser);
 
     parser.prototype.parseStmt = function () {
         var token = this.getToken();
