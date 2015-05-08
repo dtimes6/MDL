@@ -1,0 +1,69 @@
+{ parent: null,
+  type: 'root',
+  childs: { stmts: [ [Object], [Object] ] },
+  value: null,
+  scope: 
+   { symbol: { '"$0+$1"': [Object] },
+     type: 
+      { original: [Object],
+        synth: [Object],
+        method: [Object],
+        net8: [Circular] } } }
+{ parent: null,
+  type: 'root',
+  childs: { stmts: [ [Object], [Object] ] },
+  value: null,
+  scope: 
+   { symbol: { '"$0+$1"': [Object] },
+     type: 
+      { original: [Object],
+        synth: [Object],
+        method: [Object],
+        net8: [Object] } } }
+------------------------
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'element',
+  childs: 
+   { name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'net8',
+        scope: null } },
+  value: null,
+  scope: null }
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'operation_decl',
+  childs: 
+   { proc: false,
+     name: 
+      { parent: [Circular],
+        type: 'operator',
+        childs: [Object],
+        value: '"$0+$1"',
+        scope: null },
+     params: [ [Object], [Object] ],
+     type: 
+      { parent: [Circular],
+        type: 'symbol',
+        childs: [Object],
+        value: 'net8',
+        scope: null },
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        scope: [Object] } },
+  value: null,
+  scope: { symbol: { l: [Object], r: [Object] }, type: {} } }

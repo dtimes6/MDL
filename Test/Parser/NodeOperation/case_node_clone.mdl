@@ -1,0 +1,6 @@
+element net8;
+
+function "$0+$1"(net8 l, net8 r) : net8 {
+    synth s = "(@l + @r)";
+    return s;
+}

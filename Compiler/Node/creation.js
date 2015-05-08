@@ -11,6 +11,37 @@ module.exports = function (node) {
         return this;
     };
 
+    node.prototype.clone = function () {
+        var cache = [];
+        var current = this.parent;
+        var index = 0;
+        var clone = function (n) {
+            if (n.clone_index !== undefined) {
+                return cache[n.clone_index].clone;
+            }
+            var c = new node.Node();
+            /// cache here just to avoid loop case.
+            n.clone_index = index;
+            cache.push({original: n, clone: c});
+
+            c.parent = current;
+            current = c;
+            c.childs = node.reconstruct(n.childs, clone);
+            if (n.scope) {
+                c.scope = node.reconstruct(n.scope, clone);
+            }
+            c.type  = n.type;
+            c.value = n.value;
+            current = c.parent;
+            return c;
+        };
+        var c = node.reconstruct(this, clone);
+        for (var i in cache) {
+            delete cache[i].original.clone_index;
+        }
+        return c;
+    };
+
     node.prototype.addType = function (n) {
         if (n.parent &&
             n.parent.type === 'module_decl' &&
