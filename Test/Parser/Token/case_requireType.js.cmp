@@ -1,1 +1,1 @@
-Error: expected type: 'identifier' but got 'decimal'
+Error: expected type: 'identifier' but got 'decimal' : '1234'

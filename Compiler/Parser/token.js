@@ -10,6 +10,7 @@
  *
  ***/
 var msg = require('../ErrorHandling/errorhandling.js');
+
 var Token = function (type, pos, text) {
     'use strict';
     this.type = type;
@@ -133,7 +134,7 @@ TokenProvider.enum = {
     float         : [/^[0-9]*\.[0-9]+/,        TokenProvider.func.basic],
     decimal       : [/^(0d)?[0-9]+/,           TokenProvider.func.basic],
     // op
-    operator      : [/^[^ \t\nA-Za-z0-9_]+/,   TokenProvider.func.basic]
+    operator      : [/^[^ \t\nA-Za-z0-9_;]+/,   TokenProvider.func.basic]
 };
 
 TokenProvider.prototype.parse1Token = function () {
@@ -185,7 +186,7 @@ TokenProvider.prototype.requireType = function (type) {
         return ret;
     }
     if (ret.type !== type) {
-        msg.error(this, "expected type: '" + type + "' but got '" + ret.type + "'");
+        msg.error(this, "expected type: '" + type + "' but got '" + ret.type + "' : '" + ret.text + "'");
     }
     return ret;
 };
