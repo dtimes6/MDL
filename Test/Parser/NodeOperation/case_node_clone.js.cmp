@@ -8,7 +8,7 @@
       { original: [Object],
         synth: [Object],
         method: [Object],
-        net8: [Circular] } } }
+        net8: [Object] } } }
 { parent: null,
   type: 'root',
   childs: { stmts: [ [Object], [Object] ] },

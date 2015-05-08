@@ -1,0 +1,87 @@
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'function_decl',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'typename',
+     childs: { type: 'typename', name: [Circular] },
+     value: null,
+     scope: null },
+  type: 'identifier',
+  childs: 
+   { ref: 
+      { parent: [Object],
+        type: 'typename',
+        childs: [Object],
+        value: null,
+        scope: null } },
+  value: 'BUS',
+  scope: null }
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'function_decl',
+     childs: 
+      { tparams: [Object],
+        proc: false,
+        name: [Object],
+        params: [Object],
+        type: [Object],
+        stmt: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'typename',
+  childs: 
+   { type: 'typename',
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'BUS',
+        scope: null } },
+  value: null,
+  scope: null }
+----------------------------------
+{ parent: 
+   { parent: 
+      { parent: [Object],
+        type: 'function_decl',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'typename',
+     childs: { type: 'typename', name: [Circular] },
+     value: null,
+     scope: null },
+  type: 'identifier',
+  childs: 
+   { ref: 
+      { parent: [Object],
+        type: 'element',
+        childs: [Object],
+        value: null,
+        scope: null } },
+  value: 'BUS',
+  scope: null }
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'element',
+  childs: 
+   { name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'net8',
+        scope: null } },
+  value: null,
+  scope: null }

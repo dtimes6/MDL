@@ -67,8 +67,8 @@ module.exports = function (node) {
                     var key = keys[i];
                     var value = n[key];
                     obj[key] = node.reconstruct(value, func);
-                    return obj;
                 }
+                return obj;
             }
         }
         return n;

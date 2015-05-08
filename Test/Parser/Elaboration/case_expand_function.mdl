@@ -1,0 +1,8 @@
+element net8;
+
+template [
+    typename BUS
+]
+function add (BUS l, BUS r) : BUS {
+    return l + r;
+}

@@ -21,7 +21,7 @@ module.exports = function (node) {
             }
             var c = new node.Node();
             /// cache here just to avoid loop case.
-            n.clone_index = index;
+            n.clone_index = index; ++index;
             cache.push({original: n, clone: c});
 
             c.parent = current;
