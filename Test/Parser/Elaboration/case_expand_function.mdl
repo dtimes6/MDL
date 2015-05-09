@@ -1,8 +1,17 @@
 element net8;
+1;
+
+template [
+    typename BUS,
+    original N
+]
+function expand (BUS l, BUS r) : BUS {
+    return l + add[BUS, (N - 1)]((l - 1) ,r);
+}
 
 template [
     typename BUS
 ]
-function add (BUS l, BUS r) : BUS {
+function expand[BUS,0](BUS l , BUS r) : BUS {
     return l + r;
 }

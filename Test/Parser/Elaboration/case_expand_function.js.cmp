@@ -47,6 +47,40 @@
         scope: null } },
   value: null,
   scope: null }
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'function_decl',
+     childs: 
+      { tparams: [Object],
+        proc: false,
+        name: [Object],
+        params: [Object],
+        type: [Object],
+        stmt: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'inst_decl',
+  childs: 
+   { type: 
+      { parent: [Circular],
+        type: 'symbol',
+        childs: [Object],
+        value: 'original',
+        scope: null },
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'N',
+        scope: null },
+     init: null },
+  value: null,
+  scope: null }
 ----------------------------------
 { parent: 
    { parent: 
@@ -84,4 +118,14 @@
         value: 'net8',
         scope: null } },
   value: null,
+  scope: null }
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'number',
+  childs: {},
+  value: '1',
   scope: null }
