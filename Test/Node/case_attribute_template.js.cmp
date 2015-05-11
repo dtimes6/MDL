@@ -76,13 +76,6 @@
         value: 'io',
         scope: null,
         attribute: {} },
-     self: 
-      { parent: [Circular],
-        type: 'inst_decl',
-        childs: [Object],
-        value: null,
-        scope: null,
-        attribute: {} },
      inheritance: null,
      stmt: 
       { parent: [Circular],
@@ -93,7 +86,7 @@
         attribute: {} } },
   value: null,
   scope: 
-   { symbol: { this: [Object], in: [Object], out: [Object], plus: [Object] },
+   { symbol: { in: [Object], out: [Object], plus: [Object] },
      type: { type: [Object] } },
   attribute: { template: true } }
 --

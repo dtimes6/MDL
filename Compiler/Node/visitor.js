@@ -1,6 +1,70 @@
 module.exports = function (node) {
     'use strict';
 
+    // visit the same part of the two l and r
+    node.crossvisitor = function (l, r, func) {
+        if (func.visit === undefined) {
+            func.visit = [];
+        }
+        node.crossvisit(l, r, func);
+        for(var i in func.visit) {
+            delete func.visit[i].visited;
+        }
+    };
+
+    node.crossvisit = function (l, r, func) {
+        if (l && r) {
+            if ((l instanceof node.Node) &&
+                (r instanceof node.Node)) {
+                if ((l.visited === true) &&
+                    (r.visited === true)) { return; }
+                if (l.visited !== true) {
+                    l.visited = true;
+                    func.visit.push(l);
+                }
+                if (r.visited !== true) {
+                    r.visited = true;
+                    func.visit.push(r);
+                }
+                if (func.before) {
+                    if(func.before(l, r)) {
+                        return;
+                    }
+                }
+                if (l.type !== r.type) {
+                    return;
+                }
+                var keys = Object.keys(l.childs);
+                for(var i in keys) {
+                    node.crossvisit(l.childs[keys[i]], r.childs[keys[i]], func);
+                }
+
+                if (func.after) {
+                    func.after(l, r);
+                }
+                return;
+            }
+            if ((l instanceof Array) &&
+                (r instanceof Array) &&
+                l.length == r.length) {
+                for (var i in l) {
+                    node.crossvisit(l[i], r[i], func);
+                }
+                return;
+            }
+            if ((typeof l === 'object') &&
+                (typeof r === 'object')) {
+                var keys = Object.keys(l);
+                for (var i in keys) {
+                    if (r[keys[i]]) {
+                        node.crossvisit(l[keys[i]], r[keys[i]], func);
+                    }
+                }
+                return;
+            }
+        }
+    };
+
     node.visitor = function (n, func) {
         if (func.visit === undefined) {
             func.visit = [];
@@ -18,7 +82,9 @@ module.exports = function (node) {
                 n.visited = true;
                 func.visit.push(n);
                 if (func.before) {
-                    func.before(n);
+                    if(func.before(n)) {
+                        return;
+                    }
                 }
                 var keys = Object.keys(n.childs);
                 for(var i in keys) {

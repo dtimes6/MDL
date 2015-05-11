@@ -84,12 +84,6 @@
         childs: [Object],
         value: 'io',
         scope: null },
-     self: 
-      { parent: [Circular],
-        type: 'inst_decl',
-        childs: [Object],
-        value: null,
-        scope: null },
      inheritance: null,
      stmt: 
       { parent: [Circular],
@@ -99,7 +93,7 @@
         scope: [Object] } },
   value: null,
   scope: 
-   { symbol: { this: [Object], in: [Object], out: [Object], plus: [Object] },
+   { symbol: { in: [Object], out: [Object], plus: [Object] },
      type: { type: [Object] } } }
 { parent: 
    { parent: null,
@@ -122,12 +116,6 @@
         childs: [Object],
         value: null,
         scope: null },
-     self: 
-      { parent: [Circular],
-        type: 'inst_decl',
-        childs: [Object],
-        value: null,
-        scope: null },
      inheritance: null,
      stmt: 
       { parent: [Circular],
@@ -136,9 +124,7 @@
         value: null,
         scope: [Object] } },
   value: null,
-  scope: 
-   { symbol: { this: [Object], bus: [Object], plus: [Object] },
-     type: {} } }
+  scope: { symbol: { bus: [Object], plus: [Object] }, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',

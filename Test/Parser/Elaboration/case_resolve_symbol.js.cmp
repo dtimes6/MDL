@@ -1,0 +1,124 @@
+--------------------------------
+before-elab:
+--------------------------------
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'inst_decl',
+     childs: { type: [Circular], name: [Object], init: null },
+     value: null,
+     scope: null },
+  type: 'symbol',
+  childs: { path: null, name: 'net8', ref: null },
+  value: 'net8',
+  scope: null }
+null
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'operation',
+  childs: { op: '$+$', params: [ [Object], [Object] ] },
+  value: null,
+  scope: null }
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'operation',
+     childs: { op: '$+$', params: [Object] },
+     value: null,
+     scope: null },
+  type: 'symbol',
+  childs: { path: null, name: 'a0', ref: null },
+  value: 'a0',
+  scope: null }
+--------------------------------
+after-elab:
+--------------------------------
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'inst_decl',
+     childs: { type: [Circular], name: [Object], init: null },
+     value: null,
+     scope: null },
+  type: 'symbol',
+  childs: 
+   { path: null,
+     name: 'net8',
+     ref: 
+      { parent: [Object],
+        type: 'identifier',
+        childs: [Object],
+        value: 'net8',
+        scope: null } },
+  value: 'net8',
+  scope: null }
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'element',
+     childs: { name: [Circular] },
+     value: null,
+     scope: null },
+  type: 'identifier',
+  childs: 
+   { ref: 
+      { parent: [Object],
+        type: 'element',
+        childs: [Object],
+        value: null,
+        scope: null } },
+  value: 'net8',
+  scope: null }
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'operation',
+  childs: { op: '$+$', params: [ [Object], [Object] ] },
+  value: null,
+  scope: null }
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'operation',
+     childs: { op: '$+$', params: [Object] },
+     value: null,
+     scope: null },
+  type: 'symbol',
+  childs: 
+   { path: null,
+     name: 'a0',
+     ref: 
+      { parent: [Object],
+        type: 'identifier',
+        childs: [Object],
+        value: 'a0',
+        scope: null } },
+  value: 'a0',
+  scope: null }

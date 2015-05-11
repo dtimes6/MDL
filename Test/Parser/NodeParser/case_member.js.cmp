@@ -28,12 +28,6 @@
         childs: [Object],
         value: 'A',
         scope: null },
-     self: 
-      { parent: [Circular],
-        type: 'inst_decl',
-        childs: [Object],
-        value: null,
-        scope: null },
      inheritance: null,
      stmt: 
       { parent: [Circular],
@@ -42,7 +36,7 @@
         value: null,
         scope: [Object] } },
   value: null,
-  scope: { symbol: { this: [Object], data: [Object] }, type: {} } }
+  scope: { symbol: { data: [Object] }, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',

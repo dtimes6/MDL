@@ -12,12 +12,6 @@
         childs: [Object],
         value: 'case_module_base',
         scope: null },
-     self: 
-      { parent: [Circular],
-        type: 'inst_decl',
-        childs: [Object],
-        value: null,
-        scope: null },
      inheritance: null,
      stmt: 
       { parent: [Circular],
@@ -26,7 +20,7 @@
         value: null,
         scope: [Object] } },
   value: null,
-  scope: { symbol: { this: [Object], self: [Object] }, type: {} } }
+  scope: { symbol: { self: [Object] }, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
@@ -41,12 +35,6 @@
         childs: [Object],
         value: 'case_module_inherite',
         scope: null },
-     self: 
-      { parent: [Circular],
-        type: 'inst_decl',
-        childs: [Object],
-        value: null,
-        scope: null },
      inheritance: 
       { parent: [Circular],
         type: 'inheritance',
@@ -60,7 +48,7 @@
         value: null,
         scope: [Object] } },
   value: null,
-  scope: { symbol: { this: [Object] }, type: {} } }
+  scope: { symbol: {}, type: {} } }
 { parent: 
    { parent: null,
      type: 'root',
@@ -75,12 +63,6 @@
         childs: [Object],
         value: 'case_module_inherite_simple',
         scope: null },
-     self: 
-      { parent: [Circular],
-        type: 'inst_decl',
-        childs: [Object],
-        value: null,
-        scope: null },
      inheritance: 
       { parent: [Circular],
         type: 'inheritance',
@@ -94,47 +76,8 @@
         value: null,
         scope: [Object] } },
   value: null,
-  scope: { symbol: { this: [Object] }, type: {} } }
+  scope: { symbol: {}, type: {} } }
 --------------------------
-{ parent: 
-   { parent: 
-      { parent: null,
-        type: 'root',
-        childs: [Object],
-        value: null,
-        scope: [Object] },
-     type: 'module_decl',
-     childs: 
-      { name: [Object],
-        self: [Circular],
-        inheritance: null,
-        stmt: [Object] },
-     value: null,
-     scope: { symbol: [Object], type: {} } },
-  type: 'inst_decl',
-  childs: 
-   { type: 
-      { parent: [Object],
-        type: 'module_decl',
-        childs: [Object],
-        value: null,
-        scope: [Object] },
-     name: 
-      { parent: [Circular],
-        type: 'identifier',
-        childs: [Object],
-        value: 'this',
-        scope: null },
-     init: null },
-  value: null,
-  scope: null }
+undefined
 --------------------------
-{ symbol: 
-   { this: 
-      { parent: [Object],
-        type: 'identifier',
-        childs: [Object],
-        value: 'this',
-        scope: null },
-     self: [ [Object] ] },
-  type: {} }
+{ symbol: { self: [ [Object] ] }, type: {} }

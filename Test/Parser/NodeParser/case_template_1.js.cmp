@@ -14,12 +14,6 @@
         childs: [Object],
         value: 'io',
         scope: null },
-     self: 
-      { parent: [Circular],
-        type: 'inst_decl',
-        childs: [Object],
-        value: null,
-        scope: null },
      inheritance: null,
      stmt: 
       { parent: [Circular],
@@ -29,7 +23,7 @@
         scope: [Object] } },
   value: null,
   scope: 
-   { symbol: { N: [Object], this: [Object], in: [Object], out: [Object] },
+   { symbol: { N: [Object], in: [Object], out: [Object] },
      type: { type: [Object] } } }
 --------------------------------
 { parent: 
@@ -43,7 +37,6 @@
      childs: 
       { tparams: [Object],
         name: [Object],
-        self: [Object],
         inheritance: null,
         stmt: [Object] },
      value: null,
@@ -70,7 +63,6 @@
      childs: 
       { tparams: [Object],
         name: [Object],
-        self: [Object],
         inheritance: null,
         stmt: [Object] },
      value: null,

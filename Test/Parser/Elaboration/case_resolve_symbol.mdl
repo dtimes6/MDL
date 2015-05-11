@@ -1,0 +1,6 @@
+element net8;
+
+net8 a0;
+net8 b0;
+
+net8 c0 = (a0 + b0);

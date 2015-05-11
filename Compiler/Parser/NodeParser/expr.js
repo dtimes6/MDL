@@ -49,11 +49,21 @@ module.exports = function (parser) {
                 op += token.text.replace(/\$/g, '\\$');
                 this.consume();
             }
+            parser.lastOp = op;
         } while (1);
 
         if (op === '$') {
             // has push but no pop
             return params[0];
+        }
+        if (op === '') {
+            if (token.text === ')' ||
+                token.text === ']') {
+                msg.error(this, "Unexpected operation started with token: '" + token.text + "', check the usage of operator '" + parser.lastOp + "'");
+            }
+        }
+        if (op !== '' && params.length == 0) {
+            msg.error(this, "Unexpected operation with operator: '" + op + "', at least one operand shoud be used");
         }
         var n = this.push();
         for (var i in params) {
@@ -64,7 +74,6 @@ module.exports = function (parser) {
             op:     op,
             params: params
         };
-
         return this.pop(n);
     };
 

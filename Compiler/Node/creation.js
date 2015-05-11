@@ -11,6 +11,12 @@ module.exports = function (node) {
         return this;
     };
 
+    node.clone = function (n) {
+        return node.reconstruct(n, function (nn) {
+            return nn.clone();
+        });
+    };
+
     node.prototype.clone = function () {
         var cache = [];
         var current = this.parent;

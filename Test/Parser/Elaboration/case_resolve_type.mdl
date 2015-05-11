@@ -1,0 +1,20 @@
+element net8;
+1;
+
+template [
+    typename BUS,
+    original N
+]
+module expand {
+    BUS s1;
+};
+
+template [
+    typename BUS
+]
+module expand[BUS,0] {
+    BUS s0;
+};
+
+expand[net8, 1] symbol1;
+expand[net8, 0] symbol0;

@@ -1,31 +1,6 @@
 var msg = require('../../../ErrorHandling/errorhandling.js');
 module.exports = function (parser) {
     'use strict';
-    parser.prototype.createThisNamedRef = function () {
-        var n = this.push();
-        n.type  = 'identifier';
-        n.value = 'this';
-        n.childs = {
-            ref: null
-        };
-        return this.pop(n);
-    };
-
-    parser.prototype.createThisSymbol = function () {
-        var n = this.push();
-
-        var name = this.createThisNamedRef();
-        n.type = 'inst_decl';
-        n.childs = {
-            type: n.parent,
-            name: name,
-            init: null
-        };
-        name.childs.ref = n;
-        n.parent.addSymbol(name);
-        return this.pop(n);
-    };
-
     parser.prototype.parseModuleDecl = function (n) {
         var createN = false;
         if (n === undefined) {
@@ -55,7 +30,6 @@ module.exports = function (parser) {
             }
         }
 
-        n.childs.self = this.createThisSymbol();
         var token = this.getToken();
         n.childs.inheritance = null;
         if (token.text === ':') {

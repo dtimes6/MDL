@@ -1,0 +1,119 @@
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'inst_decl',
+  childs: 
+   { type: 
+      { parent: [Circular],
+        type: 'selection',
+        childs: [Object],
+        value: null,
+        scope: null },
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'symbol1',
+        scope: [Object] },
+     init: null },
+  value: null,
+  scope: null }
+-------------
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'module_decl',
+     childs: 
+      { tparams: [Object],
+        name: [Circular],
+        inheritance: null,
+        stmt: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'identifier',
+  childs: 
+   { ref: 
+      { parent: [Object],
+        type: 'module_decl',
+        childs: [Object],
+        value: null,
+        scope: [Object] } },
+  value: 'expand',
+  scope: null }
+-------------
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'inst_decl',
+     childs: { type: [Object], name: [Circular], init: null },
+     value: null,
+     scope: null },
+  type: 'identifier',
+  childs: 
+   { ref: 
+      { parent: [Object],
+        type: 'inst_decl',
+        childs: [Object],
+        value: null,
+        scope: null } },
+  value: 'symbol1',
+  scope: 
+   { symbol: { N: [Object], s1: [Object], this: [Object] },
+     type: {} } }
+=============
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'inst_decl',
+  childs: 
+   { type: 
+      { parent: [Circular],
+        type: 'selection',
+        childs: [Object],
+        value: null,
+        scope: null },
+     name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'symbol0',
+        scope: [Object] },
+     init: null },
+  value: null,
+  scope: null }
+-------------
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'inst_decl',
+     childs: { type: [Object], name: [Circular], init: null },
+     value: null,
+     scope: null },
+  type: 'identifier',
+  childs: 
+   { ref: 
+      { parent: [Object],
+        type: 'inst_decl',
+        childs: [Object],
+        value: null,
+        scope: null } },
+  value: 'symbol0',
+  scope: { symbol: { s0: [Object], this: [Object] }, type: {} } }
