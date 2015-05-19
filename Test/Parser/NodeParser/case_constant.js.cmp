@@ -21,16 +21,6 @@
   value: null,
   scope: null }
 { parent: 
-   { parent: null,
-     type: 'root',
-     childs: { stmts: [Object] },
-     value: null,
-     scope: { symbol: [Object], type: [Object] } },
-  type: 'null',
-  childs: {},
-  value: null,
-  scope: null }
-{ parent: 
    { parent: 
       { parent: null,
         type: 'root',
