@@ -1,0 +1,23 @@
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     scope: { symbol: {}, type: [Object] } },
+  type: 'module_decl',
+  childs: 
+   { name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'A',
+        scope: null },
+     inheritance: null,
+     stmt: 
+      { parent: [Circular],
+        type: 'block',
+        childs: [Object],
+        value: null,
+        scope: [Object] } },
+  value: null,
+  scope: { symbol: {}, type: { B: [Object] } } }

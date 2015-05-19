@@ -1,0 +1,3 @@
+module A {
+    typedef A B;
+};
