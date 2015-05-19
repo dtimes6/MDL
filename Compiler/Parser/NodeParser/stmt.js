@@ -15,6 +15,7 @@ module.exports = function (parser) {
     require('./Stmt/while.js')(parser);
     require('./Stmt/expr.js')(parser);
     require('./Stmt/typedef.js')(parser);
+    require('./Stmt/constant.js')(parser);
 
     parser.prototype.parseStmt = function () {
         var token = this.getToken();
@@ -37,6 +38,9 @@ module.exports = function (parser) {
         }
         if (token.text === 'typedef') {
             return this.parseTypeDef();
+        }
+        if (token.text === 'constant') {
+            return this.parseConstant();
         }
         // stmt
         if (token.text === 'if') {

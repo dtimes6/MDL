@@ -1,0 +1,75 @@
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'constant',
+  childs: 
+   { name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'a',
+        scope: null },
+     init: 
+      { parent: [Circular],
+        type: 'number',
+        childs: {},
+        value: '1',
+        scope: null } },
+  value: null,
+  scope: null }
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'null',
+  childs: {},
+  value: null,
+  scope: null }
+{ parent: 
+   { parent: 
+      { parent: null,
+        type: 'root',
+        childs: [Object],
+        value: null,
+        scope: [Object] },
+     type: 'constant',
+     childs: { name: [Circular], init: [Object] },
+     value: null,
+     scope: null },
+  type: 'identifier',
+  childs: 
+   { ref: 
+      { parent: [Object],
+        type: 'constant',
+        childs: [Object],
+        value: null,
+        scope: null } },
+  value: 'a',
+  scope: null }
+{ parent: 
+   { parent: null,
+     type: 'root',
+     childs: { stmts: [Object] },
+     value: null,
+     scope: { symbol: [Object], type: [Object] } },
+  type: 'constant',
+  childs: 
+   { name: 
+      { parent: [Circular],
+        type: 'identifier',
+        childs: [Object],
+        value: 'a',
+        scope: null },
+     init: 
+      { parent: [Circular],
+        type: 'number',
+        childs: {},
+        value: '1',
+        scope: null } },
+  value: null,
+  scope: null }
